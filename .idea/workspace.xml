@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c0b5d198-644a-4f80-8508-b371db833ddd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/javad.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
     </list>
     <ignored path="laravel-1.iws" />
@@ -29,7 +28,7 @@
       <file leaf-file-name="routes.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="3" selection-start="652" selection-end="652" vertical-scroll-proportion="0.4373928" vertical-offset="0" max-vertical-offset="583">
+            <state line="25" column="14" selection-start="667" selection-end="667" vertical-scroll-proportion="0.46655232" vertical-offset="0" max-vertical-offset="583">
               <folding />
             </state>
           </provider>
@@ -262,7 +261,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="3" selection-start="652" selection-end="652" vertical-scroll-proportion="0.4373928" vertical-offset="0" max-vertical-offset="583">
+        <state line="25" column="14" selection-start="667" selection-end="667" vertical-scroll-proportion="0.46655232" vertical-offset="0" max-vertical-offset="583">
           <folding />
         </state>
       </provider>

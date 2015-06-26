@@ -23,3 +23,7 @@ Route::get('user/{id}', function($id)
 {
     return 'User '.$id;
 });
+Route::get('ll/{id}', function($id)
+{
+    return 'User '.$id;
+});
