@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c0b5d198-644a-4f80-8508-b371db833ddd" name="Default" comment="" />
+    <list default="true" id="c0b5d198-644a-4f80-8508-b371db833ddd" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
+    </list>
     <ignored path="laravel-1.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,7 +28,7 @@
       <file leaf-file-name="routes.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="20" selection-start="504" selection-end="504" vertical-scroll-proportion="0.23327616" vertical-offset="0" max-vertical-offset="583">
+            <state line="29" column="14" selection-start="733" selection-end="733" vertical-scroll-proportion="0.5831904" vertical-offset="0" max-vertical-offset="583">
               <folding />
             </state>
           </provider>
@@ -259,7 +261,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="20" selection-start="504" selection-end="504" vertical-scroll-proportion="0.23327616" vertical-offset="0" max-vertical-offset="583">
+        <state line="29" column="14" selection-start="733" selection-end="733" vertical-scroll-proportion="0.5831904" vertical-offset="0" max-vertical-offset="583">
           <folding />
         </state>
       </provider>

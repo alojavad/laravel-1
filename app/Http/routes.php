@@ -27,3 +27,7 @@ Route::get('ll/{id}', function($id)
 {
     return 'User '.$id;
 });
+Route::get('tt/{id}', function($id)
+{
+    return 'User '.$id;
+});
