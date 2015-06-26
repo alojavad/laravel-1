@@ -11,23 +11,24 @@
 |
 */
 
-Route::get('/', 'WelcomeController@index');
-
-Route::get('home', 'HomeController@index');
-
 Route::controllers([
-	'auth' => 'Auth\AuthController',
-	'password' => 'Auth\PasswordController',
+    'auth' => 'Auth\AuthController',
+    'password' => 'Auth\PasswordController',
 ]);
-Route::get('user/{id}', function($id)
-{
-    return 'User '.$id;
-});
-Route::get('ll/{id}', function($id)
-{
-    return 'User '.$id;
-});
-Route::get('tt/{id}', function($id)
-{
-    return 'User '.$id;
-});
+
+
+
+
+
+
+
+
+Route::get('/home',['as'=>'home','uses'=>'HomeController@index']);
+Route::get('/',['as'=>'home','uses'=>'HomeController@index']);
+
+
+Route::get('laravel/laravel',['as'=>'laravel1','uses'=>'LaravelController@index']);
+Route::resource('laravel', 'LaravelController');
+Route::resource('news', 'NewsController');
+Route::controller('news','NewsController');
+Route::resource('tag', 'TagController');
