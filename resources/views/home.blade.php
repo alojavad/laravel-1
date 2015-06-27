@@ -139,7 +139,7 @@
             <!-- Wrapper for slides -->
             <div class="carousel-inner" role="listbox">
                 @if ($specss!="")
-                <div class="item active">
+                <div class="item active" style="height: 250px">
                     <a href="/news/{!!$specss->id!!}" target="_blank">
                     <img src="{!! $specss->image !!}" alt="{!! $specss->title !!}"></a>
                     <div class="carousel-caption">
@@ -148,7 +148,7 @@
                 </div>
                 @endif
                 @foreach ($specs as $db)
-                <div class="item">
+                <div class="item" style="height: 250px">
                     <a href="/news/{!!$db->id!!}" target="_blank">
                     <img src="{!! $db->image !!}" alt="{!! $db->title !!}"></a>
                     <div class="carousel-caption">
@@ -209,7 +209,7 @@
 
 
     </div>
-    <div class="b_curv" style="margin-bottom: 5px;">
+    <div class="b_curv1" style="margin-bottom: 5px;">
         <img alt="" src="{!! asset('/images/inn_b_r_box.gif')!!}" class="fr_img">
         <img alt="" src="{!! asset('/images/inn_b_l_box.gif')!!}" class="fl_img">
         <div class="wrapper"></div>
@@ -262,7 +262,7 @@
 
 
     </div>
-    <div class="b_curv" style="margin-bottom: 5px;">
+    <div class="b_curv1" style="margin-bottom: 5px;">
         <img alt="" src="{!! asset('/images/inn_b_r_box.gif')!!}" class="fr_img">
         <img alt="" src="{!! asset('/images/inn_b_l_box.gif')!!}" class="fl_img">
         <div class="wrapper"></div>
@@ -344,7 +344,7 @@
             <!-- Wrapper for slides -->
             <div class="carousel-inner" role="listbox">
                 @if ($speckk!="")
-                <div class="item active">
+                <div class="item active" style="height: 250px">
                     <a href="/news/{!!$speckk->id!!}" target="_blank">
                         <img src="{!! $speckk->image !!}" alt="{!! $speckk->title !!}"></a>
                     <div class="carousel-caption">
@@ -353,7 +353,7 @@
                 </div>
                 @endif
                 @foreach ($speck as $db)
-                <div class="item">
+                <div class="item" style="height: 250px">
                     <a href="/news/{!!$db->id!!}" target="_blank">
                         <img src="{!! $db->image !!}" alt="{!! $db->title !!}"></a>
                     <div class="carousel-caption">
@@ -414,7 +414,7 @@
 
 
         </div>
-        <div class="b_curv" style="margin-bottom: 5px;">
+        <div class="b_curv1" style="margin-bottom: 5px;">
             <img alt="" src="{!! asset('/images/inn_b_r_box.gif')!!}" class="fr_img">
             <img alt="" src="{!! asset('/images/inn_b_l_box.gif')!!}" class="fl_img">
             <div class="wrapper"></div>
@@ -467,7 +467,7 @@
 
 
         </div>
-        <div class="b_curv" style="margin-bottom: 5px;">
+        <div class="b_curv1" style="margin-bottom: 5px;">
             <img alt="" src="{!! asset('/images/inn_b_r_box.gif')!!}" class="fr_img">
             <img alt="" src="{!! asset('/images/inn_b_l_box.gif')!!}" class="fl_img">
             <div class="wrapper"></div>
@@ -549,7 +549,7 @@
             <!-- Wrapper for slides -->
             <div class="carousel-inner" role="listbox">
                 @if ($spectt!="")
-                <div class="item active">
+                <div class="item active" style="height: 250px">
                     <a href="/news/{!!$spectt->id!!}" target="_blank">
                         <img src="{!! $spectt->image !!}" alt="{!! $spectt->title !!}"></a>
                     <div class="carousel-caption">
@@ -558,7 +558,7 @@
                 </div>
                 @endif
                 @foreach ($spect as $db)
-                <div class="item">
+                <div class="item" style="height: 250px">
                     <a href="/news/{!!$db->id!!}" target="_blank">
                         <img src="{!! $db->image !!}" alt="{!! $db->title !!}"></a>
                     <div class="carousel-caption">
@@ -619,7 +619,7 @@
 
 
         </div>
-        <div class="b_curv" style="margin-bottom: 5px;">
+        <div class="b_curv1" style="margin-bottom: 5px;">
             <img alt="" src="{!! asset('/images/inn_b_r_box.gif')!!}" class="fr_img">
             <img alt="" src="{!! asset('/images/inn_b_l_box.gif')!!}" class="fl_img">
             <div class="wrapper"></div>
@@ -672,7 +672,7 @@
 
 
         </div>
-        <div class="b_curv" style="margin-bottom: 5px;">
+        <div class="b_curv1" style="margin-bottom: 5px;">
             <img alt="" src="{!! asset('/images/inn_b_r_box.gif')!!}" class="fr_img">
             <img alt="" src="{!! asset('/images/inn_b_l_box.gif')!!}" class="fl_img">
             <div class="wrapper"></div>
