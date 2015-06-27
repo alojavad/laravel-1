@@ -4,8 +4,11 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Hightr</title>
-    <link rel="shortcut icon" href="{!! asset('/hightr.ico') !!}" type="image/x-icon">
+    <meta name="author" content="Javad Hajiyan Maleki">
+    <meta name="description" content="سایت خبری ایران">
+    <meta name="keywords" content="سایت خبری هایتر سایت ورزشی تکنولوژی جدید عکس خبر سوتی سلفی جدید   hightr  hightr.com">
+	<title>Hightr| هایتر</title>
+    <link rel="shortcut icon" href="{!! asset('/facicon.ico') !!}" type="image/x-icon">
 	<link href="{!! asset('/css/bootstrap.css') !!}" rel="stylesheet">
 
 	<!-- Fonts -->
@@ -21,14 +24,14 @@
 <body>
 <div class="container">
     <img src="{!! asset('/images/707.png') !!}" class="" alt="Responsive image" height="150px" width="100%">
-@yield('content');
+@yield('content')
 
 
     <footer class="col-md-12">
 
         <div class="content  text-center">
-            <p>Hightr is a trademark of Javad Hajiyan. Copyright © Javad Hajiyan.</p>
-            <p ><a href="http://jackmcdade.com/">Design by Javad Hajiyan</a></p>
+            <p>Hightr is a trademark of Javad Hajiyan Maleki. Copyright © Javad Hajiyan Maleki.</p>
+            <p ><a href="http://jackmcdade.com/">Design by Javad Hajiyan Maleki</a></p>
         </div>
     </footer>
 </div>

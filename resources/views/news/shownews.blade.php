@@ -1,4 +1,4 @@
-@extends('layout.lnews')
+@extends('app')
 
 @section('content')
 <div class="col-md-3">
@@ -6,9 +6,6 @@
 </div>
 <div class="col-md-6" dir="rtl">
 
-<br>
-<br>
-<br>
 <div class="news_col2">
 <div class="t_curv">
     <img alt="" src="{!! asset('images/inn_t_r_box.gif')!!}" class="fr_img">
@@ -16,13 +13,24 @@
     <div class="wrapper"></div> 				</div>
 <div class="news_content">
     <div style="margin-bottom:15px; padding-right: 10px; padding-left: 10px;"> 	<div class="news_toolbar">
-            <div class="news_nav news_id_c"><span class="news_nav_title">کد خبر: </span>۲۱۰۲۲۹</div>
-            <div class="news_nav news_comments">     		<span class="news_nav_title">تعداد نظرات: </span>     		<a href="#comments">۹ نظر</a> 		</div>
-            <div class="news_nav news_pdate_c"><span class="news_nav_title">تاریخ انتشار: </span>{!!$data->created_at!!}</div> 	<div class="wrapper"></div> 	</div> 	<div class="news_tools">
-            <div class="news_path"> 			<a href="/fa/archive?service_id=1">صفحه نخست</a>  		</div>
+            <div class="news_nav news_id_c"><span class="news_nav_title">کد خبر: </span>{!! $data->id !!}</div>
+            <div class="news_nav news_comments">
+                <span class="news_nav_title">تعداد نظرات: </span>
+                <a href="#comments">{!! $data->id !!}نظر</a>
+            </div>
+            <div class="news_nav news_pdate_c">
+                <span class="news_nav_title">تاریخ انتشار: </span>{!!$data->created_at!!}</div>
+            <div class="wrapper"></div>
+        </div> 	<div class="news_tools">
+            <div class="news_path">
+                <a href="{!! route('home') !!}">صفحه نخست</a>
+            </div>
             <div title="نسخه چاپی" class="news_print_botton" onclick="window.open(&quot;/fa/print/210229&quot;, &quot;printwin&quot;,&quot;left=200,top=200,width=820,height=550,toolbar=1,resizable=0,status=0,scrollbars=1&quot;);"></div>
             <div title="ارسال به دوستان" class="news_emails_botton" onclick="window.open(&quot;/fa/send/210229&quot;, &quot;sendmailwin&quot;,&quot;left=200,top=100,width=370,height=400,toolbar=0,resizable=0,status=0,scrollbars=1&quot;);"></div>
-            <a title="ذخیره" class="news_save_botton" href="/fa/save/210229"></a> 		 		<a href="#" class="news_size_down"></a> 		<a href="#" class="news_size_reset"></a> 		<a href="#" class="news_size_up"></a>
+            <a title="ذخیره" class="news_save_botton" href="/"></a>
+            <a href="#" class="news_size_down"></a>
+            <a href="#" class="news_size_reset"></a>
+            <a href="#" class="news_size_up"></a>
             <div class="wrapper"></div>
         </div>
     </div>
@@ -35,21 +43,29 @@
 
         <div class="title" style="text-align:center;margin-bottom: 10px;margin-top: 4px;">
             <h1 style="padding: 0px;margin: 0px" class="title">
-                <a href="/fa/news/210229/{!! $data->title !!}">{!! $data->title !!}</a> 	</h1>
+                <a href="#">{!! $data->title !!}</a> 	</h1>
         </div>
 
 
         <div class="subtitle" style="margin-bottom: 10px;text-align: justify;">{!!$data->abst !!}</a></div>
         <div class="body" style="text-align: justify;padding: 10px;">
-            <a class="entekhab_lead2" href="/">پایگاه خبری تحلیلی هایتر hightr.con </a>
+            <a class="entekhab_lead2" href="">پایگاه خبری Hightr</a>
             <div align="justify"><br><div align="center"><img style="border: medium none;" alt="{!!$data->abst!!}" src="{!!$data->image!!}" height="357" width="520"><br></div>
                 {!!$data->descr!!}</div>
             <div class="wrapper"></div>
         </div>
 
     </div>
-    <div style="width: 100%;padding-top: 10px;">                     	                     </div>
-    <div style="width: 100%;"> 			            <div style="width: 610px;"> 			            	<div style="width: 200px; float: right;padding-top: 14px;"> 				                <span style="padding: 0px 5px;" class="news_nav_toolbar"><a href="/" style="text-decoration: none;color: #000;"><img alt="" src="{!! asset('/images/home.gif')!!}" border="0"></a></span> 								<span style="padding: 0px 5px;" class="news_nav_toolbar" onclick="window.open(&quot;/fa/send/210229&quot;, &quot;sendmailwin&quot;,&quot;left=200,top=100,width=370,height=300,toolbar=0,resizable=0,status=0,scrollbars=1&quot;);"><img src="{!! asset('/images/email.gif')!!}" border="0" alt="send"></span> 								<span style="padding: 0px 5px;" class="news_nav_toolbar" onclick="window.open(&quot;/fa/print/210229&quot;, &quot;printwin&quot;,&quot;left=200,top=200,width=820,height=550,toolbar=1,resizable=0,status=0,scrollbars=1&quot;);"><img src="{!! asset('/images/print.gif')!!}" border="0" alt="print"></span> 								<a href="/fa/save/210229" style="padding: 0px 5px;" class="news_nav_toolbar"><img src="{!!asset('/images/save.gif')!!}" border="0" alt="print"></a> 							</div>
+    <div style="width: 100%;padding-top: 10px;">
+    </div>
+    <div style="width: 100%;">
+        <div style="width: 610px;">
+            <div style="width: 200px; float: right;padding-top: 14px;">
+                <span style="padding: 0px 5px;" class="news_nav_toolbar"><a href="/" style="text-decoration: none;color: #000;"><img alt="" src="{!! asset('/images/home.gif')!!}" border="0"></a></span>
+                <span style="padding: 0px 5px;" class="news_nav_toolbar" onclick="window.open(&quot;/fa/send/210229&quot;, &quot;sendmailwin&quot;,&quot;left=200,top=100,width=370,height=300,toolbar=0,resizable=0,status=0,scrollbars=1&quot;);"><img src="{!! asset('/images/email.gif')!!}" border="0" alt="send"></span>
+                <span style="padding: 0px 5px;" class="news_nav_toolbar" onclick="window.open(&quot;/fa/print/210229&quot;, &quot;printwin&quot;,&quot;left=200,top=200,width=820,height=550,toolbar=1,resizable=0,status=0,scrollbars=1&quot;);"><img src="{!! asset('/images/print.gif')!!}" border="0" alt="print"></span>
+                <a href="" style="padding: 0px 5px;" class="news_nav_toolbar"><img src="{!!asset('/images/save.gif')!!}" border="0" alt="print"></a>
+            </div>
             <div class="share_to_con">
                 <a href="http://www.facebook.com/share.php?u=http://www.entekhab.ir/fa/news/{!!$data->title!!}"  title="" rel="nofollow" target="_blank"> <img src="{!! asset('/images/kh_fb.gif')!!}" alt=""> </a>
                 <a href="https://plusone.google.com/_/+1/confirm?hl=en&amp;url=http://entekhab.ir/fa/news/210229/{!!$data->title!!}" rel="nofollow" title="" target="_blank"> <img src="{!! asset('/images/kh_g.gif')!!}" alt=""> </a>
@@ -73,12 +89,20 @@
         <div style="padding-bottom:5px;"><a href="http://entekhab.ir/fa/ads/redirect/a/273" target="_blank"><img alt="" style="width:130px;height:103px;border:0px;" src="/files/adv//273_844.jpg"></a></div>
         <div style="padding-bottom:5px;"><a href="http://entekhab.ir/fa/ads/redirect/a/686" target="_blank"><img alt="" style="width:130px;height:130px;border:0px;" src="/files/adv//881_272.jpg"></a></div>
         <div style="padding-bottom:5px;"><a href="http://entekhab.ir/fa/ads/redirect/a/612" target="_blank"><img alt="" style="width:130px;height:105px;border:0px;" src="/files/adv//754_119.jpg"></a></div>
-    </div> 					<div class="wrapper"></div> 				</div> 				 				<!-- Start Comments -->
+    </div>
+    <div class="wrapper"></div>
+</div>
+
+
+<!-- Start Comments -->
+
+
+
 <div class="comm_title_box">
     <img alt="" src="{!! asset('/images/r_sar.gif')!!}" class="fr_img">
     <a href="#" class="comments_topic">نظرات بینندگان</a>
-    <div class="com_title_n">در انتظار بررسی: <span>۱۰</span>
-    </div> 	<div class="com_title_p">انتشار یافته: <span>۹</span></div>
+    <div class="com_title_n">در انتظار بررسی: <span>{!! $data->id !!}</span>
+    </div> 	<div class="com_title_p">انتشار یافته: <span>{!! $data->id !!}</span></div>
     <img alt="" src="{!! asset('/images/sar.gif')!!}" class="fl_img">
     <div class="wrapper"></div>
 </div>
@@ -91,7 +115,7 @@
 
 
 <div class="comm_container" id="comm_t">
-    <div style="width: 628px;">
+    <div style="width: 610px;">
 
 
 
@@ -200,7 +224,7 @@
 <input type="hidden" name="_token" value="{!! csrf_token() !!}">
 
 
-<div class="form-group">
+<div class="form-group" style="width: 610px;">
     <label for="InputDesc">نظر</label>
     <textarea class="form-control" id="InputDesc" name="descrip"></textarea>
 </div>

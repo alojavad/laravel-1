@@ -42,7 +42,6 @@ class CreateWebsiteTable extends Migration {
             $table->integer('vote_down');
             $table->unsignedInteger('counter');
             $table->unsignedInteger('user_id')->nullable();
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('set null')->onUpdate('cascade');
             $table->unsignedInteger('refre_id')->nullable();
             $table->unsignedInteger('dep');
             $table->longText('descr');
@@ -51,7 +50,6 @@ class CreateWebsiteTable extends Migration {
         Schema::create('news', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('user_id')->nullable();
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('set null')->onUpdate('cascade');
             $table->unsignedInteger('counter');
             $table->unsignedInteger('publi');
             $table->unsignedInteger('dep');
@@ -65,9 +63,7 @@ class CreateWebsiteTable extends Migration {
         Schema::create('tag_news', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('tag_id')->nullable();
-            $table->foreign('tag_id')->references('id')->on('tag')->onDelete('set null')->onUpdate('cascade');
             $table->unsignedInteger('news_id')->nullable();
-            $table->foreign('news_id')->references('id')->on('news')->onDelete('set null')->onUpdate('cascade');
             $table->unsignedInteger('refre_id')->nullable();
             $table->timestamps();
         });
@@ -77,9 +73,7 @@ class CreateWebsiteTable extends Migration {
             $table->integer('vote_down');
             $table->unsignedInteger('counter');
             $table->unsignedInteger('user_id')->nullable();
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('set null')->onUpdate('cascade');
             $table->unsignedInteger('news_id')->nullable();
-            $table->foreign('news_id')->references('id')->on('news')->onDelete('set null')->onUpdate('cascade');
             $table->longText('descr');
             $table->timestamps();
         });
@@ -89,9 +83,7 @@ class CreateWebsiteTable extends Migration {
             $table->integer('vote_down');
             $table->unsignedInteger('counter');
             $table->unsignedInteger('user_id')->nullable();
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('set null')->onUpdate('cascade');
             $table->unsignedInteger('comment_id')->nullable();
-            $table->foreign('comment_id')->references('id')->on('comment')->onDelete('set null')->onUpdate('cascade');
             $table->longText('descr');
             $table->timestamps();
         });

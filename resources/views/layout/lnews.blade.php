@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Hightr</title>
-    <link rel="shortcut icon" href="{!! asset('/hightr.ico') !!}" type="image/x-icon">
+    <link rel="shortcut icon" href="{!! asset('/facicon.ico') !!}" type="image/x-icon">
     <link href="{!! asset('/css/bootstrap.css') !!}" rel="stylesheet">
 
     <!-- Fonts -->

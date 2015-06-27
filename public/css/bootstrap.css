@@ -6876,7 +6876,7 @@ button.close {
 }
 
 .c_tabs_title {
-    width: 240px;
+    width: 340px;
     height: 33px;
     background: url('../images/bg_sar.gif') repeat-x;
     overflow: hidden;
@@ -6884,7 +6884,7 @@ button.close {
 
 
 .c_tabs_content {
-    width: 238px;
+    width: 340px;
     padding: 4px 0px;
     border-right: 1px solid #DCDCDC;
     border-left: 1px solid #DCDCDC;
@@ -6894,7 +6894,7 @@ button.close {
 
 
 .b_curv {
-    width: 100%;
+    width: 610px;
     height: 10px;
     overflow: hidden;
     background: url('../images/bg_b_curv.gif') repeat-x;
@@ -6974,7 +6974,7 @@ button.close {
 
 
 .t_curv {
-    width: 100%;
+    width: 610px;
     height: 10px;
     overflow: hidden;
     background: url('../images/bg_t_curv.gif') repeat-x;
@@ -7109,7 +7109,7 @@ button.close {
 
 
 .comm_title_box {
-    width: 100%;
+    width: 610px;
     height: 33px;
     background: url('../images/bg_sar.gif') repeat-x;
     overflow: hidden;
@@ -7146,7 +7146,7 @@ button.close {
 
 
 .comm_container {
-    width: 628px;
+    width: 610px;
     padding-top: 5px;
     border-right: 1px solid #DCDCDC;
     border-left: 1px solid #DCDCDC;
@@ -7434,3 +7434,30 @@ input.butt {
     background: url('../images/b_pasokh.gif') no-repeat top right;
 }
 
+.boxes_news {
+    width: 600px;
+    margin-left: 5px;
+    float: right;
+}
+.col1 {
+    width: 219px;
+    float: right;
+    margin-left: 5px;
+    padding-bottom: 1px;
+}
+
+.col2 {
+    width: 376px;
+    float: right;
+    padding-bottom: 1px;
+}
+
+.col3 {
+    width: 375px;
+    float: right;
+    padding-bottom: 1px;
+}
+
+.c_tabs {
+    width: 340px;
+}
