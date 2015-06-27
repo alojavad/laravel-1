@@ -6,193 +6,215 @@
 </div>
 <div class="col-md-6" dir="rtl">
 
-    <br>
-    <br>
-    <br>
-    <div class="news_col2">
-        <div class="t_curv">
-            <img alt="" src="{!! asset('images/inn_t_r_box.gif')!!}" class="fr_img">
-            <img alt="" src="{!! asset('images/inn_t_l_box.gif')!!}" class="fl_img">
-            <div class="wrapper"></div> 				</div>
-        <div class="news_content">
-            <div style="margin-bottom:15px; padding-right: 10px; padding-left: 10px;"> 	<div class="news_toolbar">
-                    <div class="news_nav news_id_c"><span class="news_nav_title">کد خبر: </span>۲۱۰۲۲۹</div>
-                    <div class="news_nav news_comments">     		<span class="news_nav_title">تعداد نظرات: </span>     		<a href="#comments">۹ نظر</a> 		</div>
-                    <div class="news_nav news_pdate_c"><span class="news_nav_title">تاریخ انتشار: </span>{!!$data->created_at!!}</div> 	<div class="wrapper"></div> 	</div> 	<div class="news_tools">
-                    <div class="news_path"> 			<a href="/fa/archive?service_id=1">صفحه نخست</a>  		</div>
-                    <div title="نسخه چاپی" class="news_print_botton" onclick="window.open(&quot;/fa/print/210229&quot;, &quot;printwin&quot;,&quot;left=200,top=200,width=820,height=550,toolbar=1,resizable=0,status=0,scrollbars=1&quot;);"></div>
-                    <div title="ارسال به دوستان" class="news_emails_botton" onclick="window.open(&quot;/fa/send/210229&quot;, &quot;sendmailwin&quot;,&quot;left=200,top=100,width=370,height=400,toolbar=0,resizable=0,status=0,scrollbars=1&quot;);"></div>
-                    <a title="ذخیره" class="news_save_botton" href="/fa/save/210229"></a> 		 		<a href="#" class="news_size_down"></a> 		<a href="#" class="news_size_reset"></a> 		<a href="#" class="news_size_up"></a>
-                    <div class="wrapper"></div> 	</div> </div>
-
-
-
-
-            <div style="direction: rtl;">
-                <div class="rutitr" style="text-align:center"></div>
-
-                <div class="title" style="text-align:center;margin-bottom: 10px;margin-top: 4px;">
-                    <h1 style="padding: 0px;margin: 0px" class="title">
-                        <a href="/fa/news/210229/{!! $data->title !!}">{!! $data->title !!}</a> 	</h1>
-                </div>
-
-
-                	<div class="subtitle" style="margin-bottom: 10px;text-align: justify;">{!!$data->abst !!}</a></div>
-                <div class="body" style="text-align: justify;padding: 10px;">
-                    <a class="entekhab_lead2" href="/">پایگاه خبری تحلیلی هایتر hightr.con </a>
-                    <div align="justify"><br><div align="center"><img style="border: medium none;" alt="{!!$data->abst!!}" src="{!!$data->image!!}" height="357" width="520"><br></div>
-                        {!!$data->descr!!}</div>
-                    <div class="wrapper"></div>
-                </div>
-            </div>
-            <div style="width: 100%;padding-top: 10px;">                     	                     </div>
-            <div style="width: 100%;"> 			            <div style="width: 610px;"> 			            	<div style="width: 200px; float: right;padding-top: 14px;"> 				                <span style="padding: 0px 5px;" class="news_nav_toolbar"><a href="/" style="text-decoration: none;color: #000;"><img alt="" src="{!! asset('/images/home.gif')!!}" border="0"></a></span> 								<span style="padding: 0px 5px;" class="news_nav_toolbar" onclick="window.open(&quot;/fa/send/210229&quot;, &quot;sendmailwin&quot;,&quot;left=200,top=100,width=370,height=300,toolbar=0,resizable=0,status=0,scrollbars=1&quot;);"><img src="{!! asset('/images/email.gif')!!}" border="0" alt="send"></span> 								<span style="padding: 0px 5px;" class="news_nav_toolbar" onclick="window.open(&quot;/fa/print/210229&quot;, &quot;printwin&quot;,&quot;left=200,top=200,width=820,height=550,toolbar=1,resizable=0,status=0,scrollbars=1&quot;);"><img src="{!! asset('/images/print.gif')!!}" border="0" alt="print"></span> 								<a href="/fa/save/210229" style="padding: 0px 5px;" class="news_nav_toolbar"><img src="{!!asset('/images/save.gif')!!}" border="0" alt="print"></a> 							</div>
-                    <div class="share_to_con">
-                        <a href="http://www.facebook.com/share.php?u=http://www.entekhab.ir/fa/news/{!!$data->title!!}"  title="" rel="nofollow" target="_blank"> <img src="{!! asset('/images/kh_fb.gif')!!}" alt=""> </a>
-                        <a href="https://plusone.google.com/_/+1/confirm?hl=en&amp;url=http://entekhab.ir/fa/news/210229/{!!$data->title!!}" rel="nofollow" title="" target="_blank"> <img src="{!! asset('/images/kh_g.gif')!!}" alt=""> </a>
-                        <a href="http://twitter.com/home?status={!!$data->title!!}" title="" rel="nofollow" target="_blank"> <img src="{!! asset('/images/kh_tw.gif')!!}" alt=""> </a>
-                        <div class="wrapper"></div>
-                    </div> 				             			        	<div class="wrapper"></div> 						</div> 					</div> 				</div>
-        <div class="b_curv" style="margin-bottom: 5px;">
-            <img alt="" src="{!! asset('/images/inn_b_r_box.gif')!!}" class="fr_img">
-            <img alt="" src="{!! asset('/images/inn_b_l_box.gif')!!}" class="fl_img">
-            <div class="wrapper"></div> 				</div>
-        <div style="width: 580px; margin: 0px auto;">
-            <div class="ads" style="display:none;">
-                <div style="padding-bottom:5px;"><a href="http://entekhab.ir/fa/ads/redirect/a/273" target="_blank"><img alt="" style="width:130px;height:103px;border:0px;" src="/files/adv//273_844.jpg"></a></div>
-                <div style="padding-bottom:5px;"><a href="http://entekhab.ir/fa/ads/redirect/a/686" target="_blank"><img alt="" style="width:130px;height:130px;border:0px;" src="/files/adv//881_272.jpg"></a></div>
-                <div style="padding-bottom:5px;"><a href="http://entekhab.ir/fa/ads/redirect/a/612" target="_blank"><img alt="" style="width:130px;height:105px;border:0px;" src="/files/adv//754_119.jpg"></a></div>
-            </div> 					<div class="wrapper"></div> 				</div> 				 				<!-- Start Comments -->
-        <div class="comm_title_box">
-            <img alt="" src="{!! asset('/images/r_sar.gif')!!}" class="fr_img">
-            <a href="#" class="comments_topic">نظرات بینندگان</a>
-            <div class="com_title_n">در انتظار بررسی: <span>۱۰</span>
-            </div> 	<div class="com_title_p">انتشار یافته: <span>۹</span></div>
-            <img alt="" src="{!! asset('/images/sar.gif')!!}" class="fl_img">
-            <div class="wrapper"></div> </div>
-        <div class="comm_container" id="comm_t">
-            <div style="width: 628px;">
-
-
-
-
-                <!--start comment -->
-
-
-
-
-@foreach ($comment as $db)
-
-
-                <div style="width: 100%;margin-bottom: 25px;" id="comm_1928054">
-                    <!-- Start Comment Info Bar -->
-                    <div class="comm_info_bar">
-                        <div class="comm_info">
-                            <img alt="" src="{!! asset('/images/r_c_info.gif')!!}" class="fr_img">
-                            <div class="comm_info_content">
-                                <div class="comm_info_name">حبیب</div> 			                   <span class="comm_sep">|</span> 			                   <div class="comm_info_country"><img title="Iran, Islamic Republic of" alt="Iran, Islamic Republic of" src="{!! asset('/images/ir.gif')!!}" border="0"></div>
-                                <span class="comm_sep">|</span>
-                                <div class="comm_info_date">۱۴:۴۱ - ۱۳۹۴/۰۳/۲۶</div> 			                </div>
-                            <img alt="" src="{!! asset('/images/l_c_info.gif')!!}" class="fr_img">
-                        </div>
-                        <div class="comm_rating">
-                            <div class="rating_down" id="down_rate_1928054">{!! $db -> vote_down !!}</div>
-                            <a onclick="commentDown(1928054);" class="rate_down_link" id="down_button_1928054"></a>
-                            <a onclick="commentUp(1928054);" class="rate_up_link" id="up_button_1928054"></a>
-                            <div class="rating_up" id="up_rate_1928054">{!! $db -> vote_up !!}</div>
-                        </div>
-                        <div class="comm_answer_link">
-                            <a style="cursor:pointer" onclick="renderForm('1928054', '210229')"> 			               پاسخ 			               </a>
-                        </div>
-                        <div class="wrapper"></div>
-                    </div>
-                    <div class="comments">
-                        <img style="padding-left:3px;" src="../images/comments.gif" alt="">{!! $db -> descr !!}</div>
-                    <div id="answer_container_1928054" class="comments_form_container"></div>
-                    <div class="wrapper"></div>
-                    @foreach ($replay as $dbr)
-@if ($db->id == $dbr->comment_id)
-
-                    <div class="comm_answer">
-
-
-                       <!-- <div class="comm_answer_title">پاسخ</div>-->
-
-                        <div class="comm_answer_content">
-                            <div class="comm_answer_line">
-                                <div style="margin-bottom: 5px;">
-                                    <img alt="" src="{!!asset('/images/r_replay.gif')!!}" class="fr_img">
-                                    <div class="comment_answer_c">
-                                        <div class="comment_answer_2">رضا</div> 			                            <span>|</span>
-                                        <img title="Iran, Islamic Republic of" alt="Iran, Islamic Republic of" src="{!!asset('/images/ir.gif')!!}" border="0" class="fr_img"> 			                            <span>|</span>
-                                        <div class="comment_answer_5">۱۶:۲۳ - ۱۳۹۴/۰۳/۲۶</div>
-                                        <div class="wrapper"></div> 			                        </div>
-                                    <img alt="" src="{!!asset('/images/l_replay.gif')!!}" class="fr_img">
-                                    <div class="wrapper"></div> 			                    </div>
-                                <img style="padding-left:3px; border:0px;" src="{!!asset('/images/comments.gif')!!}" alt="">{!! $dbr->descr!!}</div>
-                            <div class="wrapper"></div> 			            </div>
-                        <div class="b_pasokh"></div>
-                        <div class="wrapper"></div>
-                    </div>
-
-
-                    @endif
-                    @endforeach
-
-                    <!-- End Comment Info Bar -->
-
-                    <div id="answer_container_1928054" class="comments_form_container" style="height: 130px; display: block;">
-                        <div style="margin:auto;width:541px;">
-                            <div style="float:right;width:221px;padding-top:1px;padding-right: 10px;">
-                                {!! Form::model($comment, array('method' => 'post',
-                                'action' => array('NewsController@postSreplay', 'comment_id' => $db->id),
-                                'role' => 'form'
-                                )) !!}
-                                <input type="hidden" name="_token" value="{!! csrf_token() !!}">
-
-
-                                <div class="form-group">
-                                    <label for="InputDesc">نظر</label>
-                                    <textarea class="form-control" id="InputDesc" name="descript"></textarea>
-                                </div>
-                                <button type="submit" class="btn btn-default">Replay</button>
-                                    {!! Form::close() !!}
-                                </div></div>
-                        <div class="wrapper"></div></div>
+<br>
+<br>
+<br>
+<div class="news_col2">
+<div class="t_curv">
+    <img alt="" src="{!! asset('images/inn_t_r_box.gif')!!}" class="fr_img">
+    <img alt="" src="{!! asset('images/inn_t_l_box.gif')!!}" class="fl_img">
+    <div class="wrapper"></div> 				</div>
+<div class="news_content">
+    <div style="margin-bottom:15px; padding-right: 10px; padding-left: 10px;"> 	<div class="news_toolbar">
+            <div class="news_nav news_id_c"><span class="news_nav_title">کد خبر: </span>۲۱۰۲۲۹</div>
+            <div class="news_nav news_comments">     		<span class="news_nav_title">تعداد نظرات: </span>     		<a href="#comments">۹ نظر</a> 		</div>
+            <div class="news_nav news_pdate_c"><span class="news_nav_title">تاریخ انتشار: </span>{!!$data->created_at!!}</div> 	<div class="wrapper"></div> 	</div> 	<div class="news_tools">
+            <div class="news_path"> 			<a href="/fa/archive?service_id=1">صفحه نخست</a>  		</div>
+            <div title="نسخه چاپی" class="news_print_botton" onclick="window.open(&quot;/fa/print/210229&quot;, &quot;printwin&quot;,&quot;left=200,top=200,width=820,height=550,toolbar=1,resizable=0,status=0,scrollbars=1&quot;);"></div>
+            <div title="ارسال به دوستان" class="news_emails_botton" onclick="window.open(&quot;/fa/send/210229&quot;, &quot;sendmailwin&quot;,&quot;left=200,top=100,width=370,height=400,toolbar=0,resizable=0,status=0,scrollbars=1&quot;);"></div>
+            <a title="ذخیره" class="news_save_botton" href="/fa/save/210229"></a> 		 		<a href="#" class="news_size_down"></a> 		<a href="#" class="news_size_reset"></a> 		<a href="#" class="news_size_up"></a>
             <div class="wrapper"></div>
+        </div>
+    </div>
+
+
+
+
+    <div style="direction: rtl;">
+        <div class="rutitr" style="text-align:center"></div>
+
+        <div class="title" style="text-align:center;margin-bottom: 10px;margin-top: 4px;">
+            <h1 style="padding: 0px;margin: 0px" class="title">
+                <a href="/fa/news/210229/{!! $data->title !!}">{!! $data->title !!}</a> 	</h1>
+        </div>
+
+
+        <div class="subtitle" style="margin-bottom: 10px;text-align: justify;">{!!$data->abst !!}</a></div>
+        <div class="body" style="text-align: justify;padding: 10px;">
+            <a class="entekhab_lead2" href="/">پایگاه خبری تحلیلی هایتر hightr.con </a>
+            <div align="justify"><br><div align="center"><img style="border: medium none;" alt="{!!$data->abst!!}" src="{!!$data->image!!}" height="357" width="520"><br></div>
+                {!!$data->descr!!}</div>
+            <div class="wrapper"></div>
+        </div>
+
+    </div>
+    <div style="width: 100%;padding-top: 10px;">                     	                     </div>
+    <div style="width: 100%;"> 			            <div style="width: 610px;"> 			            	<div style="width: 200px; float: right;padding-top: 14px;"> 				                <span style="padding: 0px 5px;" class="news_nav_toolbar"><a href="/" style="text-decoration: none;color: #000;"><img alt="" src="{!! asset('/images/home.gif')!!}" border="0"></a></span> 								<span style="padding: 0px 5px;" class="news_nav_toolbar" onclick="window.open(&quot;/fa/send/210229&quot;, &quot;sendmailwin&quot;,&quot;left=200,top=100,width=370,height=300,toolbar=0,resizable=0,status=0,scrollbars=1&quot;);"><img src="{!! asset('/images/email.gif')!!}" border="0" alt="send"></span> 								<span style="padding: 0px 5px;" class="news_nav_toolbar" onclick="window.open(&quot;/fa/print/210229&quot;, &quot;printwin&quot;,&quot;left=200,top=200,width=820,height=550,toolbar=1,resizable=0,status=0,scrollbars=1&quot;);"><img src="{!! asset('/images/print.gif')!!}" border="0" alt="print"></span> 								<a href="/fa/save/210229" style="padding: 0px 5px;" class="news_nav_toolbar"><img src="{!!asset('/images/save.gif')!!}" border="0" alt="print"></a> 							</div>
+            <div class="share_to_con">
+                <a href="http://www.facebook.com/share.php?u=http://www.entekhab.ir/fa/news/{!!$data->title!!}"  title="" rel="nofollow" target="_blank"> <img src="{!! asset('/images/kh_fb.gif')!!}" alt=""> </a>
+                <a href="https://plusone.google.com/_/+1/confirm?hl=en&amp;url=http://entekhab.ir/fa/news/210229/{!!$data->title!!}" rel="nofollow" title="" target="_blank"> <img src="{!! asset('/images/kh_g.gif')!!}" alt=""> </a>
+                <a href="http://twitter.com/home?status={!!$data->title!!}" title="" rel="nofollow" target="_blank"> <img src="{!! asset('/images/kh_tw.gif')!!}" alt=""> </a>
+                <div class="wrapper"></div>
+            </div>
+            <div class="wrapper"></div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="b_curv" style="margin-bottom: 5px;">
+    <img alt="" src="{!! asset('/images/inn_b_r_box.gif')!!}" class="fr_img">
+    <img alt="" src="{!! asset('/images/inn_b_l_box.gif')!!}" class="fl_img">
+    <div class="wrapper"></div> 				</div>
+<div style="width: 580px; margin: 0px auto;">
+    <div class="ads" style="display:none;">
+        <div style="padding-bottom:5px;"><a href="http://entekhab.ir/fa/ads/redirect/a/273" target="_blank"><img alt="" style="width:130px;height:103px;border:0px;" src="/files/adv//273_844.jpg"></a></div>
+        <div style="padding-bottom:5px;"><a href="http://entekhab.ir/fa/ads/redirect/a/686" target="_blank"><img alt="" style="width:130px;height:130px;border:0px;" src="/files/adv//881_272.jpg"></a></div>
+        <div style="padding-bottom:5px;"><a href="http://entekhab.ir/fa/ads/redirect/a/612" target="_blank"><img alt="" style="width:130px;height:105px;border:0px;" src="/files/adv//754_119.jpg"></a></div>
+    </div> 					<div class="wrapper"></div> 				</div> 				 				<!-- Start Comments -->
+<div class="comm_title_box">
+    <img alt="" src="{!! asset('/images/r_sar.gif')!!}" class="fr_img">
+    <a href="#" class="comments_topic">نظرات بینندگان</a>
+    <div class="com_title_n">در انتظار بررسی: <span>۱۰</span>
+    </div> 	<div class="com_title_p">انتشار یافته: <span>۹</span></div>
+    <img alt="" src="{!! asset('/images/sar.gif')!!}" class="fl_img">
+    <div class="wrapper"></div>
+</div>
+
+
+
+
+
+
+
+
+<div class="comm_container" id="comm_t">
+    <div style="width: 628px;">
+
+
+
+
+        <!--start comment -->
+
+
+
+
+        @foreach ($comment as $db)
+
+
+        <div style="width: 100%;margin-bottom: 25px;" id="comm_1928054">
+            <!-- Start Comment Info Bar -->
+            <div class="comm_info_bar">
+                <div class="comm_info">
+                    <img alt="" src="{!! asset('/images/r_c_info.gif')!!}" class="fr_img">
+                    <div class="comm_info_content">
+                        <div class="comm_info_name">حبیب</div> 			                   <span class="comm_sep">|</span> 			                   <div class="comm_info_country"><img title="Iran, Islamic Republic of" alt="Iran, Islamic Republic of" src="{!! asset('/images/ir.gif')!!}" border="0"></div>
+                        <span class="comm_sep">|</span>
+                        <div class="comm_info_date">۱۴:۴۱ - ۱۳۹۴/۰۳/۲۶</div> 			                </div>
+                    <img alt="" src="{!! asset('/images/l_c_info.gif')!!}" class="fr_img">
                 </div>
-                @endforeach
+                <div class="comm_rating">
+                    <div class="rating_down" id="down_rate_1928054">{!! $db -> vote_down !!}</div>
+                    <a onclick="commentDown(1928054);" class="rate_down_link" id="down_button_1928054"></a>
+                    <a onclick="commentUp(1928054);" class="rate_up_link" id="up_button_1928054"></a>
+                    <div class="rating_up" id="up_rate_1928054">{!! $db -> vote_up !!}</div>
+                </div>
+                <div class="comm_answer_link">
+                    <a style="cursor:pointer" onclick="renderForm('1928054', '210229')"> 			               پاسخ 			               </a>
+                </div>
+                <div class="wrapper"></div>
+            </div>
+            <div class="comments">
+                <img style="padding-left:3px;" src="../images/comments.gif" alt="">{!! $db -> descr !!}</div>
+            <div id="answer_container_1928054" class="comments_form_container"></div>
+            <div class="wrapper"></div>
+            @foreach ($replay as $dbr)
+            @if ($db->id == $dbr->comment_id)
+
+            <div class="comm_answer">
+
+
+                <!-- <div class="comm_answer_title">پاسخ</div>-->
+
+                <div class="comm_answer_content">
+                    <div class="comm_answer_line">
+                        <div style="margin-bottom: 5px;">
+                            <img alt="" src="{!!asset('/images/r_replay.gif')!!}" class="fr_img">
+                            <div class="comment_answer_c">
+                                <div class="comment_answer_2">رضا</div> 			                            <span>|</span>
+                                <img title="Iran, Islamic Republic of" alt="Iran, Islamic Republic of" src="{!!asset('/images/ir.gif')!!}" border="0" class="fr_img"> 			                            <span>|</span>
+                                <div class="comment_answer_5">۱۶:۲۳ - ۱۳۹۴/۰۳/۲۶</div>
+                                <div class="wrapper"></div> 			                        </div>
+                            <img alt="" src="{!!asset('/images/l_replay.gif')!!}" class="fr_img">
+                            <div class="wrapper"></div> 			                    </div>
+                        <img style="padding-left:3px; border:0px;" src="{!!asset('/images/comments.gif')!!}" alt="">{!! $dbr->descr!!}</div>
+                    <div class="wrapper"></div> 			            </div>
+                <div class="b_pasokh"></div>
+                <div class="wrapper"></div>
+            </div>
+
+
+            @endif
+            @endforeach
+
+            <!-- End Comment Info Bar -->
+
+            <div id="answer_container_1928054" class="comments_form_container" style="height: 130px; display: block;">
+                <div style="margin:auto;width:541px;">
+                    <div style="float:right;width:221px;padding-top:1px;padding-right: 10px;">
+
+                        {!! Form::model($comment, array('method' => 'post',
+                        'action' => array('NewsController@postSreplay', 'comment_id' => $db->id),
+                        'role' => 'form'
+                        )) !!}
+                        <input type="hidden" name="_token" value="{!! csrf_token() !!}">
+
+
+                        <div class="form-group">
+                            <label for="InputDesc">نظر</label>
+                            <textarea class="form-control" id="InputDesc" name="descript"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-default">Replay</button>
+                        {!! Form::close() !!}
+                    </div></div>
+                <div class="wrapper"></div></div>
+            <div class="wrapper"></div>
+        </div>
+        @endforeach
 
 
 
-                <!-- end of comment -->
+        <!-- end of comment -->
 
         <div class="b_curv" style="margin-bottom: 5px;">
             <img alt="" src="{!! asset('/images/inn_b_r_box.gif')!!}" class="fr_img">
             <img alt="" src="{!! asset('/images/inn_b_l_box.gif')!!}" class="fl_img">
             <div class="wrapper"></div> </div>  <div id="_ff_c"><embed type="application/x-shockwave-flash" src="/fa/comments/embed" width="1" height="1" style="undefined" id="_ff_" name="_ff_" quality="high" allowscriptaccess="always"></div>
-                <script type="text/javascript">eval(function(p,a,c,k,e,r){e=function(c){return c.toString(a)};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('2 6(){g h.i("7")};2 j(0){$.9(\'0\',0,{a:b,c:\'/\'})};2 k(){4 0="";$.l(\'/d/e/m\',{},2(3){3=n(\'(\'+3+\')\');0=3[\'0\'];$.9(\'0\',0,{a:b,c:\'/\'});4 f=6();f.o(0)})};4 5=p q("/d/e/r","7",\'1\',\'1\',\'8\');5.s("t","u");5.v("w");',33,33,'uid||function|data|var|so|get_FF|_ff_||cookie|expires|365|path|fa|comments|ff|return|document|getElementById|setUID|genUID|post|userid|eval|setData|new|SWFObject|embed|addParam|allowScriptAccess|always|write|_ff_c'.split('|'),0,{}))</script>
-                <!-- End Comments --> 				<div class="wrapper"></div>
-                <div style="width: 100%">
+        <script type="text/javascript">eval(function(p,a,c,k,e,r){e=function(c){return c.toString(a)};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('2 6(){g h.i("7")};2 j(0){$.9(\'0\',0,{a:b,c:\'/\'})};2 k(){4 0="";$.l(\'/d/e/m\',{},2(3){3=n(\'(\'+3+\')\');0=3[\'0\'];$.9(\'0\',0,{a:b,c:\'/\'});4 f=6();f.o(0)})};4 5=p q("/d/e/r","7",\'1\',\'1\',\'8\');5.s("t","u");5.v("w");',33,33,'uid||function|data|var|so|get_FF|_ff_||cookie|expires|365|path|fa|comments|ff|return|document|getElementById|setUID|genUID|post|userid|eval|setData|new|SWFObject|embed|addParam|allowScriptAccess|always|write|_ff_c'.split('|'),0,{}))</script>
+        <!-- End Comments --> 				<div class="wrapper"></div>
+        <div style="width: 100%">
+        </div>
+    </div>
 </div>
-                </div>
-            </div>
-        {!! Form::model($data, array('method' => 'post',
-        'action' => array('NewsController@postScommand', 'news_id' => $data -> id),
-        'role' => 'form'
-        )) !!}
-                   <input type="hidden" name="_token" value="{!! csrf_token() !!}">
+
+{!! Form::model($data, array('method' => 'post',
+'action' => array('NewsController@postScommand', 'news_id' => $data -> id),
+'role' => 'form'
+)) !!}
+<input type="hidden" name="_token" value="{!! csrf_token() !!}">
 
 
-                        <div class="form-group">
-                            <label for="InputDesc">نظر</label>
-                            <textarea class="form-control" id="InputDesc" name="descrip"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-default">Comment</button>
-        {!! Form::close() !!}
-                    <script>
-                        CKEDITOR.replace('desc');
-                    </script>
+<div class="form-group">
+    <label for="InputDesc">نظر</label>
+    <textarea class="form-control" id="InputDesc" name="descrip"></textarea>
+</div>
+<button type="submit" class="btn btn-default">Comment</button>
+{!! Form::close() !!}
+<script>
+    CKEDITOR.replace('desc');
+</script>
 
 
 
@@ -244,4 +266,6 @@
 
 
 </div>
+
+
 @endsection
