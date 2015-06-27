@@ -164,11 +164,8 @@
             <div id="answer_container_1928054" class="comments_form_container" style="height: 130px; display: block;">
                 <div style="margin:auto;width:541px;">
                     <div style="float:right;width:221px;padding-top:1px;padding-right: 10px;">
+                        <form class="form-horizontal" role="form" method="POST" action="{{ url('/news/sreplay/$db->id') }}">
 
-                        {!! Form::model($comment, array('method' => 'post',
-                        'action' => array('NewsController@postSreplay', 'comment_id' => $db->id),
-                        'role' => 'form'
-                        )) !!}
                         <input type="hidden" name="_token" value="{!! csrf_token() !!}">
 
 
@@ -177,7 +174,7 @@
                             <textarea class="form-control" id="InputDesc" name="descript"></textarea>
                         </div>
                         <button type="submit" class="btn btn-default">Replay</button>
-                        {!! Form::close() !!}
+                            </form>
                     </div></div>
                 <div class="wrapper"></div></div>
             <div class="wrapper"></div>
@@ -198,11 +195,8 @@
         </div>
     </div>
 </div>
+<form class="form-horizontal" role="form" method="POST" action="{{ url('/news/scommand/$data->id') }}">
 
-{!! Form::model($data, array('method' => 'post',
-'action' => array('NewsController@postScommand', 'news_id' => $data -> id),
-'role' => 'form'
-)) !!}
 <input type="hidden" name="_token" value="{!! csrf_token() !!}">
 
 
@@ -211,7 +205,7 @@
     <textarea class="form-control" id="InputDesc" name="descrip"></textarea>
 </div>
 <button type="submit" class="btn btn-default">Comment</button>
-{!! Form::close() !!}
+</form>
 <script>
     CKEDITOR.replace('desc');
 </script>

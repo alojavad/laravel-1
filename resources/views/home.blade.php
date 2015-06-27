@@ -82,8 +82,9 @@
 </div>
 <hr>
 <div style="align-content: center;">
-
+<div class="col-md-1"style="float: right"></div>
 <div class="boxes_news">
+
 
 
 <div class="col1">
