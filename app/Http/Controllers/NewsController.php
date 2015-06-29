@@ -94,6 +94,7 @@ class NewsController extends Controller {
 	public function edit($id)
 	{
 		//
+
         $news=DB::table('news')->where('id', $id)->first();
         return view('news.editnews')->with('news',$news);
 	}
@@ -112,7 +113,7 @@ class NewsController extends Controller {
         $data = Input::only('title', 'image', 'abst', 'desc','dep','refre','publi');
         if ($data) {
             if (Auth::check()) {
-                DB::table('tag')
+                DB::table('news')
                     ->where('id', $id)
                     ->update(array(
                         'title' => $data['title'],

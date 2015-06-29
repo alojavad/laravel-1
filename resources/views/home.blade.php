@@ -1,132 +1,65 @@
 @extends('app')
 
 @section('content')
-
-
-
-
-
-<nav class="navbar navbar-default">
 <div class="container-fluid">
-
-<div class="navbar-header">
-
-
-    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle Navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-    </button>
+<div class="row">
+    &nbsp;
 </div>
-
-<!--
-<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-<div role="tabpanel">
-
-
-
-<ul class="nav nav-tabs" role="tablist">
-    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">خبری</a></li>
-    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">ورزشی</a></li>
-    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">تکنولوژی</a></li>
-    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">اجتماعی</a></li>
-
-        <li >&nbsp;</li>
-        <li><a href="{!! url('/') !!}">Home</a></li>
-        <li >&nbsp;</li>
-        <li><a href="{!! url('/tag') !!}">Tag</a></li>
-        <li >&nbsp;</li>
-        <li><a href="{!! url('/news/create') !!}">Add News</a></li>
-        <li >&nbsp;</li>
-        <li><button type="button" class="btn btn-lg btn-info" onclick="location.href='{!! route("laravel1") !!}'" >laravel(persian)</button></li>
-        <li >&nbsp;</li>
-    <!--
-        <li ><button type="button" class="btn btn-lg btn-info" ><a href="{!!URL::to('forum')!!}">Forum</a> </button></li>
-        <li >&nbsp;</li>
-        </ul>
+<div class="row">
+    <div class="col-md-1"><img src="{!! asset('/facicon.ico')!!}"></div>
+    <form>
+        <div class="col-md-6 col-md-offset-1">
+            <input type="email" class="form-control" name="email" value=""></div>
+        <div class="col-md-1"><button type="submit" class="btn btn-primary" style="width: 100%">Search</button></div>
+    </form>
+    <div class="col-md-2 col-md-offset-1">
+        <!--
+        <img src="{!! asset('/images/kh_fb.gif')!!}" alt="..." class="img-thumbnail" style="width: 50px;height: 50px;" >
         -->
-
-
-
-
-
-
-
-
-
-
-<ul class="nav navbar-nav navbar-right">
-    @if (Auth::guest())
-    <li><a href="{!! url('/auth/login') !!}">Login</a></li>
-    <li><a href="{!! url('/auth/register') !!}">Register</a></li>
-    @else
-    <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{!! Auth::user()->name !!} <span class="caret"></span></a>
-        <ul class="dropdown-menu" role="menu">
-            <li><a href="{!! url('/') !!}">Home</a></li>
-            <li><a href="{!! url('/news/create') !!}">Add news</a></li>
-            <li><a href="{!! url('/tag') !!}">Tag</a></li>
-            <li><a href="{!! url('/laravel/laravel') !!}">Laravel</a></li>
-            <li><a href="{!! url('/auth/logout') !!}">Logout</a></li>
+        <ul class="nav navbar-nav navbar-right">
+            @if (Auth::guest())
+            <li><a href="{!! url('/auth/login') !!}">Login</a></li>
+            <li><a href="{!! url('/auth/register') !!}">Register</a></li>
+            @else
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{!! Auth::user()->name !!} <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="{!! url('/') !!}">Home</a></li>
+                    <li><a href="{!! url('/news/create') !!}">Add news</a></li>
+                    <li><a href="{!! url('/tag') !!}">Tag</a></li>
+                    <li><a href="{!! url('/laravel/laravel') !!}">Laravel</a></li>
+                    <li><a href="{!! url('/auth/logout') !!}">Logout</a></li>
+                </ul>
+            </li>
+            @endif
         </ul>
-    </li>
-    @endif
-</ul>
-
-
-
-
-
-<div class="col-md-12"  style="align-content: center;">
-
-<div class="col-md-4" style="float: left">
-
-
-
-<div class="col-md-4" style="float: left">
-<div class="ads" style="display:none;">
-    <div style="padding-bottom:5px;"><a href="{!! url('/') !!}" target="_blank">
-            <img alt="" style="width:219px;height:80px;border:0px;" src="{!! asset('/images/890_775.gif')!!}"></a>
     </div>
 </div>
-
-<div class="ads" style="display:none;">
-    <div style="padding-bottom:5px;">
-        <a href="{!! url('/') !!}" target="_blank">
-            <img alt="" style="width:219px;height:80px;border:0px;" src="{!! asset('/images/890_775.gif')!!}"></a></div>
+<div class="row">
+    <ul class="nav nav-tabs nav-pills navbar-brand">
+        <li><a href="#">Home</a></li>
+        <li><a href="laravel/laravel">Laravel</a></li>
+        <li><a href="isis">داعش</a></li>
+        <li><a href="tell">مذاکرات</a></li>
+        <li><a href="https://www.google.com">google</a></li>
+        <li><a href="https://www.facebook.com">facebook</a></li>
+        <li><a href="https://www.twitter.com">twitter</a></li>
+        <li><a href="https://www.linkedin.com">linkedin</a></li>
+        <li><a href="https://www.hotmail.com">hotmail</a></li>
+        <li><a href="https://www.gmail.com">gmail</a></li>
+        <li><a href="https://www.entekhab.com">انتخاب</a></li>
+        <li><a href="https://www.varzesh3.com">varzesh3</a></li>
+        <li><a href="https://www.instigram.com">instigram</a></li>
+        <li><a href="forum">chat</a></li>
+    </ul>
 </div>
-<div class="ads" style="display:none;">
-    <div style="padding-bottom:5px;">
-        <a href="{!! url('/') !!}" target="_blank">
-            <img alt="" style="width:219px;height:80px;border:0px;" src="{!! asset('/images/890_775.gif')!!}"></a></div>
+<div class="row">
+    &nbsp;
 </div>
-<div class="ads" style="display:none;">
-    <div style="padding-bottom:5px;">
-        <a href="{!! url('/') !!}" target="_blank">
-            <img alt="" style="width:219px;height:80px;border:0px;" src="{!! asset('/images/890_775.gif')!!}"></a></div>
-</div>
-<div class="wrapper">
+<!-- vasat -->
+<div class="row">
 
-</div>
-
-<div class="ads" style="display:none;">  	<div style="padding-bottom:5px;"><a href="/" target="_blank"><img alt="" style="width:219px;height:80px;border:0px;" src="{!! asset('/images/890_775.gif')!!}"></a></div> </div>
-<div class="wrapper"> </div>
-<div class="ads" style="display:none;">
-    <div style="padding-bottom:5px;">
-        <a href="{!! url('/') !!}" target="_blank">
-            <img alt="" style="width:219px;height:80px;border:0px;" src="{!! asset('/images/890_775.gif')!!}"></a></div>
-</div>
-<div class="wrapper"></div>
-
-
-<div class="ads" style="display:none;">
-    <div style="padding-bottom:5px;">
-        <a href="{!! url('/') !!}" target="_blank">
-            <img alt="" style="width:219px;height:80px;border:0px;" src="{!! asset('/images/890_775.gif')!!}"></a></div>
-</div>
-    <div class="c_tabs">
-
+    <div class="col-md-6">
         <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
             <ol class="carousel-indicators">
@@ -134,28 +67,28 @@
                 <li data-target="#carousel-example-generic" data-slide-to="1"></li>
                 <li data-target="#carousel-example-generic" data-slide-to="2"></li>
                 <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="4"></li>
             </ol>
 
             <!-- Wrapper for slides -->
             <div class="carousel-inner" role="listbox">
-                @if ($specss!="")
-                <div class="item active" style="height: 250px">
-                    <a href="/news/{!!$specss->id!!}" target="_blank">
-                    <img src="{!! $specss->image !!}" alt="{!! $specss->title !!}"></a>
+                @if ($titr1!="")
+                <div class="item active" style="height: 370px">
+                    <img src="{!!$titr1->image!!}" alt="{!!$titr1->title!!}">
                     <div class="carousel-caption">
-                        {!! $specss->title !!}
+                        {!!$titr1->title!!}
                     </div>
                 </div>
                 @endif
-                @foreach ($specs as $db)
-                <div class="item" style="height: 250px">
-                    <a href="/news/{!!$db->id!!}" target="_blank">
-                    <img src="{!! $db->image !!}" alt="{!! $db->title !!}"></a>
+                @foreach ($titr as $db)
+                <div class="item" style="height: 370px">
+                    <img src="{!!$db->image!!}" alt="{!!$db->title!!}">
                     <div class="carousel-caption">
-                    {!! $db->title !!}
+                        {!!$db->title!!}
                     </div>
                 </div>
                 @endforeach
+
             </div>
 
             <!-- Controls -->
@@ -168,534 +101,332 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
-    <div class="c_tabs_title title_tabs" dir="rtl">
-        <img alt="" src="{!! asset('/images/r_sar.gif')!!}" class="fr_img">
-        <a href="#" class="c_tab1 active_tab" id="most_visited" style="width: 105px;">مهمترین عناوین روز</a>
-        <img alt="" src="{!! asset('/images/sar.gif')!!}" class="fl_img">
-        <div class="wrapper"></div>
     </div>
-    <div class="c_tabs_content content_tabs">
-        <div class="tab_p tab_page1 active_tab_p jquery_odd_background" style="display: block;">
+
+
+    <div class="col-md-3">
+        @if ($spec1 !="")
+        <div class="image">
+            <img src="{!!$spec1->image!!}" style="width: 300px" alt="{!!$spec1->title!!}" class="img-thumbnail">
+            <p  class="hh2">{!!$spec1->title!!}</p>
+        </div>
+        @endif
+        <div class="row">
+            &nbsp;
+        </div>
+
+        <div class="t_curvn">
+            <img src="{!! asset('/images/inn_t_r_box.gif')!!}" alt="..." class="fr_img">
+            <img src="{!! asset('/images/inn_t_l_box.gif')!!}" alt="..." class="fl_img">
+
+
+        </div>
+        <div class="news_contentn" style="height: 100px;">
+            @if ($spec2 !="")
+            <img src="" style="width: 120px" alt="" class="img-thumbnail">
+            <div style="width: 180;float: right">
+
+
+            </div>
+@endif
+        </div>
+
+        <div class="b_curvn" style="margin-bottom: 5px;">
+            <img alt="" src="{!! asset('/images/inn_b_r_box.gif')!!}" class="fr_img">
+            <img alt="" src="{!! asset('/images/inn_b_l_box.gif')!!}" class="fl_img">
+            <div class="wrapper"></div>
+        </div>
+
+
+
+
+    </div>
+    <div class="col-md-3">
+        @if ($spec3 !="")
+        <div class="image">
+            <img src="{!!$spec3->image!!}" style="width: 300px" alt="{!!$spec3->title!!}" class="img-thumbnail">
+            <p  class="hh2">{!!$spec3->title!!}</p>
+        </div>
+        @endif
+        <div class="row">
+            &nbsp;
+        </div>
+
+        <div class="t_curvn">
+            <img src="{!! asset('/images/inn_t_r_box.gif')!!}" alt="..." class="fr_img">
+            <img src="{!! asset('/images/inn_t_l_box.gif')!!}" alt="..." class="fl_img">
+
+
+        </div>
+        <div class="news_contentn" style="height: 100px;">
+            @if ($spec4 !="")
+            <img src="" style="width: 120px" alt="" class="img-thumbnail">
+            <div style="width: 180;float: right">
+
+
+            </div>
+            @endif
+        </div>
+
+        <div class="b_curvn" style="margin-bottom: 5px;">
+            <img alt="" src="{!! asset('/images/inn_b_r_box.gif')!!}" class="fr_img">
+            <img alt="" src="{!! asset('/images/inn_b_l_box.gif')!!}" class="fl_img">
+            <div class="wrapper"></div>
+        </div>
+
+
+
+
+    </div>
+
+
+
+
+
+
+</div>
+
+
+<div class="row">
+    &nbsp;
+</div>
+
+<!-- edame -->
+
+<div class="row">
+    @foreach ($best as $db)
+    <div class="col-md-3">
+        <div class="t_curvn">
+            <img src="{!! asset('/images/inn_t_r_box.gif')!!}" alt="..." class="fr_img">
+            <img src="{!! asset('/images/inn_t_l_box.gif')!!}" alt="..." class="fl_img">
+
+
+        </div>
+        <div class="news_contentn"style="height: 100px">
+
+            <img src="{!!$db->image!!}" style="width: 120px" alt="{!!$db->title!!}" class="img-thumbnail">
+            <div style="width: 180;float: right">
+                {!!$db->title!!}
+
+            </div>
+
+        </div>
+
+        <div class="b_curvn" style="margin-bottom: 5px;">
+            <img alt="" src="{!! asset('/images/inn_b_r_box.gif')!!}" class="fr_img">
+            <img alt="" src="{!! asset('/images/inn_b_l_box.gif')!!}" class="fl_img">
+            <div class="wrapper"></div>
+        </div>
+
+        <div class="row">
+            &nbsp;
+        </div>
+
+
+
+    </div>
+    @endforeach
+
+
+
+</div>
+
+
+<div class="row">
+    &nbsp;
+</div>
+
+<!-- akhar -->
+
+
+
+<div class="row">
+    <div class="col-md-3">
+        <div class="t_curvn">
+            <img src="{!! asset('/images/inn_t_r_box.gif')!!}" alt="..." class="fr_img">
+            <img src="{!! asset('/images/inn_t_l_box.gif')!!}" alt="..." class="fl_img">
+
+
+        </div>
+        <div class="news_contentn">
+
             <div style="width: 100%; height: 100%;">
-                @if ($bests!="")
-                @foreach ($bests as $db)
-                @if (($db->id %2)==0)
+
                 <div style="padding-bottom: 4px; text-align: justify; direction: rtl; padding-left: 4px; padding-right: 4px;">
 
 
+                    @foreach ($lastk as $db)
+                    @if (($db->id %2)==0)
 
 
                     <img src="{!! asset('/images/l_bolet.gif')!!}" style="padding-left: 1px;" alt="">
-                    <a class="title4" href="/news/{!!$db->id!!}" title="12:10 - 1394/03/23" target="_blank">{!! $db->title !!} </a>
+                    <a class="title4" href="/news/{!!$db->id!!}" title="{!!$db->title!!}" target="_blank">{!!$db->title!!}</a>
 
                 </div>
                 @endif
                 @if (($db->id %2)==1)
                 <div style="padding-bottom: 4px; text-align: justify; direction: rtl; padding-left: 4px; padding-right: 4px; background: rgb(237, 237, 237);">
                     <img src="{!! asset('/images/l_bolet.gif')!!}" style="padding-left: 1px;" alt="">
-                    <a class="title4" href="news/{!!$db->id!!}" title="11:22 - 1394/03/23" target="_blank">{!! $db->title !!} </a>
+                    <a class="title4" href="news/{!!$db->id!!}" title="{!!$db->title!!}" target="_blank">{!!$db->title!!} </a>
                 </div>
                 @endif
                 @endforeach
-                @endif
 
 
 
                 <div class="wrapper" style="padding-left: 4px; padding-right: 4px;"></div>
             </div>
-        </div>
-
-
-
-
-    </div>
-    <div class="b_curv1" style="margin-bottom: 5px;">
-        <img alt="" src="{!! asset('/images/inn_b_r_box.gif')!!}" class="fr_img">
-        <img alt="" src="{!! asset('/images/inn_b_l_box.gif')!!}" class="fl_img">
-        <div class="wrapper"></div>
-    </div>
-</div>
-
-<div class="ads" style="display:none;">
-    <div style="padding-bottom:5px;"><a href="/#" target="_blank"><img alt="" style="width:219px;height:80px;border:0px;" src="{!! asset('/images/890_775.gif')!!}"></a>
-    </div>
-</div>
-<div class="wrapper"></div>
-
-<div class="c_tabs">
-    <div class="c_tabs_title title_tabs" dir="rtl">
-        <img alt="" src="{!! asset('/images/r_sar.gif')!!}" class="fr_img">
-        <a href="#" class="c_tab1 active_tab" id="latest">آخرین اخبار</a>
-
-        <img alt="" src="{!! asset('/images/sar.gif')!!}" class="fl_img">
-        <div class="wrapper"></div>
-    </div>
-
-    <div class="c_tabs_content content_tabs jquery_odd_background">
-        <div class="" id="latest_content"> <!-- c_tabs_content1 active_content  -->
-            @if ($lasts!="")
-            @foreach ($lasts as $db)
-            @if (($db->id %2)==0)
-
-            <div style="padding-bottom: 4px; text-align: justify; direction: rtl; padding-left: 4px; padding-right: 4px;">
-                <img src="{!! asset('/images/l_bolet.gif')!!}" style="padding-left: 1px;" alt="">
-                <a class="title4" href="news/{!!$db->id!!}" title="12:44 - 1394/03/23" target="_blank">{!! $db->title !!}</a>
-            </div>
-            @endif
-            @if (($db->id %2)==1)
-
-            <div style="padding-bottom: 4px; text-align: justify; direction: rtl; padding-left: 4px; padding-right: 4px; background: rgb(237, 237, 237);">
-                <img src="{!! asset('/images/l_bolet.gif')!!}" style="padding-left: 1px;" alt="">
-                <a class="title4" href="news/{!!$db->id!!}" title="12:42 - 1394/03/23" target="_blank">{!! $db->title !!}</a>
-            </div>
-            @endif
-            @endforeach
-            @endif
-
-
 
         </div>
 
-
-
-
-
-
-    </div>
-    <div class="b_curv1" style="margin-bottom: 5px;">
-        <img alt="" src="{!! asset('/images/inn_b_r_box.gif')!!}" class="fr_img">
-        <img alt="" src="{!! asset('/images/inn_b_l_box.gif')!!}" class="fl_img">
-        <div class="wrapper"></div>
-    </div>
-</div>
-
-<div class="ads" style="display:none;">
-    <div style="padding-bottom:5px;"><a href="/" target="_blank">
-            <img alt="" style="width:219px;height:80px;border:0px;" src="{!! asset('/images/890_775.gif')!!}"></a>
-    </div>
-</div>
-<div class="wrapper"></div>
-</div>
-<div class="adv_col">
-
-
-
-    <div class="wrapper"></div>
-</div>
-</div>
-
-
-<div class="col-md-4" style="float: left">
-
-
-
-<div class="col-md-4" style="float: left">
-    <div class="ads" style="display:none;">
-        <div style="padding-bottom:5px;"><a href="{!! url('/') !!}" target="_blank">
-                <img alt="" style="width:219px;height:80px;border:0px;" src="{!! asset('/images/890_775.gif')!!}"></a>
-        </div>
-    </div>
-
-    <div class="ads" style="display:none;">
-        <div style="padding-bottom:5px;">
-            <a href="{!! url('/') !!}" target="_blank">
-                <img alt="" style="width:219px;height:80px;border:0px;" src="{!! asset('/images/890_775.gif')!!}"></a></div>
-    </div>
-    <div class="ads" style="display:none;">
-        <div style="padding-bottom:5px;">
-            <a href="{!! url('/') !!}" target="_blank">
-                <img alt="" style="width:219px;height:80px;border:0px;" src="{!! asset('/images/890_775.gif')!!}"></a></div>
-    </div>
-    <div class="ads" style="display:none;">
-        <div style="padding-bottom:5px;">
-            <a href="{!! url('/') !!}" target="_blank">
-                <img alt="" style="width:219px;height:80px;border:0px;" src="{!! asset('/images/890_775.gif')!!}"></a></div>
-    </div>
-    <div class="wrapper">
-
-    </div>
-
-    <div class="ads" style="display:none;">  	<div style="padding-bottom:5px;"><a href="/" target="_blank"><img alt="" style="width:219px;height:80px;border:0px;" src="{!! asset('/images/890_775.gif')!!}"></a></div> </div>
-    <div class="wrapper"> </div>
-    <div class="ads" style="display:none;">
-        <div style="padding-bottom:5px;">
-            <a href="{!! url('/') !!}" target="_blank">
-                <img alt="" style="width:219px;height:80px;border:0px;" src="{!! asset('/images/890_775.gif')!!}"></a></div>
-    </div>
-    <div class="wrapper"></div>
-
-
-    <div class="ads" style="display:none;">
-        <div style="padding-bottom:5px;">
-            <a href="{!! url('/') !!}" target="_blank">
-                <img alt="" style="width:219px;height:80px;border:0px;" src="{!! asset('/images/890_775.gif')!!}"></a></div>
-    </div>
-    <div class="c_tabs">
-
-        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="3"></li>
-            </ol>
-
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner" role="listbox">
-                @if ($speckk!="")
-                <div class="item active" style="height: 250px">
-                    <a href="/news/{!!$speckk->id!!}" target="_blank">
-                        <img src="{!! $speckk->image !!}" alt="{!! $speckk->title !!}"></a>
-                    <div class="carousel-caption">
-                        {!! $speckk->title !!}
-                    </div>
-                </div>
-                @endif
-                @foreach ($speck as $db)
-                <div class="item" style="height: 250px">
-                    <a href="/news/{!!$db->id!!}" target="_blank">
-                        <img src="{!! $db->image !!}" alt="{!! $db->title !!}"></a>
-                    <div class="carousel-caption">
-                        {!! $db->title !!}
-                    </div>
-                </div>
-                @endforeach
-            </div>
-
-            <!-- Controls -->
-            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
-        <div class="c_tabs_title title_tabs" dir="rtl">
-            <img alt="" src="{!! asset('/images/r_sar.gif')!!}" class="fr_img">
-            <a href="#" class="c_tab1 active_tab" id="most_visited" style="width: 105px;">مهمترین عناوین روز</a>
-            <img alt="" src="{!! asset('/images/sar.gif')!!}" class="fl_img">
-            <div class="wrapper"></div>
-        </div>
-        <div class="c_tabs_content content_tabs">
-            <div class="tab_p tab_page1 active_tab_p jquery_odd_background" style="display: block;">
-                <div style="width: 100%; height: 100%;">
-                    @if ($bestk!="")
-                    @foreach ($bestk as $db)
-                    @if (($db->id %2)==0)
-                    <div style="padding-bottom: 4px; text-align: justify; direction: rtl; padding-left: 4px; padding-right: 4px;">
-
-
-
-
-                        <img src="{!! asset('/images/l_bolet.gif')!!}" style="padding-left: 1px;" alt="">
-                        <a class="title4" href="/news/{!!$db->id!!}" title="12:10 - 1394/03/23" target="_blank">{!! $db->title !!} </a>
-
-                    </div>
-                    @endif
-                    @if (($db->id %2)==1)
-                    <div style="padding-bottom: 4px; text-align: justify; direction: rtl; padding-left: 4px; padding-right: 4px; background: rgb(237, 237, 237);">
-                        <img src="{!! asset('/images/l_bolet.gif')!!}" style="padding-left: 1px;" alt="">
-                        <a class="title4" href="news/{!!$db->id!!}" title="11:22 - 1394/03/23" target="_blank">{!! $db->title !!} </a>
-                    </div>
-                    @endif
-                    @endforeach
-                    @endif
-
-
-
-                    <div class="wrapper" style="padding-left: 4px; padding-right: 4px;"></div>
-                </div>
-            </div>
-
-
-
-
-        </div>
-        <div class="b_curv1" style="margin-bottom: 5px;">
+        <div class="b_curvn" style="margin-bottom: 5px;">
             <img alt="" src="{!! asset('/images/inn_b_r_box.gif')!!}" class="fr_img">
             <img alt="" src="{!! asset('/images/inn_b_l_box.gif')!!}" class="fl_img">
             <div class="wrapper"></div>
         </div>
+
+
     </div>
 
-    <div class="ads" style="display:none;">
-        <div style="padding-bottom:5px;"><a href="/#" target="_blank"><img alt="" style="width:219px;height:80px;border:0px;" src="{!! asset('/images/890_775.gif')!!}"></a>
+
+    <div class="col-md-3">
+        <div class="t_curvn">
+            <img src="{!! asset('/images/inn_t_r_box.gif')!!}" alt="..." class="fr_img">
+            <img src="{!! asset('/images/inn_t_l_box.gif')!!}" alt="..." class="fl_img">
+
+
         </div>
-    </div>
-    <div class="wrapper"></div>
+        <div class="news_contentn">
 
-    <div class="c_tabs">
-        <div class="c_tabs_title title_tabs" dir="rtl">
-            <img alt="" src="{!! asset('/images/r_sar.gif')!!}" class="fr_img">
-            <a href="#" class="c_tab1 active_tab" id="latest">آخرین اخبار</a>
-
-            <img alt="" src="{!! asset('/images/sar.gif')!!}" class="fl_img">
-            <div class="wrapper"></div>
-        </div>
-
-        <div class="c_tabs_content content_tabs jquery_odd_background">
-            <div class="" id="latest_content"> <!-- c_tabs_content1 active_content  -->
-                @if ($lastk!="")
-                @foreach ($lastk as $db)
-                @if (($db->id %2)==0)
+            <div style="width: 100%; height: 100%;">
 
                 <div style="padding-bottom: 4px; text-align: justify; direction: rtl; padding-left: 4px; padding-right: 4px;">
+
+
+                    @foreach ($lasts as $db)
+                    @if (($db->id %2)==0)
+
+
                     <img src="{!! asset('/images/l_bolet.gif')!!}" style="padding-left: 1px;" alt="">
-                    <a class="title4" href="news/{!!$db->id!!}" title="12:44 - 1394/03/23" target="_blank">{!! $db->title !!}</a>
+                    <a class="title4" href="/news/{!!$db->id!!}" title="{!!$db->title!!}" target="_blank">{!!$db->title!!}</a>
+
                 </div>
                 @endif
                 @if (($db->id %2)==1)
-
                 <div style="padding-bottom: 4px; text-align: justify; direction: rtl; padding-left: 4px; padding-right: 4px; background: rgb(237, 237, 237);">
                     <img src="{!! asset('/images/l_bolet.gif')!!}" style="padding-left: 1px;" alt="">
-                    <a class="title4" href="news/{!!$db->id!!}" title="12:42 - 1394/03/23" target="_blank">{!! $db->title !!}</a>
+                    <a class="title4" href="news/{!!$db->id!!}" title="{!!$db->title!!}" target="_blank">{!!$db->title!!} </a>
                 </div>
                 @endif
                 @endforeach
-                @endif
 
 
 
+                <div class="wrapper" style="padding-left: 4px; padding-right: 4px;"></div>
             </div>
 
-
-
-
-
-
         </div>
-        <div class="b_curv1" style="margin-bottom: 5px;">
+
+        <div class="b_curvn" style="margin-bottom: 5px;">
             <img alt="" src="{!! asset('/images/inn_b_r_box.gif')!!}" class="fr_img">
             <img alt="" src="{!! asset('/images/inn_b_l_box.gif')!!}" class="fl_img">
             <div class="wrapper"></div>
         </div>
-    </div>
 
-    <div class="ads" style="display:none;">
-        <div style="padding-bottom:5px;"><a href="/" target="_blank">
-                <img alt="" style="width:219px;height:80px;border:0px;" src="{!! asset('/images/890_775.gif')!!}"></a>
-        </div>
-    </div>
-    <div class="wrapper"></div>
-</div>
-<div class="adv_col">
-
-
-
-    <div class="wrapper"></div>
-</div>
-</div>
-
-
-<div class="col-md-4" style="float: left">
-
-
-
-<div class="col-md-4" style="float: left">
-    <div class="ads" style="display:none;">
-        <div style="padding-bottom:5px;"><a href="{!! url('/') !!}" target="_blank">
-                <img alt="" style="width:219px;height:80px;border:0px;" src="{!! asset('/images/890_775.gif')!!}"></a>
-        </div>
-    </div>
-
-    <div class="ads" style="display:none;">
-        <div style="padding-bottom:5px;">
-            <a href="{!! url('/') !!}" target="_blank">
-                <img alt="" style="width:219px;height:80px;border:0px;" src="{!! asset('/images/890_775.gif')!!}"></a></div>
-    </div>
-    <div class="ads" style="display:none;">
-        <div style="padding-bottom:5px;">
-            <a href="{!! url('/') !!}" target="_blank">
-                <img alt="" style="width:219px;height:80px;border:0px;" src="{!! asset('/images/890_775.gif')!!}"></a></div>
-    </div>
-    <div class="ads" style="display:none;">
-        <div style="padding-bottom:5px;">
-            <a href="{!! url('/') !!}" target="_blank">
-                <img alt="" style="width:219px;height:80px;border:0px;" src="{!! asset('/images/890_775.gif')!!}"></a></div>
-    </div>
-    <div class="wrapper">
 
     </div>
-
-    <div class="ads" style="display:none;">  	<div style="padding-bottom:5px;"><a href="/" target="_blank"><img alt="" style="width:219px;height:80px;border:0px;" src="{!! asset('/images/890_775.gif')!!}"></a></div> </div>
-    <div class="wrapper"> </div>
-    <div class="ads" style="display:none;">
-        <div style="padding-bottom:5px;">
-            <a href="{!! url('/') !!}" target="_blank">
-                <img alt="" style="width:219px;height:80px;border:0px;" src="{!! asset('/images/890_775.gif')!!}"></a></div>
-    </div>
-    <div class="wrapper"></div>
-
-
-    <div class="ads" style="display:none;">
-        <div style="padding-bottom:5px;">
-            <a href="{!! url('/') !!}" target="_blank">
-                <img alt="" style="width:219px;height:80px;border:0px;" src="{!! asset('/images/890_775.gif')!!}"></a></div>
-    </div>
-    <div class="c_tabs">
-
-        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="3"></li>
-            </ol>
-
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner" role="listbox">
-                @if ($spectt!="")
-                <div class="item active" style="height: 250px">
-                    <a href="/news/{!!$spectt->id!!}" target="_blank">
-                        <img src="{!! $spectt->image !!}" alt="{!! $spectt->title !!}"></a>
-                    <div class="carousel-caption">
-                        {!! $spectt->title !!}
-                    </div>
-                </div>
-                @endif
-                @foreach ($spect as $db)
-                <div class="item" style="height: 250px">
-                    <a href="/news/{!!$db->id!!}" target="_blank">
-                        <img src="{!! $db->image !!}" alt="{!! $db->title !!}"></a>
-                    <div class="carousel-caption">
-                        {!! $db->title !!}
-                    </div>
-                </div>
-                @endforeach
-            </div>
-
-            <!-- Controls -->
-            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
-        <div class="c_tabs_title title_tabs" dir="rtl">
-            <img alt="" src="{!! asset('/images/r_sar.gif')!!}" class="fr_img">
-            <a href="#" class="c_tab1 active_tab" id="most_visited" style="width: 105px;">مهمترین عناوین روز</a>
-            <img alt="" src="{!! asset('/images/sar.gif')!!}" class="fl_img">
-            <div class="wrapper"></div>
-        </div>
-        <div class="c_tabs_content content_tabs">
-            <div class="tab_p tab_page1 active_tab_p jquery_odd_background" style="display: block;">
-                <div style="width: 100%; height: 100%;">
-                    @if ($bestt!="")
-                    @foreach ($bestt as $db)
-                    @if (($db->id %2)==0)
-                    <div style="padding-bottom: 4px; text-align: justify; direction: rtl; padding-left: 4px; padding-right: 4px;">
-
-
-
-
-                        <img src="{!! asset('/images/l_bolet.gif')!!}" style="padding-left: 1px;" alt="">
-                        <a class="title4" href="/news/{!!$db->id!!}" title="12:10 - 1394/03/23" target="_blank">{!! $db->title !!} </a>
-
-                    </div>
-                    @endif
-                    @if (($db->id %2)==1)
-                    <div style="padding-bottom: 4px; text-align: justify; direction: rtl; padding-left: 4px; padding-right: 4px; background: rgb(237, 237, 237);">
-                        <img src="{!! asset('/images/l_bolet.gif')!!}" style="padding-left: 1px;" alt="">
-                        <a class="title4" href="news/{!!$db->id!!}" title="11:22 - 1394/03/23" target="_blank">{!! $db->title !!} </a>
-                    </div>
-                    @endif
-                    @endforeach
-                    @endif
-
-
-
-                    <div class="wrapper" style="padding-left: 4px; padding-right: 4px;"></div>
-                </div>
-            </div>
-
-
+    <div class="col-md-3">
+        <div class="t_curvn">
+            <img src="{!! asset('/images/inn_t_r_box.gif')!!}" alt="..." class="fr_img">
+            <img src="{!! asset('/images/inn_t_l_box.gif')!!}" alt="..." class="fl_img">
 
 
         </div>
-        <div class="b_curv1" style="margin-bottom: 5px;">
-            <img alt="" src="{!! asset('/images/inn_b_r_box.gif')!!}" class="fr_img">
-            <img alt="" src="{!! asset('/images/inn_b_l_box.gif')!!}" class="fl_img">
-            <div class="wrapper"></div>
-        </div>
-    </div>
+        <div class="news_contentn">
 
-    <div class="ads" style="display:none;">
-        <div style="padding-bottom:5px;"><a href="/#" target="_blank"><img alt="" style="width:219px;height:80px;border:0px;" src="{!! asset('/images/890_775.gif')!!}"></a>
-        </div>
-    </div>
-    <div class="wrapper"></div>
-
-    <div class="c_tabs">
-        <div class="c_tabs_title title_tabs" dir="rtl">
-            <img alt="" src="{!! asset('/images/r_sar.gif')!!}" class="fr_img">
-            <a href="#" class="c_tab1 active_tab" id="latest">آخرین اخبار</a>
-
-            <img alt="" src="{!! asset('/images/sar.gif')!!}" class="fl_img">
-            <div class="wrapper"></div>
-        </div>
-
-        <div class="c_tabs_content content_tabs jquery_odd_background">
-            <div class="" id="latest_content"> <!-- c_tabs_content1 active_content  -->
-                @if ($lastt!="")
-                @foreach ($lastt as $db)
-                @if (($db->id %2)==0)
+            <div style="width: 100%; height: 100%;">
 
                 <div style="padding-bottom: 4px; text-align: justify; direction: rtl; padding-left: 4px; padding-right: 4px;">
+
+
+                    @foreach ($lastt as $db)
+                    @if (($db->id %2)==0)
+
+
                     <img src="{!! asset('/images/l_bolet.gif')!!}" style="padding-left: 1px;" alt="">
-                    <a class="title4" href="news/{!!$db->id!!}" title="12:44 - 1394/03/23" target="_blank">{!! $db->title !!}</a>
+                    <a class="title4" href="/news/{!!$db->id!!}" title="{!!$db->title!!}" target="_blank">{!!$db->title!!}</a>
+
                 </div>
                 @endif
                 @if (($db->id %2)==1)
-
                 <div style="padding-bottom: 4px; text-align: justify; direction: rtl; padding-left: 4px; padding-right: 4px; background: rgb(237, 237, 237);">
                     <img src="{!! asset('/images/l_bolet.gif')!!}" style="padding-left: 1px;" alt="">
-                    <a class="title4" href="news/{!!$db->id!!}" title="12:42 - 1394/03/23" target="_blank">{!! $db->title !!}</a>
+                    <a class="title4" href="news/{!!$db->id!!}" title="{!!$db->title!!}" target="_blank">{!!$db->title!!} </a>
                 </div>
                 @endif
                 @endforeach
-                @endif
 
 
 
+                <div class="wrapper" style="padding-left: 4px; padding-right: 4px;"></div>
             </div>
 
-
-
-
-
-
         </div>
-        <div class="b_curv1" style="margin-bottom: 5px;">
+
+        <div class="b_curvn" style="margin-bottom: 5px;">
             <img alt="" src="{!! asset('/images/inn_b_r_box.gif')!!}" class="fr_img">
             <img alt="" src="{!! asset('/images/inn_b_l_box.gif')!!}" class="fl_img">
             <div class="wrapper"></div>
         </div>
-    </div>
 
-    <div class="ads" style="display:none;">
-        <div style="padding-bottom:5px;"><a href="/" target="_blank">
-                <img alt="" style="width:219px;height:80px;border:0px;" src="{!! asset('/images/890_775.gif')!!}"></a>
+
+    </div>
+    <div class="col-md-3">
+        <div class="t_curvn">
+            <img src="{!! asset('/images/inn_t_r_box.gif')!!}" alt="..." class="fr_img">
+            <img src="{!! asset('/images/inn_t_l_box.gif')!!}" alt="..." class="fl_img">
+
+
         </div>
+        <div class="news_contentn">
+
+            <div style="width: 100%; height: 100%;">
+
+                <div style="padding-bottom: 4px; text-align: justify; direction: rtl; padding-left: 4px; padding-right: 4px;">
+
+
+                    @foreach ($lastso as $db)
+                    @if (($db->id %2)==0)
+
+
+                    <img src="{!! asset('/images/l_bolet.gif')!!}" style="padding-left: 1px;" alt="">
+                    <a class="title4" href="/news/{!!$db->id!!}" title="{!!$db->title!!}" target="_blank">{!!$db->title!!}</a>
+
+                </div>
+                @endif
+                @if (($db->id %2)==1)
+                <div style="padding-bottom: 4px; text-align: justify; direction: rtl; padding-left: 4px; padding-right: 4px; background: rgb(237, 237, 237);">
+                    <img src="{!! asset('/images/l_bolet.gif')!!}" style="padding-left: 1px;" alt="">
+                    <a class="title4" href="news/{!!$db->id!!}" title="{!!$db->title!!}" target="_blank">{!!$db->title!!} </a>
+                </div>
+                @endif
+                @endforeach
+
+
+
+                <div class="wrapper" style="padding-left: 4px; padding-right: 4px;"></div>
+            </div>
+
+        </div>
+
+        <div class="b_curvn" style="margin-bottom: 5px;">
+            <img alt="" src="{!! asset('/images/inn_b_r_box.gif')!!}" class="fr_img">
+            <img alt="" src="{!! asset('/images/inn_b_l_box.gif')!!}" class="fl_img">
+            <div class="wrapper"></div>
+        </div>
+
+
     </div>
-    <div class="wrapper"></div>
-</div>
-<div class="adv_col">
-
-
-
-    <div class="wrapper"></div>
-</div>
-</div>
-
-
-
 
 
 
@@ -705,7 +436,8 @@
 </div>
 
 
-</nav>
+
+
 
 
 

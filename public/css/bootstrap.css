@@ -7461,3 +7461,47 @@ input.butt {
 .c_tabs {
     width: 340px;
 }
+
+.b_curv1 {
+    width: 160px;
+    height: 10px;
+    overflow: hidden;
+    background: url('../images/bg_b_curv.gif') repeat-x;
+}
+
+.t_curvn {
+    width: 299px;
+    height: 10px;
+    overflow: hidden;
+    background: url('../images/bg_t_curv.gif') repeat-x;
+}
+
+.b_curvn {
+    width: 299px;
+    height: 10px;
+    overflow: hidden;
+    background: url('../images/bg_b_curv.gif') repeat-x;
+}
+
+.news_contentn {
+    width: 299px;
+    border-right: 1px solid #DCDCDC;
+    border-left: 1px solid #DCDCDC;
+    padding: 0px 9px;
+    background: #FFF;
+}
+
+
+.image {
+    position: relative;
+    width: 100%; /* for IE 6 */
+}
+
+.hh2 {
+    position: absolute;
+    top: 150px;
+    left: 30px;
+    color: red;
+    font-size: 25px;
+    width: 300px;
+}

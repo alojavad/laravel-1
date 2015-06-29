@@ -8,15 +8,13 @@
 
 
 
+    <form class="form-horizontal" role="form" method="post" action="{{ URL::to('/') }}/news/{!!$news->id!!}">
+        <input type="hidden" name="_method" value="put" />
 
-    {!! Form::model($news, array('method' => 'put',
-    'action' => array('NewsController@update', 'news_id' => $news -> id),
-    'role' => 'form'
-    )) !!}
     <input type="hidden" name="_token" value="{!! csrf_token() !!}">
     <div class="form-group">
         <label for="InputTitle">Title</label>
-        <input type="text" class="form-control" id="InputTitle" name="title" placeholder="Title" value="{!!$news->title!!}">
+        <textarea class="form-control" id="InputTitle" name="title" placeholder="Title" rows="1">{!!$news->title!!}</textarea>
     </div>
     <div class="form-group">
         <label for="InputType">Type</label>
@@ -24,6 +22,7 @@
             <option value="1">خبری</option>
             <option value="2">ورزشی</option>
             <option value="3">تکنولوژی</option>
+            <option value="4">اجتماعی</option>
         </select>
     </div>
     <div class="form-group">
@@ -32,14 +31,15 @@
             <option value="1">عدم انتشار</option>
             <option value="2">اخرین اخبار</option>
             <option value="3">مهمترین اخبار</option>
-            <option value="4">خبر ویژه</option>
-            <option value="5">تیتر یک</option>
-            <option value="6">یادداشت</option>
-            <option value="7">گزارش</option>
-            <option value="8">گفتگو</option>
-            <option value="9">نوع 1</option>
-            <option value="10">نوع 2</option>
-            <option value="11">نوع 3</option>
+            <option value="4">خبر ویژه 1</option>
+            <option value="5">خبر ویژه 2</option>
+            <option value="6">تیتر یک</option>
+            <option value="7">یادداشت</option>
+            <option value="8">گزارش</option>
+            <option value="9">گفتگو</option>
+            <option value="10">نوع 1</option>
+            <option value="11">نوع 2</option>
+            <option value="12">نوع 3</option>
         </select>
     </div>
     <div class="form-group">
@@ -60,14 +60,15 @@
         <textarea class="form-control" id="InputDesc" name="desc" rows="10">{!!$news->descr!!}</textarea>
     </div>
     <button type="submit" class="btn btn-default">Update</button>
-    {!! Form::close() !!}
+</form>
     <hr>
     Delete this record
     <br>
-    {!! Form::open(array('action' => array('NewsController@destroy', $news -> id), 'method' => 'delete')) !!}
-    {!! Form::submit('Delete', array('class' => 'btn btn-default')) !!}
-    {!! Form::close() !!}
-
+    <form class="form-horizontal" role="form" method="post" action="{{ URL::to('/') }}/news/{!!$news->id!!}">
+        <input type="hidden" name="_method" value="delete" />
+        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+        <button type="submit" class="btn btn-default">Delete</button>
+        </form>
 
     <br>
     <br>

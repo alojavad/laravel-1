@@ -1,7 +1,239 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c0b5d198-644a-4f80-8508-b371db833ddd" name="Default" comment="" />
+    <list default="true" id="c0b5d198-644a-4f80-8508-b371db833ddd" name="Default" comment="">
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\app\Http\Controllers\HomeController.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\app\Http\Controllers\NewsController.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\Laravel-5.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\css\app.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\css\bootstrap-theme.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\css\bootstrap-theme.css.map" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\css\bootstrap-theme.min.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\css\bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\css\bootstrap.css.map" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\css\bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\css\laravel.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\css\mcc.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\fonts\glyphicons-halflings-regular.eot" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\fonts\glyphicons-halflings-regular.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\fonts\glyphicons-halflings-regular.ttf" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\fonts\glyphicons-halflings-regular.woff" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\fonts\glyphicons-halflings-regular.woff2" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\images\707.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\images\707.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\images\772_172.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\images\856_357.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\images\857_677.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\images\890_775.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\images\Header-graphic03.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\images\b_bg_cycle.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\images\b_kh_v.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\images\b_l_cycle.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\images\b_pasokh.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\images\b_r_cycle.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\images\bg_b_curv.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\images\bg_c_info.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\images\bg_sar.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\images\bg_t_curv.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\images\btn_r_cycle.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\images\comments.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\images\dot.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\images\email.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\images\entekhab_in_tic.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\images\home.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\images\images (1).jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\images\inn_b_l_box.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\images\inn_b_r_box.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\images\inn_t_l_box.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\images\inn_t_r_box.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\images\ir.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\images\kh_fb.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\images\kh_g.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\images\kh_tw.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\images\kh_v_sar.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\images\l_bolet.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\images\l_mi.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\images\l_po.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\images\l_replay.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\images\logo-s.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\images\print.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\images\r_c_info.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\images\r_mi.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\images\r_po.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\images\r_replay.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\images\r_sar.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\images\sar.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\images\sar_pasokh.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\images\save.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\images\sp_b_cycle_titr1.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\images\sp_r_cycle.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\images\text_resize.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\images\tik.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\images\titr_yek.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\jquery-1.11.2.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\jquery.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\moment.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\npm.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\scripts.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\langs\readme.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\license.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\plugins\advlist\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\plugins\anchor\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\plugins\autolink\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\plugins\autoresize\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\plugins\autosave\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\plugins\bbcode\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\plugins\charmap\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\plugins\code\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\plugins\colorpicker\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\plugins\contextmenu\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\plugins\directionality\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\plugins\emoticons\img\smiley-cool.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\plugins\emoticons\img\smiley-cry.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\plugins\emoticons\img\smiley-embarassed.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\plugins\emoticons\img\smiley-foot-in-mouth.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\plugins\emoticons\img\smiley-frown.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\plugins\emoticons\img\smiley-innocent.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\plugins\emoticons\img\smiley-kiss.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\plugins\emoticons\img\smiley-laughing.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\plugins\emoticons\img\smiley-money-mouth.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\plugins\emoticons\img\smiley-sealed.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\plugins\emoticons\img\smiley-smile.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\plugins\emoticons\img\smiley-surprised.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\plugins\emoticons\img\smiley-tongue-out.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\plugins\emoticons\img\smiley-undecided.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\plugins\emoticons\img\smiley-wink.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\plugins\emoticons\img\smiley-yell.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\plugins\emoticons\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\plugins\example\dialog.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\plugins\example\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\plugins\example_dependency\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\plugins\fullpage\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\plugins\fullscreen\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\plugins\hr\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\plugins\image\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\plugins\importcss\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\plugins\insertdatetime\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\plugins\layer\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\plugins\legacyoutput\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\plugins\link\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\plugins\lists\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\plugins\media\moxieplayer.swf" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\plugins\media\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\plugins\nonbreaking\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\plugins\noneditable\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\plugins\pagebreak\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\plugins\paste\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\plugins\preview\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\plugins\print\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\plugins\save\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\plugins\searchreplace\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\plugins\spellchecker\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\plugins\tabfocus\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\plugins\table\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\plugins\template\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\plugins\textcolor\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\plugins\textpattern\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\plugins\visualblocks\css\visualblocks.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\plugins\visualblocks\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\plugins\visualchars\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\plugins\wordcount\plugin.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\skins\lightgray\content.inline.min.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\skins\lightgray\content.min.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\skins\lightgray\fonts\readme.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\skins\lightgray\fonts\tinymce-small.dev.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\skins\lightgray\fonts\tinymce-small.eot" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\skins\lightgray\fonts\tinymce-small.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\skins\lightgray\fonts\tinymce-small.ttf" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\skins\lightgray\fonts\tinymce-small.woff" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\skins\lightgray\fonts\tinymce.dev.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\skins\lightgray\fonts\tinymce.eot" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\skins\lightgray\fonts\tinymce.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\skins\lightgray\fonts\tinymce.ttf" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\skins\lightgray\fonts\tinymce.woff" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\skins\lightgray\img\anchor.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\skins\lightgray\img\loader.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\skins\lightgray\img\object.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\skins\lightgray\img\trans.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\skins\lightgray\skin.ie7.min.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\skins\lightgray\skin.min.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\themes\modern\theme.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\js\tinymce\tinymce.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\public\laravel4-hello-72dpi.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\resources\views\app.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\resources\views\auth\login.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\resources\views\auth\password.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\resources\views\auth\register.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\resources\views\auth\reset.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\resources\views\emails\auth\reminder.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\resources\views\emails\password.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\resources\views\errors\503.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\resources\views\home.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\resources\views\laravel\artisan.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\resources\views\laravel\authentication.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\resources\views\laravel\billing.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\resources\views\laravel\bus.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\resources\views\laravel\cache.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\resources\views\laravel\collections.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\resources\views\laravel\commands.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\resources\views\laravel\configuration.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\resources\views\laravel\container.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\resources\views\laravel\contracts.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\resources\views\laravel\contributions.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\resources\views\laravel\controllers.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\resources\views\laravel\database.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\resources\views\laravel\elixir.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\resources\views\laravel\eloquent.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\resources\views\laravel\encryption.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\resources\views\laravel\envoy.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\resources\views\laravel\errors.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\resources\views\laravel\events.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\resources\views\laravel\extending.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\resources\views\laravel\facades.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\resources\views\laravel\filesystem.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\resources\views\laravel\hashing.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\resources\views\laravel\helpers.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\resources\views\laravel\homestead.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\resources\views\laravel\laravel.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\resources\views\laravel\lifecycle.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\resources\views\laravel\localization.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\resources\views\laravel\mail.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\resources\views\laravel\middleware.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\resources\views\laravel\migrations.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\resources\views\laravel\packages.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\resources\views\laravel\pagination.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\resources\views\laravel\providers.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\resources\views\laravel\queries.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\resources\views\laravel\queues.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\resources\views\laravel\redis.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\resources\views\laravel\releases.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\resources\views\laravel\requests.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\resources\views\laravel\responses.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\resources\views\laravel\routing.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\resources\views\laravel\schema.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\resources\views\laravel\session.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\resources\views\laravel\structure.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\resources\views\laravel\templates.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\resources\views\laravel\testing.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\resources\views\laravel\upgrade.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\resources\views\laravel\validation.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\resources\views\laravel\views.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\resources\views\layout\lnews.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\resources\views\layout\userbar.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\resources\views\master.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\resources\views\modals\login.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\resources\views\news\createnews.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\resources\views\news\editnews.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\resources\views\news\listnews.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\resources\views\news\shownews.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\resources\views\tags\edittag.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\resources\views\tags\tags.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\resources\views\vendor\.gitkeep" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\new\laravel-1\resources\views\welcome.blade.php" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="laravel-1.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,15 +259,6 @@
         <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
           <provider selected="true" editor-type-id="text-editor">
             <state line="33" column="40" selection-start="901" selection-end="901" vertical-scroll-proportion="-15.692307" vertical-offset="0" max-vertical-offset="510">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home.blade.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="38" selection-start="436" selection-end="436" vertical-scroll-proportion="-11.769231" vertical-offset="0" max-vertical-offset="12223">
               <folding />
             </state>
           </provider>
@@ -128,46 +351,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="laravel-1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="laravel-1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="laravel-1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="laravel-1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="laravel-1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="auth" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -356,23 +539,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="38" selection-start="436" selection-end="436" vertical-scroll-proportion="-11.769231" vertical-offset="0" max-vertical-offset="12818">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="36" selection-start="194" selection-end="194" vertical-scroll-proportion="-4.576923" vertical-offset="0" max-vertical-offset="799">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/auth/login.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.07890223" vertical-offset="46" max-vertical-offset="1139">
           <folding />
         </state>
       </provider>

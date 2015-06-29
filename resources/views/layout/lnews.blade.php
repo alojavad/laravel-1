@@ -19,7 +19,13 @@
     <![endif]-->
 </head>
 <body>
-@yield('content');
+<div style="width: 100%; height: 100%;">
+
+
+
+
+@yield('content')
+
 <script src="{!! asset('js/jquery-1.11.2.min.js') !!}" ></script>
 <script src="{!! asset('js/bootstrap.js') !!}" ></script>
 

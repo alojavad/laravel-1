@@ -22,10 +22,32 @@
 	<![endif]-->
 </head>
 <body>
-<div class="container">
-    <img src="{!! asset('/images/707.png') !!}" class="" alt="Responsive image" height="150px" width="100%">
+<!-- Button trigger modal -->
+<nav class="navbar navbar-default">
+<div class="container-fluid">
+
+<div class="navbar-header">
+
+
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle Navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </button>
+</div>
+
+
+
+
+
+
+
+
+
 @yield('content')
 
+</nav>
 
     <footer class="col-md-12">
 

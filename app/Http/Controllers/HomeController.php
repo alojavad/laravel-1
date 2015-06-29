@@ -31,6 +31,7 @@ class HomeController extends Controller {
 		//$this->middleware('auth');
 	}
 
+
 	/**
 	 * Show the application dashboard to the user.
 	 *
@@ -38,21 +39,20 @@ class HomeController extends Controller {
 	 */
 	public function index()
 	{
+        $titr1 = DB::table('news')->where('publi',6)->orderBy('created_at', 'desc')->first();
+        $titr = DB::table('news')->where('publi',6)->orderBy('created_at', 'desc')->take(4)->get();
+        $spec1 = DB::table('news')->where('publi',4)->orderBy('created_at', 'desc')->first();
+        $spec2 = DB::table('news')->where('publi',4)->orderBy('created_at', 'desc')->skip(1)->take(1)->get();
+        $spec3 = DB::table('news')->where('publi',5)->orderBy('created_at', 'desc')->first();
+        $spec4 = DB::table('news')->where('publi',5)->orderBy('created_at', 'desc')->skip(1)->take(1)->get();
+        $best = DB::table('news')->where('publi',3)->orderBy('created_at', 'desc')->take(8)->get();
         $lastk = DB::table('news')->where('publi',2)->where('dep',1)->orderBy('created_at', 'desc')->take(30)->get();
-        $bestk = DB::table('news')->where('publi',3)->where('dep',1)->orderBy('created_at', 'desc')->take(15)->get();
-        $speck = DB::table('news')->where('publi',4)->where('dep',1)->orderBy('created_at', 'desc')->skip(1)->take(3)->get();
-        $speckk = DB::table('news')->where('publi',4)->where('dep',1)->orderBy('created_at', 'desc')->first();
         $lasts = DB::table('news')->where('publi',2)->where('dep',2)->orderBy('created_at', 'desc')->take(30)->get();
-        $bests = DB::table('news')->where('publi',3)->where('dep',2)->orderBy('created_at', 'desc')->take(15)->get();
-        $specs = DB::table('news')->where('publi',4)->where('dep',2)->orderBy('created_at', 'desc')->skip(1)->take(3)->get();
-        $specss = DB::table('news')->where('publi',4)->where('dep',2)->orderBy('created_at', 'desc')->first();
         $lastt = DB::table('news')->where('publi',2)->where('dep',3)->orderBy('created_at', 'desc')->take(30)->get();
-        $bestt = DB::table('news')->where('publi',3)->where('dep',3)->orderBy('created_at', 'desc')->take(15)->get();
-        $spect = DB::table('news')->where('publi',4)->where('dep',3)->orderBy('created_at', 'desc')->skip(1)->take(3)->get();
-        $spectt = DB::table('news')->where('publi',4)->where('dep',3)->orderBy('created_at', 'desc')->first();
-		return view('home')->with(array('lastk' => $lastk,'bestk' => $bestk, 'speck' => $speck, 'lasts' => $lasts,
-            'bests' => $bests, 'specs' => $specs, 'lastt' => $lastt, 'bestt' => $bestt, 'spect' => $spect,
-            'speckk' => $speckk, 'specss' => $specss, 'spectt' => $spectt));
+        $lastso = DB::table('news')->where('publi',2)->where('dep',4)->orderBy('created_at', 'desc')->take(30)->get();
+		return view('home')->with(array('titr1' => $titr1,'titr' => $titr, 'spec1' => $spec1, 'spec2' => $spec2,
+            'spec3' => $spec3, 'spec4' => $spec4, 'best' => $best, 'lastk' => $lastk, 'lasts' => $lasts,
+            'lastt' => $lastt, 'lastso' => $lastso));
 	}
 
 }
