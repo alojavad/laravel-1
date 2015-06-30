@@ -9,7 +9,7 @@
     <div class="col-md-1"><img src="{!! asset('/facicon.ico')!!}"></div>
     <form>
         <div class="col-md-6 col-md-offset-1">
-            <input type="email" class="form-control" name="email" value=""></div>
+            <input type="email" class="form-control" name="email" value="" draggable="true" ></div>
         <div class="col-md-1"><button type="submit" class="btn btn-primary" style="width: 100%">Search</button></div>
     </form>
     <div class="col-md-2 col-md-offset-1">
@@ -53,6 +53,8 @@
         <li><a href="forum">chat</a></li>
     </ul>
 </div>
+
+
 <div class="row">
     &nbsp;
 </div>
@@ -73,18 +75,26 @@
             <!-- Wrapper for slides -->
             <div class="carousel-inner" role="listbox">
                 @if ($titr1!="")
-                <div class="item active" style="height: 370px">
+                <div class="item active" style="height: 370px;width: 600px">
+                    <a href="news/{!!$titr1->id!!}" target="_blank">
                     <img src="{!!$titr1->image!!}" alt="{!!$titr1->title!!}">
+                    </a>
                     <div class="carousel-caption">
+                        <a href="news/{!!$titr1->id!!}" target="_blank">
                         {!!$titr1->title!!}
+                            </a>
                     </div>
                 </div>
                 @endif
                 @foreach ($titr as $db)
-                <div class="item" style="height: 370px">
+                <div class="item" style="height: 370px;width: 600px">
+                    <a href="news/{!!$db->id!!}" target="_blank">
                     <img src="{!!$db->image!!}" alt="{!!$db->title!!}">
+                    </a>
                     <div class="carousel-caption">
+                        <a href="news/{!!$db->id!!}" target="_blank">
                         {!!$db->title!!}
+                            </a>
                     </div>
                 </div>
                 @endforeach
@@ -107,8 +117,10 @@
     <div class="col-md-3">
         @if ($spec1 !="")
         <div class="image">
-            <img src="{!!$spec1->image!!}" style="width: 300px" alt="{!!$spec1->title!!}" class="img-thumbnail">
+            <a href="news/{!!$spec1->id!!}" target="_blank">
+            <img src="{!!$spec1->image!!}" style="width: 300px;height: 230px" alt="{!!$spec1->title!!}" class="img-thumbnail">
             <p  class="hh2">{!!$spec1->title!!}</p>
+            </a>
         </div>
         @endif
         <div class="row">
@@ -121,15 +133,17 @@
 
 
         </div>
-        <div class="news_contentn" style="height: 100px;">
-            @if ($spec2 !="")
-            <img src="" style="width: 120px" alt="" class="img-thumbnail">
-            <div style="width: 180;float: right">
-
+        <a href="news/{!!$spec2->id!!}" target="_blank">
+        <div class="news_contentn"style="height: 100px">
+@if ($spec2!="")
+            <img src="{!!$spec2->image!!}" style="width: 90px;height: 90px" alt="{!!$spec2->title!!}" class="img-thumbnail">
+            <div style="width: 180;height: 90px;float: right">
+                {!!$spec2->title!!}
 
             </div>
 @endif
         </div>
+            </a>
 
         <div class="b_curvn" style="margin-bottom: 5px;">
             <img alt="" src="{!! asset('/images/inn_b_r_box.gif')!!}" class="fr_img">
@@ -141,11 +155,14 @@
 
 
     </div>
+
     <div class="col-md-3">
         @if ($spec3 !="")
         <div class="image">
-            <img src="{!!$spec3->image!!}" style="width: 300px" alt="{!!$spec3->title!!}" class="img-thumbnail">
-            <p  class="hh2">{!!$spec3->title!!}</p>
+            <a href="news/{!!$spec3->id!!}" target="_blank">
+                <img src="{!!$spec3->image!!}" style="width: 300px;height: 230px" alt="{!!$spec3->title!!}" class="img-thumbnail">
+                <p  class="hh2">{!!$spec3->title!!}</p>
+            </a>
         </div>
         @endif
         <div class="row">
@@ -158,15 +175,17 @@
 
 
         </div>
-        <div class="news_contentn" style="height: 100px;">
-            @if ($spec4 !="")
-            <img src="" style="width: 120px" alt="" class="img-thumbnail">
-            <div style="width: 180;float: right">
-
+        <a href="news/{!!$spec4->id!!}" target="_blank">
+        <div class="news_contentn"style="height: 100px">
+            @if ($spec4!="")
+            <img src="{!!$spec4->image!!}" style="width: 90px;height: 90px" alt="{!!$spec4->title!!}" class="img-thumbnail">
+            <div style="width: 180;height: 90px;float: right">
+                {!!$spec4->title!!}
 
             </div>
             @endif
         </div>
+            </a>
 
         <div class="b_curvn" style="margin-bottom: 5px;">
             <img alt="" src="{!! asset('/images/inn_b_r_box.gif')!!}" class="fr_img">
@@ -178,6 +197,7 @@
 
 
     </div>
+
 
 
 
@@ -202,15 +222,17 @@
 
 
         </div>
+        <a href="news/{!!$db->id!!}" target="_blank">
         <div class="news_contentn"style="height: 100px">
 
-            <img src="{!!$db->image!!}" style="width: 120px" alt="{!!$db->title!!}" class="img-thumbnail">
-            <div style="width: 180;float: right">
+            <img src="{!!$db->image!!}" style="width: 90px;height: 90px" alt="{!!$db->title!!}" class="img-thumbnail">
+            <div style="width: 180px;height: 90px;float: right">
                 {!!$db->title!!}
 
             </div>
 
         </div>
+            </a>
 
         <div class="b_curvn" style="margin-bottom: 5px;">
             <img alt="" src="{!! asset('/images/inn_b_r_box.gif')!!}" class="fr_img">
@@ -242,6 +264,7 @@
 
 <div class="row">
     <div class="col-md-3">
+        <h2 style="text-align: center;color: #008000">سیاسی اقتصادی فرهنگی</h2>
         <div class="t_curvn">
             <img src="{!! asset('/images/inn_t_r_box.gif')!!}" alt="..." class="fr_img">
             <img src="{!! asset('/images/inn_t_l_box.gif')!!}" alt="..." class="fl_img">
@@ -251,14 +274,9 @@
         <div class="news_contentn">
 
             <div style="width: 100%; height: 100%;">
-
+                @foreach ($lastk as $db)
+                @if (($db->id %2)==0)
                 <div style="padding-bottom: 4px; text-align: justify; direction: rtl; padding-left: 4px; padding-right: 4px;">
-
-
-                    @foreach ($lastk as $db)
-                    @if (($db->id %2)==0)
-
-
                     <img src="{!! asset('/images/l_bolet.gif')!!}" style="padding-left: 1px;" alt="">
                     <a class="title4" href="/news/{!!$db->id!!}" title="{!!$db->title!!}" target="_blank">{!!$db->title!!}</a>
 
@@ -287,9 +305,13 @@
 
 
     </div>
+
+
+
 
 
     <div class="col-md-3">
+        <h2 style="color: #008000;text-align: center">ورزشی</h2>
         <div class="t_curvn">
             <img src="{!! asset('/images/inn_t_r_box.gif')!!}" alt="..." class="fr_img">
             <img src="{!! asset('/images/inn_t_l_box.gif')!!}" alt="..." class="fl_img">
@@ -299,14 +321,9 @@
         <div class="news_contentn">
 
             <div style="width: 100%; height: 100%;">
-
+                @foreach ($lasts as $db)
+                @if (($db->id %2)==0)
                 <div style="padding-bottom: 4px; text-align: justify; direction: rtl; padding-left: 4px; padding-right: 4px;">
-
-
-                    @foreach ($lasts as $db)
-                    @if (($db->id %2)==0)
-
-
                     <img src="{!! asset('/images/l_bolet.gif')!!}" style="padding-left: 1px;" alt="">
                     <a class="title4" href="/news/{!!$db->id!!}" title="{!!$db->title!!}" target="_blank">{!!$db->title!!}</a>
 
@@ -335,7 +352,9 @@
 
 
     </div>
+
     <div class="col-md-3">
+        <h2 style="color: #008000;text-align: center">تکنولوژی</h2>
         <div class="t_curvn">
             <img src="{!! asset('/images/inn_t_r_box.gif')!!}" alt="..." class="fr_img">
             <img src="{!! asset('/images/inn_t_l_box.gif')!!}" alt="..." class="fl_img">
@@ -345,14 +364,9 @@
         <div class="news_contentn">
 
             <div style="width: 100%; height: 100%;">
-
+                @foreach ($lastt as $db)
+                @if (($db->id %2)==0)
                 <div style="padding-bottom: 4px; text-align: justify; direction: rtl; padding-left: 4px; padding-right: 4px;">
-
-
-                    @foreach ($lastt as $db)
-                    @if (($db->id %2)==0)
-
-
                     <img src="{!! asset('/images/l_bolet.gif')!!}" style="padding-left: 1px;" alt="">
                     <a class="title4" href="/news/{!!$db->id!!}" title="{!!$db->title!!}" target="_blank">{!!$db->title!!}</a>
 
@@ -381,7 +395,9 @@
 
 
     </div>
+
     <div class="col-md-3">
+        <h2 style="color: #008000;text-align: center">اجتماعی</h2>
         <div class="t_curvn">
             <img src="{!! asset('/images/inn_t_r_box.gif')!!}" alt="..." class="fr_img">
             <img src="{!! asset('/images/inn_t_l_box.gif')!!}" alt="..." class="fl_img">
@@ -391,14 +407,9 @@
         <div class="news_contentn">
 
             <div style="width: 100%; height: 100%;">
-
+                @foreach ($lastso as $db)
+                @if (($db->id %2)==0)
                 <div style="padding-bottom: 4px; text-align: justify; direction: rtl; padding-left: 4px; padding-right: 4px;">
-
-
-                    @foreach ($lastso as $db)
-                    @if (($db->id %2)==0)
-
-
                     <img src="{!! asset('/images/l_bolet.gif')!!}" style="padding-left: 1px;" alt="">
                     <a class="title4" href="/news/{!!$db->id!!}" title="{!!$db->title!!}" target="_blank">{!!$db->title!!}</a>
 
@@ -427,6 +438,9 @@
 
 
     </div>
+
+
+
 
 
 

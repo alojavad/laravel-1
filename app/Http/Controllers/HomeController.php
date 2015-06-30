@@ -42,9 +42,9 @@ class HomeController extends Controller {
         $titr1 = DB::table('news')->where('publi',6)->orderBy('created_at', 'desc')->first();
         $titr = DB::table('news')->where('publi',6)->orderBy('created_at', 'desc')->take(4)->get();
         $spec1 = DB::table('news')->where('publi',4)->orderBy('created_at', 'desc')->first();
-        $spec2 = DB::table('news')->where('publi',4)->orderBy('created_at', 'desc')->skip(1)->take(1)->get();
+        $spec2 = DB::table('news')->where('publi',4)->orderBy('created_at', 'desc')->skip(1)->first();
         $spec3 = DB::table('news')->where('publi',5)->orderBy('created_at', 'desc')->first();
-        $spec4 = DB::table('news')->where('publi',5)->orderBy('created_at', 'desc')->skip(1)->take(1)->get();
+        $spec4 = DB::table('news')->where('publi',5)->orderBy('created_at', 'desc')->skip(1)->first();
         $best = DB::table('news')->where('publi',3)->orderBy('created_at', 'desc')->take(8)->get();
         $lastk = DB::table('news')->where('publi',2)->where('dep',1)->orderBy('created_at', 'desc')->take(30)->get();
         $lasts = DB::table('news')->where('publi',2)->where('dep',2)->orderBy('created_at', 'desc')->take(30)->get();
