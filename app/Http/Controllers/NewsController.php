@@ -80,8 +80,11 @@ class NewsController extends Controller {
 	{
 		//
         $news=DB::table('news')->where('id', $id)->first();
-        $comment=DB::table('comment')->get();
-        $replay=DB::table('replay')->get();
+        $comment=DB::table('comment')->where('news_id','=',$id)->get();
+        $replay=DB::table('replay')->join('comment', function($join)
+    {
+        $join->on('replay.comment_id', '=', 'comment.id');
+    })->get();
         return view('news.shownews')->with(array('data' => $news, 'comment' => $comment, 'replay' => $replay));
 	}
 
@@ -164,17 +167,17 @@ class NewsController extends Controller {
                     'vote_up' => '0',
                     'vote_down' => '0',
                     'counter' => '0',
-                    'user_id' => Auth::id(),
+                    'name' => Auth::user()->name,
                     'news_id' => $id,
                     'descr' => $data['descrip'],
                     'created_at' => $datetime
                 ));
                 return redirect()->back();
             }else{
-                return view('layout.lnews')->with('data',"");
+                return redirect()->back()->with('dat',"لطفا در  سایت ثبت نام کنید");
             }
         }else{
-            return view('layout.lnews')->with('data',"");
+            return redirect()->back()->with('dat',"لطفا متن خود را تایپ نمایید");
         }
     }
 
@@ -194,17 +197,17 @@ class NewsController extends Controller {
                     'vote_up' => '0',
                     'vote_down' => '0',
                     'counter' => '0',
-                    'user_id' => Auth::id(),
+                    'name' => Auth::user()->name,
                     'comment_id' => $id,
                     'descr' => $data['descript'],
                     'created_at' => $datetime
                 ));
                 return redirect()->back();
             }else{
-                return view('layout.lnews')->with('data',"");
+                return redirect()->back()->with('dat',"لطفا در  سایت ثبت نام کنید");
             }
         }else{
-            return view('layout.lnews')->with('data',"");
+            return redirect()->back()->with('dat',"لطفا متن خود را تایپ نمایید");
         }
     }
 

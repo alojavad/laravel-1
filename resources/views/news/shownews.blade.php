@@ -4,6 +4,13 @@
 <div class="col-md-3">
 
 </div>
+<?php
+try {
+    echo $dat;
+} catch (Exception $e) {
+    echo '';
+}
+?>
 <div class="col-md-6" dir="rtl">
 
 <div class="news_col2">
@@ -134,9 +141,9 @@
                 <div class="comm_info">
                     <img alt="" src="{!! asset('/images/r_c_info.gif')!!}" class="fr_img">
                     <div class="comm_info_content">
-                        <div class="comm_info_name">حبیب</div> 			                   <span class="comm_sep">|</span> 			                   <div class="comm_info_country"><img title="Iran, Islamic Republic of" alt="Iran, Islamic Republic of" src="{!! asset('/images/ir.gif')!!}" border="0"></div>
+                        <div class="comm_info_name">{!! $db -> name !!}</div> 			                   <span class="comm_sep">|</span> 			                   <div class="comm_info_country"><img title="Iran, Islamic Republic of" alt="Iran, Islamic Republic of" src="{!! asset('/images/ir.gif')!!}" border="0"></div>
                         <span class="comm_sep">|</span>
-                        <div class="comm_info_date">۱۴:۴۱ - ۱۳۹۴/۰۳/۲۶</div> 			                </div>
+                        <div class="comm_info_date">{!! $db -> created_at !!}</div> 			                </div>
                     <img alt="" src="{!! asset('/images/l_c_info.gif')!!}" class="fr_img">
                 </div>
                 <div class="comm_rating">
@@ -146,7 +153,7 @@
                     <div class="rating_up" id="up_rate_1928054">{!! $db -> vote_up !!}</div>
                 </div>
                 <div class="comm_answer_link">
-                    <a style="cursor:pointer" onclick="renderForm('1928054', '210229')"> 			               پاسخ 			               </a>
+                    <a style="cursor:pointer" onclick="renderForm('1928054', '210229')"></a>
                 </div>
                 <div class="wrapper"></div>
             </div>
@@ -167,9 +174,9 @@
                         <div style="margin-bottom: 5px;">
                             <img alt="" src="{!!asset('/images/r_replay.gif')!!}" class="fr_img">
                             <div class="comment_answer_c">
-                                <div class="comment_answer_2">رضا</div> 			                            <span>|</span>
+                                <div class="comment_answer_2">{!! $dbr->name!!}</div> 			                            <span>|</span>
                                 <img title="Iran, Islamic Republic of" alt="Iran, Islamic Republic of" src="{!!asset('/images/ir.gif')!!}" border="0" class="fr_img"> 			                            <span>|</span>
-                                <div class="comment_answer_5">۱۶:۲۳ - ۱۳۹۴/۰۳/۲۶</div>
+                                <div class="comment_answer_5">{!! $dbr->created_at!!}</div>
                                 <div class="wrapper"></div> 			                        </div>
                             <img alt="" src="{!!asset('/images/l_replay.gif')!!}" class="fr_img">
                             <div class="wrapper"></div> 			                    </div>
@@ -188,7 +195,7 @@
             <div id="answer_container_1928054" class="comments_form_container" style="height: 130px; display: block;">
                 <div style="margin:auto;width:541px;">
                     <div style="float:right;width:221px;padding-top:1px;padding-right: 10px;">
-                        <form class="form-horizontal" role="form" method="POST" action="{{ url('/news/sreplay/$db->id') }}">
+                        <form class="form-horizontal" role="form" method="POST" action="{{ url('/news/sreplay') }}/{!!$db->id!!}">
 
                         <input type="hidden" name="_token" value="{!! csrf_token() !!}">
 
@@ -219,7 +226,7 @@
         </div>
     </div>
 </div>
-<form class="form-horizontal" role="form" method="POST" action="{{ url('/news/scommand/$data->id') }}">
+<form class="form-horizontal" role="form" method="POST" action="{{ url('/news/scommand') }}/{!!$data->id!!}">
 
 <input type="hidden" name="_token" value="{!! csrf_token() !!}">
 

@@ -37,7 +37,39 @@
     </button>
 </div>
 
-
+    <div class="row">
+        &nbsp;
+    </div>
+    <div class="row">
+        <div class="col-md-1"><img src="{!! asset('/facicon.ico')!!}"></div>
+        <form>
+            <div class="col-md-6 col-md-offset-1">
+                <input type="email" class="form-control" name="email" value="" draggable="true" ></div>
+            <div class="col-md-1"><button type="submit" class="btn btn-primary" style="width: 100%">Search</button></div>
+        </form>
+        <div class="col-md-2 col-md-offset-1">
+            <!--
+            <img src="{!! asset('/images/kh_fb.gif')!!}" alt="..." class="img-thumbnail" style="width: 50px;height: 50px;" >
+            -->
+            <ul class="nav navbar-nav navbar-right">
+                @if (Auth::guest())
+                <li><a href="{!! url('/auth/login') !!}">Login</a></li>
+                <li><a href="{!! url('/auth/register') !!}">Register</a></li>
+                @else
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{!! Auth::user()->name !!} <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="{!! url('/') !!}">Home</a></li>
+                        <li><a href="{!! url('/news/create') !!}">Add news</a></li>
+                        <li><a href="{!! url('/tag') !!}">Tag</a></li>
+                        <li><a href="{!! url('/laravel/laravel') !!}">Laravel</a></li>
+                        <li><a href="{!! url('/auth/logout') !!}">Logout</a></li>
+                    </ul>
+                </li>
+                @endif
+            </ul>
+        </div>
+    </div>
 
 
 

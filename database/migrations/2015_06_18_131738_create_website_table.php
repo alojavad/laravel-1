@@ -72,7 +72,7 @@ class CreateWebsiteTable extends Migration {
             $table->integer('vote_up');
             $table->integer('vote_down');
             $table->unsignedInteger('counter');
-            $table->unsignedInteger('user_id')->nullable();
+            $table->string('name');
             $table->unsignedInteger('news_id')->nullable();
             $table->longText('descr');
             $table->timestamps();
@@ -82,7 +82,7 @@ class CreateWebsiteTable extends Migration {
             $table->integer('vote_up');
             $table->integer('vote_down');
             $table->unsignedInteger('counter');
-            $table->unsignedInteger('user_id')->nullable();
+            $table->string('name');
             $table->unsignedInteger('comment_id')->nullable();
             $table->longText('descr');
             $table->timestamps();

@@ -2,39 +2,7 @@
 
 @section('content')
 <div class="container-fluid">
-<div class="row">
-    &nbsp;
-</div>
-<div class="row">
-    <div class="col-md-1"><img src="{!! asset('/facicon.ico')!!}"></div>
-    <form>
-        <div class="col-md-6 col-md-offset-1">
-            <input type="email" class="form-control" name="email" value="" draggable="true" ></div>
-        <div class="col-md-1"><button type="submit" class="btn btn-primary" style="width: 100%">Search</button></div>
-    </form>
-    <div class="col-md-2 col-md-offset-1">
-        <!--
-        <img src="{!! asset('/images/kh_fb.gif')!!}" alt="..." class="img-thumbnail" style="width: 50px;height: 50px;" >
-        -->
-        <ul class="nav navbar-nav navbar-right">
-            @if (Auth::guest())
-            <li><a href="{!! url('/auth/login') !!}">Login</a></li>
-            <li><a href="{!! url('/auth/register') !!}">Register</a></li>
-            @else
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{!! Auth::user()->name !!} <span class="caret"></span></a>
-                <ul class="dropdown-menu" role="menu">
-                    <li><a href="{!! url('/') !!}">Home</a></li>
-                    <li><a href="{!! url('/news/create') !!}">Add news</a></li>
-                    <li><a href="{!! url('/tag') !!}">Tag</a></li>
-                    <li><a href="{!! url('/laravel/laravel') !!}">Laravel</a></li>
-                    <li><a href="{!! url('/auth/logout') !!}">Logout</a></li>
-                </ul>
-            </li>
-            @endif
-        </ul>
-    </div>
-</div>
+
 <div class="row">
     <ul class="nav nav-tabs nav-pills navbar-brand">
         <li><a href="#">Home</a></li>
@@ -133,17 +101,19 @@
 
 
         </div>
+        @if ($spec2!="")
         <a href="news/{!!$spec2->id!!}" target="_blank">
         <div class="news_contentn"style="height: 100px">
-@if ($spec2!="")
+
             <img src="{!!$spec2->image!!}" style="width: 90px;height: 90px" alt="{!!$spec2->title!!}" class="img-thumbnail">
             <div style="width: 180;height: 90px;float: right">
                 {!!$spec2->title!!}
 
             </div>
-@endif
+
         </div>
             </a>
+        @endif
 
         <div class="b_curvn" style="margin-bottom: 5px;">
             <img alt="" src="{!! asset('/images/inn_b_r_box.gif')!!}" class="fr_img">
@@ -175,18 +145,19 @@
 
 
         </div>
+        @if ($spec4!="")
         <a href="news/{!!$spec4->id!!}" target="_blank">
         <div class="news_contentn"style="height: 100px">
-            @if ($spec4!="")
+
             <img src="{!!$spec4->image!!}" style="width: 90px;height: 90px" alt="{!!$spec4->title!!}" class="img-thumbnail">
             <div style="width: 180;height: 90px;float: right">
                 {!!$spec4->title!!}
 
             </div>
-            @endif
+
         </div>
             </a>
-
+        @endif
         <div class="b_curvn" style="margin-bottom: 5px;">
             <img alt="" src="{!! asset('/images/inn_b_r_box.gif')!!}" class="fr_img">
             <img alt="" src="{!! asset('/images/inn_b_l_box.gif')!!}" class="fl_img">
@@ -278,7 +249,7 @@
                 @if (($db->id %2)==0)
                 <div style="padding-bottom: 4px; text-align: justify; direction: rtl; padding-left: 4px; padding-right: 4px;">
                     <img src="{!! asset('/images/l_bolet.gif')!!}" style="padding-left: 1px;" alt="">
-                    <a class="title4" href="/news/{!!$db->id!!}" title="{!!$db->title!!}" target="_blank">{!!$db->title!!}</a>
+                    <a class="title4" href="news/{!!$db->id!!}" title="{!!$db->title!!}" target="_blank">{!!$db->title!!}</a>
 
                 </div>
                 @endif
@@ -325,7 +296,7 @@
                 @if (($db->id %2)==0)
                 <div style="padding-bottom: 4px; text-align: justify; direction: rtl; padding-left: 4px; padding-right: 4px;">
                     <img src="{!! asset('/images/l_bolet.gif')!!}" style="padding-left: 1px;" alt="">
-                    <a class="title4" href="/news/{!!$db->id!!}" title="{!!$db->title!!}" target="_blank">{!!$db->title!!}</a>
+                    <a class="title4" href="news/{!!$db->id!!}" title="{!!$db->title!!}" target="_blank">{!!$db->title!!}</a>
 
                 </div>
                 @endif
@@ -368,7 +339,7 @@
                 @if (($db->id %2)==0)
                 <div style="padding-bottom: 4px; text-align: justify; direction: rtl; padding-left: 4px; padding-right: 4px;">
                     <img src="{!! asset('/images/l_bolet.gif')!!}" style="padding-left: 1px;" alt="">
-                    <a class="title4" href="/news/{!!$db->id!!}" title="{!!$db->title!!}" target="_blank">{!!$db->title!!}</a>
+                    <a class="title4" href="news/{!!$db->id!!}" title="{!!$db->title!!}" target="_blank">{!!$db->title!!}</a>
 
                 </div>
                 @endif
@@ -411,7 +382,7 @@
                 @if (($db->id %2)==0)
                 <div style="padding-bottom: 4px; text-align: justify; direction: rtl; padding-left: 4px; padding-right: 4px;">
                     <img src="{!! asset('/images/l_bolet.gif')!!}" style="padding-left: 1px;" alt="">
-                    <a class="title4" href="/news/{!!$db->id!!}" title="{!!$db->title!!}" target="_blank">{!!$db->title!!}</a>
+                    <a class="title4" href="news/{!!$db->id!!}" title="{!!$db->title!!}" target="_blank">{!!$db->title!!}</a>
 
                 </div>
                 @endif
