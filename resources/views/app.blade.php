@@ -43,8 +43,17 @@
     <div class="row">
         <div class="col-md-1"><img src="{!! asset('/facicon.ico')!!}"></div>
         <form>
+
+
             <div class="col-md-6 col-md-offset-1">
-                <input type="email" class="form-control" name="email" value="" draggable="true" ></div>
+
+                <input type="search" class="form-control" name="email" value="" draggable="true" list="news" autocomplete="off">
+                <datalist id="news">
+                    @foreach ($lastk as $dd)
+                    <option value="{!! $dd->title!!}">
+                    @endforeach
+                </datalist>
+            </div>
             <div class="col-md-1"><button type="submit" class="btn btn-primary" style="width: 100%">Search</button></div>
         </form>
         <div class="col-md-2 col-md-offset-1">

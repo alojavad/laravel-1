@@ -5,13 +5,12 @@
 
 <div class="row">
     <ul class="nav nav-tabs nav-pills navbar-brand">
-        <li><a href="#">Home</a></li>
-        <li><a href="laravel/laravel">Laravel</a></li>
+        <li><a href="#">صفحه نخست</a></li>
+        <li><a href="news/create">درج خبر</a></li>
         <li><a href="isis">داعش</a></li>
         <li><a href="tell">مذاکرات</a></li>
+        <li><a href="laravel/laravel">لاراول</a></li>
         <li><a href="https://www.google.com">google</a></li>
-        <li><a href="https://www.facebook.com">facebook</a></li>
-        <li><a href="https://www.twitter.com">twitter</a></li>
         <li><a href="https://www.linkedin.com">linkedin</a></li>
         <li><a href="https://www.hotmail.com">hotmail</a></li>
         <li><a href="https://www.gmail.com">gmail</a></li>
@@ -48,7 +47,7 @@
                     <img src="{!!$titr1->image!!}" alt="{!!$titr1->title!!}">
                     </a>
                     <div class="carousel-caption">
-                        <a href="news/{!!$titr1->id!!}" target="_blank">
+                        <a href="news/{!!$titr1->id!!}" target="_blank" style="color: red;font-size: 20px">
                         {!!$titr1->title!!}
                             </a>
                     </div>
@@ -60,7 +59,7 @@
                     <img src="{!!$db->image!!}" alt="{!!$db->title!!}">
                     </a>
                     <div class="carousel-caption">
-                        <a href="news/{!!$db->id!!}" target="_blank">
+                        <a href="news/{!!$db->id!!}" target="_blank" style="color: red;font-size: 20px">
                         {!!$db->title!!}
                             </a>
                     </div>
@@ -178,9 +177,7 @@
 </div>
 
 
-<div class="row">
-    &nbsp;
-</div>
+
 
 <!-- edame -->
 
@@ -211,9 +208,7 @@
             <div class="wrapper"></div>
         </div>
 
-        <div class="row">
-            &nbsp;
-        </div>
+
 
 
 
@@ -225,9 +220,7 @@
 </div>
 
 
-<div class="row">
-    &nbsp;
-</div>
+
 
 <!-- akhar -->
 

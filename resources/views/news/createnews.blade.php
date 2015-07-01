@@ -8,6 +8,10 @@
     <br>
     <br>
     <br>
+    @if (Auth::guest())
+    <p><h1 style="color: red">ابتدا در سایت ثبت نام کنید</h1></p>
+    <p><a href="{!! route('home')!!}">home</a></p>
+    @else
 <form class="form-horizontal" role="form" method="post" action="{{ URL::to('/') }}/news">
     <input type="hidden" name="_token" value="{{ csrf_token() }}">
     <div class="form-group">
@@ -58,10 +62,13 @@
         <label for="InputDesc">Description</label>
         <textarea class="form-control" id="InputDesc" name="desc"></textarea>
     </div>
+
     <button type="submit" class="btn btn-default">Submit</button>
+
 </form>
 <script>
     CKEDITOR.replace('desc');
 </script>
+    @endif
     </div>
 @endsection
