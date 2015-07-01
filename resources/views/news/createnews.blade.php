@@ -1,13 +1,10 @@
-@extends('layout.lnews')
+@extends('app')
 
 @section('content')
 <div class="col-md-3">
 
 </div>
 <div class="col-md-6">
-    <br>
-    <br>
-    <br>
     @if (Auth::guest())
     <p><h1 style="color: red">ابتدا در سایت ثبت نام کنید</h1></p>
     <p><a href="{!! route('home')!!}">home</a></p>

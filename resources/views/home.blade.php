@@ -105,10 +105,17 @@
         <div class="news_contentn"style="height: 100px">
 
             <img src="{!!$spec2->image!!}" style="width: 90px;height: 90px" alt="{!!$spec2->title!!}" class="img-thumbnail">
-            <div style="width: 180;height: 90px;float: right">
+            <div style="width: 180;height: 80px;float: right">
                 {!!$spec2->title!!}
+                <br>
+                <br>
+                <div style="width: 180;height: 20px;float: right;color: magenta">
+                    {!!$spec2->refre!!}
+
+                </div>
 
             </div>
+
 
         </div>
             </a>
@@ -149,10 +156,18 @@
         <div class="news_contentn"style="height: 100px">
 
             <img src="{!!$spec4->image!!}" style="width: 90px;height: 90px" alt="{!!$spec4->title!!}" class="img-thumbnail">
-            <div style="width: 180;height: 90px;float: right">
+            <div style="width: 180;height: 80px;float: right;">
                 {!!$spec4->title!!}
+<br>
+                <br>
+                <div style="width: 180;height: 20px;float: right;color: magenta">
+                    {!!$spec4->refre!!}
+
+                </div>
 
             </div>
+
+
 
         </div>
             </a>
@@ -184,30 +199,39 @@
 <div class="row">
     @foreach ($best as $db)
     <div class="col-md-3">
+
+
         <div class="t_curvn">
             <img src="{!! asset('/images/inn_t_r_box.gif')!!}" alt="..." class="fr_img">
             <img src="{!! asset('/images/inn_t_l_box.gif')!!}" alt="..." class="fl_img">
 
 
         </div>
-        <a href="news/{!!$db->id!!}" target="_blank">
-        <div class="news_contentn"style="height: 100px">
 
-            <img src="{!!$db->image!!}" style="width: 90px;height: 90px" alt="{!!$db->title!!}" class="img-thumbnail">
-            <div style="width: 180px;height: 90px;float: right">
-                {!!$db->title!!}
+        <a href="news/{!!$db->id!!}" target="_blank">
+            <div class="news_contentn"style="height: 100px">
+
+                <img src="{!!$db->image!!}" style="width: 90px;height: 90px" alt="{!!$db->title!!}" class="img-thumbnail">
+                <div style="width: 180;height: 80px;float: right;">
+                    {!!$db->title!!}
+                    <br>
+                    <br>
+                    <div style="width: 180;height: 20px;float: right;color: magenta">
+                        {!!$db->refre!!}
+
+                    </div>
+
+                </div>
+
+
 
             </div>
-
-        </div>
-            </a>
-
+        </a>
         <div class="b_curvn" style="margin-bottom: 5px;">
             <img alt="" src="{!! asset('/images/inn_b_r_box.gif')!!}" class="fr_img">
             <img alt="" src="{!! asset('/images/inn_b_l_box.gif')!!}" class="fl_img">
             <div class="wrapper"></div>
         </div>
-
 
 
 
@@ -228,7 +252,7 @@
 
 <div class="row">
     <div class="col-md-3">
-        <h2 style="text-align: center;color: #008000">سیاسی اقتصادی فرهنگی</h2>
+        <h2 style="text-align: center;color: #008000;font-size: 20px">سیاسی اقتصادی فرهنگی</h2>
         <div class="t_curvn">
             <img src="{!! asset('/images/inn_t_r_box.gif')!!}" alt="..." class="fr_img">
             <img src="{!! asset('/images/inn_t_l_box.gif')!!}" alt="..." class="fl_img">
@@ -275,7 +299,7 @@
 
 
     <div class="col-md-3">
-        <h2 style="color: #008000;text-align: center">ورزشی</h2>
+        <h2 style="color: #008000;text-align: center;font-size: 20px">ورزشی</h2>
         <div class="t_curvn">
             <img src="{!! asset('/images/inn_t_r_box.gif')!!}" alt="..." class="fr_img">
             <img src="{!! asset('/images/inn_t_l_box.gif')!!}" alt="..." class="fl_img">
@@ -318,7 +342,7 @@
     </div>
 
     <div class="col-md-3">
-        <h2 style="color: #008000;text-align: center">تکنولوژی</h2>
+        <h2 style="color: #008000;text-align: center;font-size: 20px">تکنولوژی</h2>
         <div class="t_curvn">
             <img src="{!! asset('/images/inn_t_r_box.gif')!!}" alt="..." class="fr_img">
             <img src="{!! asset('/images/inn_t_l_box.gif')!!}" alt="..." class="fl_img">
@@ -361,7 +385,7 @@
     </div>
 
     <div class="col-md-3">
-        <h2 style="color: #008000;text-align: center">اجتماعی</h2>
+        <h2 style="color: #008000;text-align: center;font-size: 20px">اجتماعی</h2>
         <div class="t_curvn">
             <img src="{!! asset('/images/inn_t_r_box.gif')!!}" alt="..." class="fr_img">
             <img src="{!! asset('/images/inn_t_l_box.gif')!!}" alt="..." class="fl_img">

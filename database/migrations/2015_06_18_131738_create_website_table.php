@@ -53,6 +53,7 @@ class CreateWebsiteTable extends Migration {
             $table->unsignedInteger('counter');
             $table->unsignedInteger('publi');
             $table->unsignedInteger('dep');
+            $table->unsignedInteger('admin')->nullable();
             $table->string('refre');
             $table->string('title');
             $table->string('image');

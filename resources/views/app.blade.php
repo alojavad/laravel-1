@@ -49,9 +49,9 @@
 
                 <input type="search" class="form-control" name="email" value="" draggable="true" list="news" autocomplete="off">
                 <datalist id="news">
-                    @foreach ($lastk as $dd)
-                    <option value="{!! $dd->title!!}">
-                    @endforeach
+
+                    <option value="hghh">
+
                 </datalist>
             </div>
             <div class="col-md-1"><button type="submit" class="btn btn-primary" style="width: 100%">Search</button></div>
@@ -79,8 +79,6 @@
             </ul>
         </div>
     </div>
-
-
 
 
 
