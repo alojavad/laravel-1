@@ -104,16 +104,15 @@
         <a href="news/{!!$spec2->id!!}" target="_blank">
         <div class="news_contentn"style="height: 100px">
 
-            <img src="{!!$spec2->image!!}" style="width: 90px;height: 90px" alt="{!!$spec2->title!!}" class="img-thumbnail">
-            <div style="width: 180;height: 80px;float: right">
-                {!!$spec2->title!!}
-                <br>
-                <br>
-                <div style="width: 180;height: 20px;float: right;color: magenta">
+            <img src="{!!$spec2->image!!}" style="width: 90px;height: 90px;position: relative;z-index: 3" alt="{!!$spec2->title!!}" class="img-thumbnail">
+            <div class="caption" style="width: 180px;height: 100px;float: right">
+                <span class="title" style="width: 180px;height: 80px;float: right;position: static">
+                    {!!$spec2->title!!}
+                </span>
+
+                <span class="sourcename" style="width: 180px;height: 80px;float: right;position: static"">
                     {!!$spec2->refre!!}
-
-                </div>
-
+                </span>
             </div>
 
 
@@ -155,16 +154,15 @@
         <a href="news/{!!$spec4->id!!}" target="_blank">
         <div class="news_contentn"style="height: 100px">
 
-            <img src="{!!$spec4->image!!}" style="width: 90px;height: 90px" alt="{!!$spec4->title!!}" class="img-thumbnail">
-            <div style="width: 180;height: 80px;float: right;">
-                {!!$spec4->title!!}
-<br>
-                <br>
-                <div style="width: 180;height: 20px;float: right;color: magenta">
-                    {!!$spec4->refre!!}
+            <img src="{!!$spec4->image!!}" style="width: 90px;height: 90px;position: relative;z-index: 3" alt="{!!$spec4->title!!}" class="img-thumbnail">
+            <div class="caption" style="width: 180px;height: 100px;float: right">
+                <span class="title" style="width: 180px;height: 80px;float: right;position: static">
+                    {!!$spec4->title!!}
+                </span>
 
-                </div>
-
+                <span class="sourcename" style="width: 180px;height: 80px;float: right;position: static"">
+                {!!$spec4->refre!!}
+                </span>1
             </div>
 
 
@@ -211,16 +209,15 @@
         <a href="news/{!!$db->id!!}" target="_blank">
             <div class="news_contentn"style="height: 100px">
 
-                <img src="{!!$db->image!!}" style="width: 90px;height: 90px" alt="{!!$db->title!!}" class="img-thumbnail">
-                <div style="width: 180;height: 80px;float: right;">
+                <img src="{!!$db->image!!}" style="width: 90px;height: 90px;position: relative;z-index: 3" alt="{!!$db->title!!}" class="img-thumbnail">
+                <div class="caption" style="width: 180px;height: 100px;float: right">
+                <span class="title" style="width: 180px;height: 80px;float: right;position: static">
                     {!!$db->title!!}
-                    <br>
-                    <br>
-                    <div style="width: 180;height: 20px;float: right;color: magenta">
-                        {!!$db->refre!!}
+                </span>
 
-                    </div>
-
+                    <span class="sourcename" style="width: 180px;height: 80px;float: right;position: static"">
+                    {!!$db->refre!!}
+                    </span>1
                 </div>
 
 
