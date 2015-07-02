@@ -7499,9 +7499,41 @@ input.butt {
 
 .hh2 {
     position: absolute;
-    top: 150px;
+    top: 100px;
     left: 30px;
     color: red;
-    font-size: 25px;
-    width: 300px;
+    font-size: 20px;
+    width: 250px;
 }
+
+.caption {
+    background: 0;
+    bottom: auto;
+    height: 7.5rem;
+    position: relative;
+    padding: 0;
+    width: auto;
+}
+
+
+.title {
+    color: #333;
+    overflow: hidden;
+    position: relative;
+    padding: 0;
+    top: -.4rem;
+    font-weight: 600;
+    font-size: 1.3rem;
+    line-height: 1.384;
+    max-height: 5.5rem;
+}
+
+
+.sourcename {
+    bottom: 0;
+    display: inline;
+    color: #a0a0a0;
+    position: absolute;
+}
+
+
