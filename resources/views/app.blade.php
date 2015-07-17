@@ -7,6 +7,7 @@
     <meta name="author" content="Javad Hajiyan Maleki">
     <meta name="description" content="سایت خبری ایران">
     <meta name="keywords" content="سایت خبری هایتر سایت ورزشی تکنولوژی جدید عکس خبر سوتی سلفی جدید   hightr  hightr.com">
+    <meta name="_token" content="{!! csrf_token() !!}"/>
 	<title>Hightr| هایتر</title>
     <link rel="shortcut icon" href="{!! asset('/facicon.ico') !!}" type="image/x-icon">
 	<link href="{!! asset('/css/bootstrap.css') !!}" rel="stylesheet">
@@ -20,8 +21,46 @@
 		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
+    <script type="text/javascript">
+        $.ajaxSetup({
+            headers: { 'X-CSRF-Token' : $('meta[name=_token]').attr('content') }
+        });
+    </script>
+
+    <script>
+
+        function showResult(str) {
+
+
+            if (str.length==0) {
+                document.getElementById("livesearch").innerHTML="";
+                document.getElementById("livesearch").style.border="0px";
+                return;
+            }
+            if (window.XMLHttpRequest) {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+                xmlhttp=new XMLHttpRequest();
+            } else {  // code for IE6, IE5
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.onreadystatechange=function() {
+                if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+                    document.getElementById("livesearch").innerHTML=xmlhttp.responseText;
+                    document.getElementById("livesearch").style.border="1px solid #A5ACB2";
+                }
+            }
+
+            xmlhttp.open("GET","news/search?q="+str,true);
+            xmlhttp.send();
+        }
+    </script>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+
+
+
 </head>
 <body>
+
 <!-- Button trigger modal -->
 <nav class="navbar navbar-default">
 <div class="container-fluid">
@@ -43,18 +82,14 @@
     <div class="row">
         <div class="col-md-1"><img src="{!! asset('/facicon.ico')!!}"></div>
         <form>
+            <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
 
+            <div class="col-md-6 col-md-offset-2">
 
-            <div class="col-md-6 col-md-offset-1">
+                <input type="text" class="form-control" name="search" draggable="true" dir="rtl" onkeyup="showResult(this.value)">
+                <div id="livesearch"></div>
 
-                <input type="search" class="form-control" name="email" value="" draggable="true" list="news" autocomplete="off">
-                <datalist id="news">
-
-                    <option value="hghh">
-
-                </datalist>
             </div>
-            <div class="col-md-1"><button type="submit" class="btn btn-primary" style="width: 100%">Search</button></div>
         </form>
         <div class="col-md-2 col-md-offset-1">
             <!--
@@ -100,5 +135,6 @@
 <!-- Scripts -->
 <script src="{!! asset('js/jquery-1.11.2.min.js') !!}" ></script>
 <script src="{!! asset('js/bootstrap.js') !!}" ></script>
+<script src="{!! asset('js/analytics.js') !!}" ></script>
 </body>
 </html>

@@ -57,7 +57,10 @@ try {
         <div class="subtitle" style="margin-bottom: 10px;text-align: justify;">{!!$data->abst !!}</a></div>
         <div class="body" style="text-align: justify;padding: 10px;">
             <a class="entekhab_lead2" href="">پایگاه خبری Hightr</a>
-            <div align="justify"><br><div align="center"><img style="border: medium none;" alt="{!!$data->abst!!}" src="{!!$data->image!!}" height="357" width="520"><br></div>
+            <div align="justify">
+                <br>
+                <div align="center">
+                    <img style="border: medium none;" alt="{!!$data->abst!!}" src="{!!$data->image!!}" height="357" width="520"><br></div>
                 {!!$data->descr!!}</div>
             <div class="wrapper"></div>
         </div>

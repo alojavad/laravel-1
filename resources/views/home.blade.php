@@ -3,28 +3,45 @@
 @section('content')
 <div class="container-fluid">
 
-<div class="row">
-    <ul class="nav nav-tabs nav-pills navbar-brand">
-        <li><a href="#">صفحه نخست</a></li>
-        <li><a href="news/create">درج خبر</a></li>
-        <li><a href="isis">داعش</a></li>
-        <li><a href="tell">مذاکرات</a></li>
-        <li><a href="laravel/laravel">لاراول</a></li>
-        <li><a href="https://www.google.com">google</a></li>
-        <li><a href="https://www.linkedin.com">linkedin</a></li>
-        <li><a href="https://www.hotmail.com">hotmail</a></li>
-        <li><a href="https://www.gmail.com">gmail</a></li>
-        <li><a href="https://www.entekhab.com">انتخاب</a></li>
-        <li><a href="https://www.varzesh3.com">varzesh3</a></li>
-        <li><a href="https://www.instigram.com">instigram</a></li>
-        <li><a href="forum">chat</a></li>
-    </ul>
-</div>
+<div class="navbar ">
+    <div class="container">
 
 
 <div class="row">
-    &nbsp;
+    <div class="collapse navbar-collapse" style="background-color: #2ca02c">
+        <ul class=" nav nav-tabs  nav-pills navbar-brand" style="border-color: blue">
+            <li class="">
+                <a href="#" style="color: blue">
+                    <i class="glyphicon glyphicon-home"></i>
+                    خانه
+                </a>
+            </li>
+            <li class="dropdown">
+                <a href="news/create" style="color: blue">
+                    <i class="glyphicon glyphicon-ok"></i>
+                    درج خبر
+                </a>
+            </li>
+            <li class="">
+                <a href="laravel/laravel" style="color: blue">
+                    <i class="glyphicon glyphicon-list"></i>
+                    لاراول
+                </a>
+            </li>
+            <li class="">
+                <a href="search" style="color: blue">
+                    <i class="glyphicon glyphicon-search"></i>
+                    جستجو
+                </a>
+            </li>
+        </ul>
+    </div>
+
 </div>
+    </div>
+</div>
+
+
 <!-- vasat -->
 <div class="row">
 
@@ -44,10 +61,10 @@
                 @if ($titr1!="")
                 <div class="item active" style="height: 370px;width: 600px">
                     <a href="news/{!!$titr1->id!!}" target="_blank">
-                    <img src="{!!$titr1->image!!}" alt="{!!$titr1->title!!}">
+                    <img src="{!!$titr1->image!!}" alt="{!!$titr1->title!!}" width="600">
                     </a>
                     <div class="carousel-caption">
-                        <a href="news/{!!$titr1->id!!}" target="_blank" style="color: red;font-size: 20px">
+                        <a href="news/{!!$titr1->id!!}" target="_blank" style="color: blue;font-size: 20px">
                         {!!$titr1->title!!}
                             </a>
                     </div>
@@ -56,10 +73,10 @@
                 @foreach ($titr as $db)
                 <div class="item" style="height: 370px;width: 600px">
                     <a href="news/{!!$db->id!!}" target="_blank">
-                    <img src="{!!$db->image!!}" alt="{!!$db->title!!}">
+                    <img src="{!!$db->image!!}" alt="{!!$db->title!!}" width="600">
                     </a>
                     <div class="carousel-caption">
-                        <a href="news/{!!$db->id!!}" target="_blank" style="color: red;font-size: 20px">
+                        <a href="news/{!!$db->id!!}" target="_blank" style="color: blue;font-size: 20px">
                         {!!$db->title!!}
                             </a>
                     </div>
@@ -102,7 +119,7 @@
         </div>
         @if ($spec2!="")
         <a href="news/{!!$spec2->id!!}" target="_blank">
-        <div class="news_contentn"style="height: 100px">
+        <div class="news_contentn"style="height: 100px;background-color: peachpuff">
 
             <img src="{!!$spec2->image!!}" style="width: 90px;height: 90px;position: relative;z-index: 3" alt="{!!$spec2->title!!}" class="img-thumbnail">
             <div class="caption" style="width: 180px;height: 100px;float: right">
@@ -152,7 +169,7 @@
         </div>
         @if ($spec4!="")
         <a href="news/{!!$spec4->id!!}" target="_blank">
-        <div class="news_contentn"style="height: 100px">
+        <div class="news_contentn"style="height: 100px;background-color: peachpuff">
 
             <img src="{!!$spec4->image!!}" style="width: 90px;height: 90px;position: relative;z-index: 3" alt="{!!$spec4->title!!}" class="img-thumbnail">
             <div class="caption" style="width: 180px;height: 100px;float: right">
@@ -162,7 +179,7 @@
 
                 <span class="sourcename" style="width: 180px;height: 80px;float: right;position: static"">
                 {!!$spec4->refre!!}
-                </span>1
+                </span>
             </div>
 
 
@@ -207,7 +224,7 @@
         </div>
 
         <a href="news/{!!$db->id!!}" target="_blank">
-            <div class="news_contentn"style="height: 100px">
+            <div class="news_contentn"style="height: 100px;background-color: palegoldenrod">
 
                 <img src="{!!$db->image!!}" style="width: 90px;height: 90px;position: relative;z-index: 3" alt="{!!$db->title!!}" class="img-thumbnail">
                 <div class="caption" style="width: 180px;height: 100px;float: right">
@@ -217,7 +234,7 @@
 
                     <span class="sourcename" style="width: 180px;height: 80px;float: right;position: static"">
                     {!!$db->refre!!}
-                    </span>1
+                    </span>
                 </div>
 
 

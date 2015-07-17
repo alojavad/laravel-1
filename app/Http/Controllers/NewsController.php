@@ -23,7 +23,8 @@ class NewsController extends Controller {
 	public function index()
 	{
 		//
-        $data = DB::table('news')->get();
+        $data = DB::table('news')->paginate(5);
+        $data->setPath('news');
         return view('news.listnews')->with('data',$data);
 	}
 
@@ -211,6 +212,44 @@ class NewsController extends Controller {
         }else{
             return redirect()->back()->with('dat',"لطفا متن خود را تایپ نمایید");
         }
+    }
+    /**
+     * Store a newly created resource in storage.
+     *
+     *
+     * @return Response
+     */
+    public function getSearch(){
+
+
+//get the q parameter from URL
+        $q=$_GET["q"];
+
+        $data = DB::table('news')->select('title','id')->where('title', 'LIKE', "%$q%")->get();
+        $hint="";
+        foreach ($data as $db)
+        {
+            if ($hint=="") {
+                $hint="<a href='news/$db->id' target='_blank'>" .
+                    $db->title . "</a>";
+            } else {
+                $hint=$hint . "<br /><a href='news/$db->id' target='_blank'>" .
+                    $db->title . "</a>";
+            }
+
+        }
+
+
+// Set output to "no suggestion" if no hint was found
+// or to the correct values
+        if ($hint=="") {
+            $response="no suggestion";
+        } else {
+            $response=$hint;
+        }
+
+//output the response
+        echo $response;
     }
 
 

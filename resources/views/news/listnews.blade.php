@@ -16,5 +16,6 @@
     <a href="{!! action('NewsController@edit',$db->id) !!}">Delete</a>
     <hr>
     @endforeach
+    <?php echo $data->render(); ?>
 </div>
 @endsection
