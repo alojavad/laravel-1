@@ -60,60 +60,87 @@
 
 </head>
 <body>
-
-<!-- Button trigger modal -->
-<nav class="navbar navbar-default">
-<div class="container-fluid">
-
-<div class="navbar-header">
-
-
-    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle Navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-    </button>
-</div>
-
-    <div class="row">
-        &nbsp;
+<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <div class="col-md-1 navbar-header" >
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"><img alt="Brand" src="{!! asset('/facicon.ico')!!}"></a>
     </div>
-    <div class="row">
-        <div class="col-md-1"><img src="{!! asset('/facicon.ico')!!}"></div>
+    <ul class="col-md-5 nav nav-tabs navbar-brand navbar">
+        <li class="">
+            <a href="{!!route('home')!!}" >
+                <i class="glyphicon glyphicon-home"></i>
+                خانه
+            </a>
+        </li>
+        <li class="dropdown">
+            <a href="news/create">
+                <i class="glyphicon glyphicon-pencil"></i>
+                درج خبر
+            </a>
+        </li>
+        <li class="">
+            <a href="laravel/laravel" >
+                <i class="glyphicon"></i>
+                لاراول
+            </a>
+        </li>
+        <li class="">
+            <a href="search" >
+                <i class="glyphicon glyphicon-search"></i>
+                جستجو
+            </a>
+        </li>
+    </ul>
+    <div class="col-md-3 " style="padding-top: 20px">
         <form>
             <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
 
-            <div class="col-md-6 col-md-offset-2">
+            <div class="col-md-12">
 
-                <input type="text" class="form-control" name="search" draggable="true" dir="rtl" onkeyup="showResult(this.value)">
+                <input type="text" class="form-control" style="border-radius: 25px;box-shadow: 5px 5px 5px #888888;" name="search" draggable="true" dir="rtl" onkeyup="showResult(this.value)">
                 <div id="livesearch"></div>
 
             </div>
         </form>
-        <div class="col-md-2 col-md-offset-1">
-            <!--
-            <img src="{!! asset('/images/kh_fb.gif')!!}" alt="..." class="img-thumbnail" style="width: 50px;height: 50px;" >
-            -->
-            <ul class="nav navbar-nav navbar-right">
-                @if (Auth::guest())
-                <li><a href="{!! url('/auth/login') !!}">Login</a></li>
-                <li><a href="{!! url('/auth/register') !!}">Register</a></li>
-                @else
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{!! Auth::user()->name !!} <span class="caret"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="{!! url('/') !!}">Home</a></li>
-                        <li><a href="{!! url('/news/create') !!}">Add news</a></li>
-                        <li><a href="{!! url('/tag') !!}">Tag</a></li>
-                        <li><a href="{!! url('/laravel/laravel') !!}">Laravel</a></li>
-                        <li><a href="{!! url('/auth/logout') !!}">Logout</a></li>
-                    </ul>
-                </li>
-                @endif
-            </ul>
-        </div>
     </div>
+    <ul class="nav  navbar-right nav-tabs navbar-brand navbar">
+
+        @if (Auth::guest())
+        <li><a href="{!! url('/auth/login') !!}" ><i class="glyphicon glyphicon-user"></i>Login</a></li>
+        <li><a href="{!! url('/auth/register') !!}" >Register</a></li>
+        @else
+        <li class="dropdown" style="color: blue">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{!! Auth::user()->name !!} <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+                <li><a href="{!! url('/') !!}">Home</a></li>
+                <li><a href="{!! url('/news/create') !!}">Add news</a></li>
+                <li><a href="{!! url('/tag') !!}">Tag</a></li>
+                <li><a href="{!! url('/laravel/laravel') !!}">Laravel</a></li>
+                <li><a href="{!! url('/auth/logout') !!}">Logout</a></li>
+            </ul>
+        </li>
+        @endif
+
+    </ul>
+
+</div><!-- /.navbar-collapse -->
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+
+        <!-- Brand and toggle get grouped for better mobile display -->
+
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+
+
+
+
+
 
 
 
@@ -132,7 +159,8 @@
     </footer>
 </div>
 
-<!-- Scripts -->
+<!-- Scripts --><script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery/jquery-1.11.2.min.js"></script>
+<script type="text/javascript"> if (typeof jQuery == 'undefined') { document.write(unescape("%3Cscript src='{!! asset('/js/jquery-1.11.2.min.js') !!} type='text/javascript'%3E%3C/script%3E")); } </script>
 <script src="{!! asset('js/jquery-1.11.2.min.js') !!}" ></script>
 <script src="{!! asset('js/bootstrap.js') !!}" ></script>
 <script src="{!! asset('js/analytics.js') !!}" ></script>

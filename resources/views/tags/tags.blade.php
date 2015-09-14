@@ -1,10 +1,22 @@
 @extends('layout.lnews')
 
 @section('content')
+
+    <?php
+    include ('js/date_time.php');
+    $day_number = jdate('j');
+    $month_number = jdate('n');
+    $year_number = jdate('y');
+    $day_name = jdate('l');
+    ?>
+    <div style="margin:0px auto; width:400px;padding:5px;border:1px solid #ccc;background:#FFF9F9;">
+        <div style="text-align:center; direction:rtl; font:bold 15px/22px tahoma; direction:rtl; color:#093;"><?php echo " امروز $day_name ۱۳$year_number/$month_number/$day_number"; ?></div><br />
+        </div>
 <div class="col-md-1">
+
 </div>
 <div class="col-md-5">
-    <br>
+<br>
     <form class="form-horizontal" role="form" method="post" action="{{ URL::to('/') }}/tag">
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
         <div class="form-group">
@@ -17,6 +29,7 @@
                 <option value="1">خبری</option>
                 <option value="2">ورزشی</option>
                 <option value="3">تکنولوژی</option>
+                <option value="4">اجتماعی</option>
             </select>
         </div>
         <div class="form-group">
@@ -28,30 +41,10 @@
     <script>
         CKEDITOR.replace('desc');
     </script>
+    <br>
+    <br>
+    <br>
 
-    <!--
-    {{Form::open(['action'=>'TagController@store','class'=>'form form-horizontal','style'=>'margin-top:50px'])}}
-    <div class="form-group">
-        {{ Form::label('title','Title:',['class'=>'col-sm-3 control-label']) }}
-        <div class="col-sm-8">
-            {{ Form::text('title',Input::old('title'),['class'=>'form-control']) }}
-        </div>
-    </div>
-    <div class="form-group">
-        {{ Form::label('text','Deasription:',['class'=>'col-sm-3 control-label']) }}
-        <div class="col-sm-8">
-            {{ Form::textarea('body',Input::old('title'),['class'=>'form-control']) }}
-        </div>
-    </div>
-
-    <div class="text-center">
-        {{Form::submit('Post Your Tags',['class'=>'btn btn-default'])}}
-    </div>
-    {{Form::close()}}
-    -->
-    <br>
-    <br>
-    <br>
 </div>
 <div class="col-md-6">
 
@@ -73,4 +66,4 @@
     @endforeach
     @endif
 </div>
-@stop
+@endsection

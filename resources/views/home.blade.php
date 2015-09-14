@@ -1,45 +1,7 @@
 @extends('app')
 
 @section('content')
-<div class="container-fluid">
 
-<div class="navbar ">
-    <div class="container">
-
-
-<div class="row">
-    <div class="collapse navbar-collapse" style="background-color: #2ca02c">
-        <ul class=" nav nav-tabs  nav-pills navbar-brand" style="border-color: blue">
-            <li class="">
-                <a href="#" style="color: blue">
-                    <i class="glyphicon glyphicon-home"></i>
-                    خانه
-                </a>
-            </li>
-            <li class="dropdown">
-                <a href="news/create" style="color: blue">
-                    <i class="glyphicon glyphicon-ok"></i>
-                    درج خبر
-                </a>
-            </li>
-            <li class="">
-                <a href="laravel/laravel" style="color: blue">
-                    <i class="glyphicon glyphicon-list"></i>
-                    لاراول
-                </a>
-            </li>
-            <li class="">
-                <a href="search" style="color: blue">
-                    <i class="glyphicon glyphicon-search"></i>
-                    جستجو
-                </a>
-            </li>
-        </ul>
-    </div>
-
-</div>
-    </div>
-</div>
 
 
 <!-- vasat -->
@@ -104,7 +66,7 @@
             <a href="news/{!!$spec1->id!!}" target="_blank">
             <img src="{!!$spec1->image!!}" style="width: 300px;height: 230px" alt="{!!$spec1->title!!}" class="img-thumbnail">
             <p  class="hh2">{!!$spec1->title!!}</p>
-            </a>
+            </a>    
         </div>
         @endif
         <div class="row">
@@ -265,7 +227,7 @@
 
 
 <div class="row">
-    <div class="col-md-3">
+    <div class="col-md-3" style="height: 500px;overflow: auto">
         <h2 style="text-align: center;color: #008000;font-size: 20px">سیاسی اقتصادی فرهنگی</h2>
         <div class="t_curvn">
             <img src="{!! asset('/images/inn_t_r_box.gif')!!}" alt="..." class="fr_img">
@@ -312,7 +274,7 @@
 
 
 
-    <div class="col-md-3">
+    <div class="col-md-3" style="height: 500px;overflow: auto">
         <h2 style="color: #008000;text-align: center;font-size: 20px">ورزشی</h2>
         <div class="t_curvn">
             <img src="{!! asset('/images/inn_t_r_box.gif')!!}" alt="..." class="fr_img">
@@ -355,7 +317,7 @@
 
     </div>
 
-    <div class="col-md-3">
+    <div class="col-md-3" style="height: 500px;overflow: auto">
         <h2 style="color: #008000;text-align: center;font-size: 20px">تکنولوژی</h2>
         <div class="t_curvn">
             <img src="{!! asset('/images/inn_t_r_box.gif')!!}" alt="..." class="fr_img">
@@ -398,7 +360,7 @@
 
     </div>
 
-    <div class="col-md-3">
+    <div class="col-md-3" style="height: 500px;overflow: auto">
         <h2 style="color: #008000;text-align: center;font-size: 20px">اجتماعی</h2>
         <div class="t_curvn">
             <img src="{!! asset('/images/inn_t_r_box.gif')!!}" alt="..." class="fr_img">
@@ -448,7 +410,9 @@
 
 
 
+
 </div>
+
 </div>
 
 

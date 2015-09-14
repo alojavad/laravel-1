@@ -2,7 +2,16 @@
 
 @section('content')
 <div class="col-md-3">
-
+    @for ($i=0;$i<10;$i++)
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <div class="panel-title">fdsfdsf</div>
+        <div class="panel-body">
+            fsdfsdfdsf
+        </div>
+    </div>
+</div>
+    @endfor
 </div>
 <?php
 try {
@@ -11,14 +20,13 @@ try {
     echo '';
 }
 ?>
+
 <div class="col-md-6" dir="rtl">
 
-<div class="news_col2">
-<div class="t_curv">
-    <img alt="" src="{!! asset('images/inn_t_r_box.gif')!!}" class="fr_img">
-    <img alt="" src="{!! asset('images/inn_t_l_box.gif')!!}" class="fl_img">
-    <div class="wrapper"></div> 				</div>
-<div class="news_content">
+<div class="panel" style="border-color: silver">
+    <div class="panel-body">
+
+
     <div style="margin-bottom:15px; padding-right: 10px; padding-left: 10px;"> 	<div class="news_toolbar">
             <div class="news_nav news_id_c"><span class="news_nav_title">کد خبر: </span>{!! $data->id !!}</div>
             <div class="news_nav news_comments">
@@ -85,15 +93,12 @@ try {
             <div class="wrapper"></div>
         </div>
     </div>
-</div>
 
 
 
 
-<div class="b_curv" style="margin-bottom: 5px;">
-    <img alt="" src="{!! asset('/images/inn_b_r_box.gif')!!}" class="fr_img">
-    <img alt="" src="{!! asset('/images/inn_b_l_box.gif')!!}" class="fl_img">
-    <div class="wrapper"></div> 				</div>
+
+
 <div style="width: 580px; margin: 0px auto;">
     <div class="ads" style="display:none;">
         <div style="padding-bottom:5px;"><a href="http://entekhab.ir/fa/ads/redirect/a/273" target="_blank"><img alt="" style="width:130px;height:103px;border:0px;" src="/files/adv//273_844.jpg"></a></div>
@@ -102,10 +107,17 @@ try {
     </div>
     <div class="wrapper"></div>
 </div>
+        </div>
+</div>
+
+
 
 
 <!-- Start Comments -->
 
+
+<div class="panel" style="border-color: silver">
+    <div class="panel-body">
 
 
 <div class="comm_title_box">
@@ -123,126 +135,145 @@ try {
 
 
 
-
-<div class="comm_container" id="comm_t">
-    <div style="width: 610px;">
+            <!--start comment -->
 
 
 
-
-        <!--start comment -->
-
+            @foreach ($comment as $db)
 
 
+            <div style="width: 100%;margin-bottom: 25px;" id="comm_1928054">
+                <!-- Start Comment Info Bar -->
+                <div class="comm_info_bar">
+                    <div class="comm_info">
+                        <img alt="" src="{!! asset('/images/r_c_info.gif')!!}" class="fr_img">
+                        <div class="comm_info_content">
+                            <div class="comm_info_name">{!! $db -> name !!}</div> 			                   <span class="comm_sep">|</span> 			                   <div class="comm_info_country"><img title="Iran, Islamic Republic of" alt="Iran, Islamic Republic of" src="{!! asset('/images/ir.gif')!!}" border="0"></div>
+                            <span class="comm_sep">|</span>
+                            <div class="comm_info_date">{!! $db -> created_at !!}</div>
+                        </div>
+                        <img alt="" src="{!! asset('/images/l_c_info.gif')!!}" class="fr_img">
+                    </div>
+                    <div class="comm_rating">
+                        <div class="rating_down" id="down_rate_1928054">{!! $db -> vote_down !!}</div>
+                        <a onclick="commentDown(1928054);" class="rate_down_link" id="down_button_1928054"></a>
+                        <a onclick="commentUp(1928054);" class="rate_up_link" id="up_button_1928054"></a>
+                        <div class="rating_up" id="up_rate_1928054">{!! $db -> vote_up !!}</div>
+                    </div>
+                    <div class="comm_answer_link">
+                        <a style="cursor:pointer" onclick="showreplay()">پاسخ</a>
 
-        @foreach ($comment as $db)
-
-
-        <div style="width: 100%;margin-bottom: 25px;" id="comm_1928054">
-            <!-- Start Comment Info Bar -->
-            <div class="comm_info_bar">
-                <div class="comm_info">
-                    <img alt="" src="{!! asset('/images/r_c_info.gif')!!}" class="fr_img">
-                    <div class="comm_info_content">
-                        <div class="comm_info_name">{!! $db -> name !!}</div> 			                   <span class="comm_sep">|</span> 			                   <div class="comm_info_country"><img title="Iran, Islamic Republic of" alt="Iran, Islamic Republic of" src="{!! asset('/images/ir.gif')!!}" border="0"></div>
-                        <span class="comm_sep">|</span>
-                        <div class="comm_info_date">{!! $db -> created_at !!}</div> 			                </div>
-                    <img alt="" src="{!! asset('/images/l_c_info.gif')!!}" class="fr_img">
+                    </div>
+                    <div class="wrapper"></div>
                 </div>
-                <div class="comm_rating">
-                    <div class="rating_down" id="down_rate_1928054">{!! $db -> vote_down !!}</div>
-                    <a onclick="commentDown(1928054);" class="rate_down_link" id="down_button_1928054"></a>
-                    <a onclick="commentUp(1928054);" class="rate_up_link" id="up_button_1928054"></a>
-                    <div class="rating_up" id="up_rate_1928054">{!! $db -> vote_up !!}</div>
-                </div>
-                <div class="comm_answer_link">
-                    <a style="cursor:pointer" onclick="renderForm('1928054', '210229')"></a>
-                </div>
+                <div class="comments">
+                    <img style="padding-left:3px;" src="../images/comments.gif" alt="">{!! $db -> descr !!}</div>
+                <div id="answer_container_1928054" class="comments_form_container"></div>
                 <div class="wrapper"></div>
+                @foreach ($replay as $dbr)
+                @if ($db->id == $dbr->comment_id)
+
+                <div class="comm_answer">
+
+
+                    <!-- <div class="comm_answer_title">پاسخ</div>-->
+
+                    <div class="comm_answer_content">
+                        <div class="comm_answer_line">
+                            <div style="margin-bottom: 5px;">
+                                <img alt="" src="{!!asset('/images/r_replay.gif')!!}" class="fr_img">
+                                <div class="comment_answer_c">
+                                    <div class="comment_answer_2">{!! $dbr->name!!}</div> 			                            <span>|</span>
+                                    <img title="Iran, Islamic Republic of" alt="Iran, Islamic Republic of" src="{!!asset('/images/ir.gif')!!}" border="0" class="fr_img"> 			                            <span>|</span>
+                                    <div class="comment_answer_5">{!! $dbr->created_at!!}</div>
+                                    <div class="wrapper"></div>
+                                </div>
+                                <img alt="" src="{!!asset('/images/l_replay.gif')!!}" class="fr_img">
+                                <div class="wrapper"></div>
+                            </div>
+                            <img style="padding-left:3px; border:0px;" src="{!!asset('/images/comments.gif')!!}" alt="">{!! $dbr->descr!!}</div>
+                        <div class="wrapper"></div>
+
+
+                    </div>
+                    <div class="b_pasokh"></div>
+                    <div class="wrapper"></div>
+                </div>
+
+
+                @endif
+                @endforeach
+
+                <!-- End Comment Info Bar -->
+
+                <div id="answer_container_1928054" class="col-md-11" >
+
+
+                            <form id="form-replay" class="form-horizontal" role="form" method="POST" action="{{ url('/news/sreplay') }}/{!!$db->id!!}">
+
+                                <input type="hidden" name="_token" value="{!! csrf_token() !!}">
+                                <div class="col-md-2">
+
+                                    <button type="submit" class="btn btn-default">Replay</button>
+                                </div>
+
+<div class="col-md-10">
+
+    <textarea class="form-control" id="InputDesc" name="descript"></textarea>
+</div>
+
+
+
+                            </form>
+
+
+
+
             </div>
-            <div class="comments">
-                <img style="padding-left:3px;" src="../images/comments.gif" alt="">{!! $db -> descr !!}</div>
-            <div id="answer_container_1928054" class="comments_form_container"></div>
-            <div class="wrapper"></div>
-            @foreach ($replay as $dbr)
-            @if ($db->id == $dbr->comment_id)
-
-            <div class="comm_answer">
-
-
-                <!-- <div class="comm_answer_title">پاسخ</div>-->
-
-                <div class="comm_answer_content">
-                    <div class="comm_answer_line">
-                        <div style="margin-bottom: 5px;">
-                            <img alt="" src="{!!asset('/images/r_replay.gif')!!}" class="fr_img">
-                            <div class="comment_answer_c">
-                                <div class="comment_answer_2">{!! $dbr->name!!}</div> 			                            <span>|</span>
-                                <img title="Iran, Islamic Republic of" alt="Iran, Islamic Republic of" src="{!!asset('/images/ir.gif')!!}" border="0" class="fr_img"> 			                            <span>|</span>
-                                <div class="comment_answer_5">{!! $dbr->created_at!!}</div>
-                                <div class="wrapper"></div> 			                        </div>
-                            <img alt="" src="{!!asset('/images/l_replay.gif')!!}" class="fr_img">
-                            <div class="wrapper"></div> 			                    </div>
-                        <img style="padding-left:3px; border:0px;" src="{!!asset('/images/comments.gif')!!}" alt="">{!! $dbr->descr!!}</div>
-                    <div class="wrapper"></div> 			            </div>
-                <div class="b_pasokh"></div>
-                <div class="wrapper"></div>
-            </div>
-
-
-            @endif
             @endforeach
 
-            <!-- End Comment Info Bar -->
-
-            <div id="answer_container_1928054" class="comments_form_container" style="height: 130px; display: block;">
-                <div style="margin:auto;width:541px;">
-                    <div style="float:right;width:221px;padding-top:1px;padding-right: 10px;">
-                        <form class="form-horizontal" role="form" method="POST" action="{{ url('/news/sreplay') }}/{!!$db->id!!}">
-
-                        <input type="hidden" name="_token" value="{!! csrf_token() !!}">
 
 
-                        <div class="form-group">
-                            <label for="InputDesc">نظر</label>
-                            <textarea class="form-control" id="InputDesc" name="descript"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-default">Replay</button>
-                            </form>
-                    </div></div>
-                <div class="wrapper"></div></div>
-            <div class="wrapper"></div>
-        </div>
-        @endforeach
+            <!-- end of comment -->
+
+
+            <div id="_ff_c"><embed type="application/x-shockwave-flash" src="/fa/comments/embed" width="1" height="1" style="undefined" id="_ff_" name="_ff_" quality="high" allowscriptaccess="always"></div>
+            <script type="text/javascript">eval(function(p,a,c,k,e,r){e=function(c){return c.toString(a)};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('2 6(){g h.i("7")};2 j(0){$.9(\'0\',0,{a:b,c:\'/\'})};2 k(){4 0="";$.l(\'/d/e/m\',{},2(3){3=n(\'(\'+3+\')\');0=3[\'0\'];$.9(\'0\',0,{a:b,c:\'/\'});4 f=6();f.o(0)})};4 5=p q("/d/e/r","7",\'1\',\'1\',\'8\');5.s("t","u");5.v("w");',33,33,'uid||function|data|var|so|get_FF|_ff_||cookie|expires|365|path|fa|comments|ff|return|document|getElementById|setUID|genUID|post|userid|eval|setData|new|SWFObject|embed|addParam|allowScriptAccess|always|write|_ff_c'.split('|'),0,{}))</script>
+            <!-- End Comments --> 				<div class="wrapper"></div>
 
 
 
-        <!-- end of comment -->
-
-        <div class="b_curv" style="margin-bottom: 5px;">
-            <img alt="" src="{!! asset('/images/inn_b_r_box.gif')!!}" class="fr_img">
-            <img alt="" src="{!! asset('/images/inn_b_l_box.gif')!!}" class="fl_img">
-            <div class="wrapper"></div> </div>  <div id="_ff_c"><embed type="application/x-shockwave-flash" src="/fa/comments/embed" width="1" height="1" style="undefined" id="_ff_" name="_ff_" quality="high" allowscriptaccess="always"></div>
-        <script type="text/javascript">eval(function(p,a,c,k,e,r){e=function(c){return c.toString(a)};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('2 6(){g h.i("7")};2 j(0){$.9(\'0\',0,{a:b,c:\'/\'})};2 k(){4 0="";$.l(\'/d/e/m\',{},2(3){3=n(\'(\'+3+\')\');0=3[\'0\'];$.9(\'0\',0,{a:b,c:\'/\'});4 f=6();f.o(0)})};4 5=p q("/d/e/r","7",\'1\',\'1\',\'8\');5.s("t","u");5.v("w");',33,33,'uid||function|data|var|so|get_FF|_ff_||cookie|expires|365|path|fa|comments|ff|return|document|getElementById|setUID|genUID|post|userid|eval|setData|new|SWFObject|embed|addParam|allowScriptAccess|always|write|_ff_c'.split('|'),0,{}))</script>
-        <!-- End Comments --> 				<div class="wrapper"></div>
-        <div style="width: 100%">
-        </div>
-    </div>
+    <script>
+        CKEDITOR.replace('desc');
+    </script>
 </div>
+    </div>
+
+</div>
+</div>
+<div class="panel" style="border-color: silver">
+    <div class="panel-body">
 <form class="form-horizontal" role="form" method="POST" action="{{ url('/news/scommand') }}/{!!$data->id!!}">
 
-<input type="hidden" name="_token" value="{!! csrf_token() !!}">
+    <input type="hidden" name="_token" value="{!! csrf_token() !!}">
+    <div class="col-md-2">
 
+        <button type="submit" class="btn btn-default">Comment</button>
+    </div>
+    <div class="col-md-10">
 
-<div class="form-group" style="width: 610px;">
-    <label for="InputDesc">نظر</label>
-    <textarea class="form-control" id="InputDesc" name="descrip"></textarea>
-</div>
-<button type="submit" class="btn btn-default">Comment</button>
+        <textarea class="form-control" id="InputDesc" name="descrip"></textarea>
+    </div>
+
 </form>
-<script>
-    CKEDITOR.replace('desc');
-</script>
+        </div>
+
+
+</div>
+
+</div>
+
+
 
 
 
@@ -293,7 +324,21 @@ try {
 -->
 
 
+<div class="col-md-3">
+    @for ($i=0;$i<5;$i++)
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div class="panel-title">fdsfdsf</div>
+            <div class="panel-body">
+                fsdfsdfdsf
+            </div>
+            <div class="panel-footer">dfsfdsf dfsfs fdsf dfdsfdsf<br>
+                <button class="btn btn-danger">fdfdsf</button> </div>
+        </div>
+    </div>
+    @endfor
 </div>
+
 
 
 @endsection

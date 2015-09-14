@@ -7153,7 +7153,7 @@ button.close {
 }
 
 .comm_info_bar {
-    width: 623px;
+    width: 600px;
     height: 26px;
     background: #EDEDED;
     padding-right: 5px;
@@ -7428,7 +7428,7 @@ input.butt {
 
 
 .b_pasokh {
-    width: 570px;
+    width: 530px;
     height: 7px;
     overflow: hidden;
     background: url('../images/b_pasokh.gif') no-repeat top right;
@@ -7499,9 +7499,9 @@ input.butt {
 
 .hh2 {
     position: absolute;
-    top: 100px;
+    top: 140px;
     left: 30px;
-    color: red;
+    color: blue;
     font-size: 20px;
     width: 250px;
 }
@@ -7535,5 +7535,4 @@ input.butt {
     color: #a0a0a0;
     position: absolute;
 }
-
 
