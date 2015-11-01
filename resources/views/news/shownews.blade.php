@@ -1,24 +1,8 @@
 @extends('app')
 
 @section('content')
-<div class="row">
-    &nbsp;
-</div>
 <div class="col-md-3">
-    <?php
-    include ('js/date_time.php');
-    $day_number = jdate('j');
-    $month_number = jdate('n');
-    $year_number = jdate('y');
-    $day_name = jdate('l');
-    ?>
-    <div style="margin:0px auto; width:400px;padding:5px;border:1px solid #ccc;background:#FFF9F9;">
-        <div style="text-align:center; direction:rtl; font:bold 15px/22px tahoma; direction:rtl; color:#093;"><?php echo " امروز $day_name ۱۳$year_number/$month_number/$day_number"; ?></div><br />
-    </div>
-    <div class="row">
-    &nbsp;
-    </div>
-    @for ($i=0;$i<7;$i++)
+    @for ($i=0;$i<10;$i++)
 <div class="panel panel-default">
     <div class="panel-heading">
         <div class="panel-title">fdsfdsf</div>
@@ -43,8 +27,7 @@ try {
     <div class="panel-body">
 
 
-    <div style="margin-bottom:15px; padding-right: 10px; padding-left: 10px;">
-        <div class="news_toolbar">
+    <div style="margin-bottom:15px; padding-right: 10px; padding-left: 10px;"> 	<div class="news_toolbar">
             <div class="news_nav news_id_c"><span class="news_nav_title">کد خبر: </span>{!! $data->id !!}</div>
             <div class="news_nav news_comments">
                 <span class="news_nav_title">تعداد نظرات: </span>
@@ -85,11 +68,7 @@ try {
             <div align="justify">
                 <br>
                 <div align="center">
-                    @if ($data->image !='')
-                    <img style="border: medium none;" alt="{!!$data->abst!!}" src="{!!$data->image!!}" height="357" width="520"><br>
-                    @endif
-
-                </div>
+                    <img style="border: medium none;" alt="{!!$data->abst!!}" src="{!!$data->image!!}" height="357" width="520"><br></div>
                 {!!$data->descr!!}</div>
             <div class="wrapper"></div>
         </div>
@@ -128,7 +107,6 @@ try {
     </div>
     <div class="wrapper"></div>
 </div>
-
         </div>
 </div>
 
@@ -138,10 +116,11 @@ try {
 <!-- Start Comments -->
 
 
+<div class="panel" style="border-color: silver">
+    <div class="panel-body">
 
 
-
-<div class="contain" style="height: 33px;background: url('../images/bg_sar.gif') repeat-x;overflow: hidden">
+<div class="comm_title_box">
     <img alt="" src="{!! asset('/images/r_sar.gif')!!}" class="fr_img">
     <a href="#" class="comments_topic">نظرات بینندگان</a>
     <div class="com_title_n">در انتظار بررسی: <span>{!! $data->id !!}</span>
@@ -150,10 +129,6 @@ try {
     <div class="wrapper"></div>
 </div>
 
-
-
-<div class="panel" style="border-color: silver">
-    <div class="panel-body">
 
 
 
@@ -232,8 +207,7 @@ try {
                 <!-- End Comment Info Bar -->
 
                 <div id="answer_container_1928054" class="col-md-11" >
-                    <div class="panel" style="border-color: silver;background-color: coral">
-                        <div class="panel-body">
+
 
                             <form id="form-replay" class="form-horizontal" role="form" method="POST" action="{{ url('/news/sreplay') }}/{!!$db->id!!}">
 
@@ -252,13 +226,11 @@ try {
 
                             </form>
 
-</div>
-                        </div>
 
 
 
             </div>
-
+            @endforeach
 
 
 
@@ -274,60 +246,95 @@ try {
     <script>
         CKEDITOR.replace('desc');
     </script>
-
-
+</div>
+    </div>
 
 </div>
+</div>
+<div class="panel" style="border-color: silver">
+    <div class="panel-body">
+<form class="form-horizontal" role="form" method="POST" action="{{ url('/news/scommand') }}/{!!$data->id!!}">
 
-        @endforeach
-        <div class="panel" style="border-color: silver">
-            <div class="panel-body">
-                <form class="form-horizontal" role="form" method="POST" action="{{ url('/news/scommand') }}/{!!$data->id!!}">
+    <input type="hidden" name="_token" value="{!! csrf_token() !!}">
+    <div class="col-md-2">
 
-                    <input type="hidden" name="_token" value="{!! csrf_token() !!}">
-                    <div class="col-md-2">
+        <button type="submit" class="btn btn-default">Comment</button>
+    </div>
+    <div class="col-md-10">
 
-                        <button type="submit" class="btn btn-default">Comment</button>
-                    </div>
-                    <div class="col-md-10">
+        <textarea class="form-control" id="InputDesc" name="descrip"></textarea>
+    </div>
 
-                        <textarea class="form-control" id="InputDesc" name="descrip"></textarea>
-                    </div>
-
-                </form>
-            </div>
-
-
+</form>
         </div>
+
+
 </div>
-</div>
+
 </div>
 
 
 
+
+
+<!--
+
+
+                    <div style="width:312px;float: right;margin-left: 6px;">
+                        <div class="comm_title_box">
+                            <img alt="" src="{!! asset('/images/r_sar.gif')!!}" class="fr_img">
+                            <a href="#" class="comments_topic2" style="color: #E2F4FE;">نظر شما</a>
+                            <img alt="" src="{!! asset('/images/sar.gif')!!}" class="fl_img"> 	<div class="wrapper"></div> 	</div>
+                        <div class="comm_container2" id="comm_b" style="height: 313px;">
+                            <div style="font: 12px tahoma;"> 	    	"انتخاب" نظراتی را كه حاوی توهین است، منتشر نمی كند<br><br> 	 			لطفا از نوشتن نظرات خود به صورت حروف لاتین (فینگلیش) خودداری نمایید 	    </div>
+                            <form method="POST" action="/fa/news/210229" name="comments" style="display:inline;">
+                                <table border="0" cellpadding="0" cellspacing="0" width="220" dir="rtl"><tbody><tr><td width="220" height="7"></td></tr>
+                            <tr>
+                                <td align="right" valign="middle" width="220">
+                                    <div style="padding-bottom: 1px"><span class="frm_label">نام:</span></div>
+                                    <input type="text" name="comment_name" class="text inp_w" size="40" dir="rtl">
+                                </td>
+                            </tr>
+                            <tr><td width="220" height="7"></td></tr>
+                            <tr>
+                                <td align="right" valign="middle" width="220">
+                                    <div style="padding-bottom: 1px"><span class="frm_label">ایمیل:</span></div>
+                                    <input type="text" name="comment_mail" class="text inp_w" size="40" dir="ltr">
+                                </td>
+                            </tr>
+                            <tr><td width="220" height="7"></td></tr>
+                            <tr>
+                                <td align="right" valign="middle" width="220">
+                                    <div style="padding-bottom: 1px"><span class="frm_label">* نظر:</span></div>
+                                    <textarea name="comment_message" class="text inp_w2" cols="40" rows="6" value="" dir="rtl"></textarea>
+                                </td>
+                            </tr>
+                            <tr><td width="220" height="7"></td></tr>
+                            <tr>
+                                <td align="right" valign="middle" width="220">
+                                    <div style="padding-bottom: 1px"></div>
+                                    <input type="submit" value="ارسال" class="butt" dir="rtl">
+                                </td>
+                            </tr>
+                            </tbody></table>
+                        <input type="hidden" name="_comments_submit" value="yes"></form> 	</div> 	<div class="b_curv"> 	<img alt="" src="/client/themes/fa/main/img/inn_b_r_box.gif" class="fr_img"> 		<img alt="" src="/client/themes/fa/main/img/inn_b_l_box.gif" class="fl_img"> 	<div class="wrapper"></div> 	</div> </div> 					<div style="float: right;width: 312px"> 						<div class="inner_news_most_sar"> 							<img alt="" src="/client/themes/fa/main/img/r_sar.gif" class="fr_img"> 							<!--<a href="#" class="inner_tab1 active_tab" id="latest" style="width: 130px;">پربیننده ترین</a> 							 <div class="inner_r_box_title">پربحث ترین عناوین</div>  							<img alt="" src="/client/themes/fa/main/img/l_sar.gif" class="fl_img"> 							<div class="wrapper"></div> 						</div> 						<div class="inner_news_most_con jquery_odd_background" style="height: 323px;"> 							<div style="width: 100%"> 								 	<div class="t_l_content" style="padding-left: 4px; padding-right: 4px;"> 	 	<div style="padding-bottom: 4px; text-align: justify; direction: rtl; padding-left: 4px; padding-right: 4px;"> 		<img src="/client/themes/fa/main/img/l_bolet.gif" style="padding-left: 1px;" alt=""> 	    <a class="title4" href="/fa/news/209738/دلواپس-نیستم-امیدوارم-شورای-امنیت-ملی-کسی-را-ممنوع-التصویر-نکرده-اینکه-می-گویند-پس-از-پروتکل-الحاقی-خانه-علما-و-مساجد-بازرسی-می-شود-بی-اساس-است-اگر-ظلم-ظالم-در-مورد-تحریم-ها-را-بیان-کردیم-کار-بدی-کردیم-باید-پنهان-می-کردیم" title="دلواپس نیستم، امیدوارم / شورای امنیت ملی، کسی را ممنوع التصویر نکرده / اینکه می گویند پس از پروتکل الحاقی، خانه علما و مساجد بازرسی می شود، بی اساس است / اگر ظلم ظالم در مورد تحریم ها را بیان کردیم، کار بدی کردیم؟ باید پنهان می کردیم؟" target="_blank"> 	         				دلواپس نیستم، امیدوارم / شورای امنیت ملی، کسی را ممنوع التصویر نکرده / اینکه می گویند پس از پروتکل الحاقی، خانه علما و مساجد بازرسی می شود، بی اساس است / اگر ظلم ظالم در مورد تحریم ها را بیان کردیم، کار بدی کردیم؟ باید پنهان می کردیم؟<span>&nbsp; (۱۱۱ نظر)</span> 			 	    </a> 	</div> 	 	<div style="padding-bottom: 4px; text-align: justify; direction: rtl; padding-left: 4px; padding-right: 4px; background: rgb(237, 237, 237);"> 		<img src="/client/themes/fa/main/img/l_bolet.gif" style="padding-left: 1px;" alt=""> 	    <a class="title4" href="/fa/news/209958/دفاع-محکم-رئیس-جمهور-ایران-از-مذاکرات-هسته-ای-روحانی-تندروها-را-بی-اطلاع-از-زندگی-مردم-توصیف-کرد" title="دفاع محکم رئیس جمهور ایران از مذاکرات هسته ای / روحانی، تندروها را بی اطلاع از زندگی مردم توصیف کرد" target="_blank"> 	         				دفاع محکم رئیس جمهور ایران از مذاکرات هسته ای / روحانی، تندروها را بی اطلاع از زندگی مردم توصیف کرد<span>&nbsp; (۶۱ نظر)</span> 			 	    </a> 	</div> 	 	<div style="padding-bottom: 4px; text-align: justify; direction: rtl; padding-left: 4px; padding-right: 4px;"> 		<img src="/client/themes/fa/main/img/l_bolet.gif" style="padding-left: 1px;" alt=""> 	    <a class="title4" href="/fa/news/209801/تصویر-خنده-های-حسن-روحانی" title="تصویر: خنده های حسن روحانی" target="_blank"> 	         				تصویر: خنده های حسن روحانی<span>&nbsp; (۵۱ نظر)</span> 			 	    </a> 	</div> 	 	<div style="padding-bottom: 4px; text-align: justify; direction: rtl; padding-left: 4px; padding-right: 4px; background: rgb(237, 237, 237);"> 		<img src="/client/themes/fa/main/img/l_bolet.gif" style="padding-left: 1px;" alt=""> 	    <a class="title4" href="/fa/news/210142/چرا-صداوسیما-بارها-حرف-پوچ-یک-مقام-آمریکایی-را-پخش-می-کند-برخی-رسانه&zwnj;ها-فقط-نامیدی-و-یأس-را-به-جامعه-پمپاژ-می&zwnj;کنند-اصراری-نداریم-تا-نهم-تیر-نتیجه-مذاکرات-مشخص-شود" title="چرا صداوسیما بارها حرف پوچ یک مقام آمریکایی را پخش می کند؟ / برخی رسانه&zwnj;ها فقط نامیدی و یأس را به جامعه پمپاژ می&zwnj;کنند / اصراری نداریم تا نهم تیر نتیجه مذاکرات مشخص شود" target="_blank"> 	         				چرا صداوسیما بارها حرف پوچ یک مقام آمریکایی را پخش می کند؟ / برخی رسانه&zwnj;ها فقط نامیدی و یأس را به جامعه پمپاژ می&zwnj;کنند / اصراری نداریم تا نهم تیر نتیجه مذاکرات مشخص شود<span>&nbsp; (۵۰ نظر)</span> 			 	    </a> 	</div> 	 	<div style="padding-bottom: 4px; text-align: justify; direction: rtl; padding-left: 4px; padding-right: 4px;"> 		<img src="/client/themes/fa/main/img/l_bolet.gif" style="padding-left: 1px;" alt=""> 	    <a class="title4" href="/fa/news/210222/آیت-الله-هاشمی-می-گویند-تحریم-ها-به-نفع-ماست-پدر-مردم-را-درآورده-چطور-به-نفع-ماست-تحریم-در-حال-پوساندن-استخوان-طبقه-مزد-بگیر-است" title="آیت الله هاشمی: می گویند «تحریم ها به نفع ماست»، پدر مردم را درآورده، چطور به نفع ماست؟/ تحریم در حال پوساندن استخوان طبقه مزد بگیر است" target="_blank"> 	         				آیت الله هاشمی: می گویند «تحریم ها به نفع ماست»، پدر مردم را درآورده، چطور به نفع ماست؟/ تحریم در حال پوساندن استخوان طبقه مزد بگیر است<span>&nbsp; (۵۰ نظر)</span> 			 	    </a> 	</div> 	 	<div style="padding-bottom: 4px; text-align: justify; direction: rtl; padding-left: 4px; padding-right: 4px; background: rgb(237, 237, 237);"> 		<img src="/client/themes/fa/main/img/l_bolet.gif" style="padding-left: 1px;" alt=""> 	    <a class="title4" href="/fa/news/209638/مفتي-سعودي-فتواي-جهاد-نکاح-با-محارم-را-صادر-کرد" title="مفتي سعودي فتواي جهاد نکاح با محارم را صادر کرد!" target="_blank"> 	         				مفتي سعودي فتواي جهاد نکاح با محارم را صادر کرد!<span>&nbsp; (۴۴ نظر)</span> 			 	    </a> 	</div> 	 	<div style="padding-bottom: 4px; text-align: justify; direction: rtl; padding-left: 4px; padding-right: 4px;"> 		<img src="/client/themes/fa/main/img/l_bolet.gif" style="padding-left: 1px;" alt=""> 	    <a class="title4" href="/fa/news/210023/جهانگيري-تحريم&zwnj;ها-واقعاً-روي-آب-آشاميدني-مردم-هم-تأثير-مي&zwnj;گذارد-استيضاح-وزير-آموزش-و-پرورش-منصفانه-نيست" title="جهانگيري: تحريم&zwnj;ها واقعاً روي آب آشاميدني مردم هم تأثير مي&zwnj;گذارد/ استيضاح وزير آموزش و پرورش منصفانه نيست" target="_blank"> 	         				جهانگيري: تحريم&zwnj;ها واقعاً روي آب آشاميدني مردم هم تأثير مي&zwnj;گذارد/ استيضاح وزير آموزش و پرورش منصفانه نيست<span>&nbsp; (۴۴ نظر)</span> 			 	    </a> 	</div> 	 	<div style="padding-bottom: 4px; text-align: justify; direction: rtl; padding-left: 4px; padding-right: 4px; background: rgb(237, 237, 237);"> 		<img src="/client/themes/fa/main/img/l_bolet.gif" style="padding-left: 1px;" alt=""> 	    <a class="title4" href="/fa/news/210089/کشف-ارثیه-تازه-دولت-احمدی-نژاد" title="کشف ارثیه تازه دولت احمدی نژاد" target="_blank"> 	         				کشف ارثیه تازه دولت احمدی نژاد<span>&nbsp; (۴۲ نظر)</span> 			 	    </a> 	</div> 	 	<div style="padding-bottom: 4px; text-align: justify; direction: rtl; padding-left: 4px; padding-right: 4px;"> 		<img src="/client/themes/fa/main/img/l_bolet.gif" style="padding-left: 1px;" alt=""> 	    <a class="title4" href="/fa/news/209820/خبری-از-یارانه-خرداد-نیست" title="خبری از یارانه خرداد نیست" target="_blank"> 	         				خبری از یارانه خرداد نیست<span>&nbsp; (۳۷ نظر)</span> 			 	    </a> 	</div> 	 	<div style="padding-bottom: 4px; text-align: justify; direction: rtl; padding-left: 4px; padding-right: 4px; background: rgb(237, 237, 237);"> 		<img src="/client/themes/fa/main/img/l_bolet.gif" style="padding-left: 1px;" alt=""> 	    <a class="title4" href="/fa/news/209657/تصویر-ظریف-همسر-و-دخترش-در-افتتاحیه-ارکستر-ملی" title="تصویر: ظریف، همسر و دخترش در افتتاحیه ارکستر ملی" target="_blank"> 	         				تصویر: ظریف، همسر و دخترش در افتتاحیه ارکستر ملی<span>&nbsp; (۳۶ نظر)</span> 			 	    </a> 	</div> 	 	</div>  							</div> 						</div> 						<div class="b_curv"> 						<img alt="" src="/client/themes/fa/main/img/inn_b_r_box.gif" class="fr_img"> 							<img alt="" src="/client/themes/fa/main/img/inn_b_l_box.gif" class="fl_img"> 						<div class="wrapper"></div> 						</div> 					</div>
+                    <div class="wrapper"></div>
+                </div>
+            </div>
+-->
 
 
 <div class="col-md-3">
-    @for ($i=0;$i<3;$i++)
+    @for ($i=0;$i<5;$i++)
     <div class="panel panel-default">
+        <div class="panel-heading">
             <div class="panel-title">fdsfdsf</div>
-                <div class="image">
-                    <a href="news/..." target="_blank">
-                        <script>
-                            function opacUp(){
-                                document.getElementById("spec1").style.opacity=".5";
-                            }
-                        </script>
-                        <img src="..." id="spec1" style="width: 300px;height: 230px"
-                             alt="..." class="img-thumbnail" onmouseover="opacUp()">
-
-                    </a>
-                </div>
-                <div class="row">
-                    &nbsp;
-                </div>
-
-
+            <div class="panel-body">
+                fsdfsdfdsf
+            </div>
+            <div class="panel-footer">dfsfdsf dfsfs fdsf dfdsfdsf<br>
+                <button class="btn btn-danger">fdfdsf</button> </div>
+        </div>
     </div>
     @endfor
 </div>

@@ -24,8 +24,7 @@ class TagController extends Controller {
 	{
 		//
         //$tag = tag::all();
-        $tag = DB::table('tag')->orderBy('created_at', 'desc')->paginate(4);
-        $tag->setPath('tag');
+        $tag = DB::table('tag')->get();
         return view('tags.tags')->with('tag',$tag);
 	}
 

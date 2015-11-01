@@ -23,7 +23,7 @@ class NewsController extends Controller {
 	public function index()
 	{
 		//
-        $data = DB::table('news')->orderBy('created_at', 'desc')->paginate(5);
+        $data = DB::table('news')->paginate(5);
         $data->setPath('news');
         return view('news.listnews')->with('data',$data);
 	}
@@ -51,7 +51,7 @@ class NewsController extends Controller {
         $datetime = new \DateTime;
         $data = Input::only('title', 'image', 'abst', 'desc','dep','refre','publi');
         if ($data) {
-            if (1) {
+            if (Auth::check()) {
                 DB::table('news')->insert(array(
                     'title' => $data['title'],
                     'dep' => $data['dep'],
@@ -82,14 +82,11 @@ class NewsController extends Controller {
 	{
 		//
         $news=DB::table('news')->where('id', $id)->first();
-        $comment=DB::table('comment')->where('news_id','=',$id)->where('name','=','javad hajiyan')->get();
+        $comment=DB::table('comment')->where('news_id','=',$id)->get();
         $replay=DB::table('replay')->join('comment', function($join)
     {
-        $join->on('replay.comment_id', '=', 'comment.id')->where('replay.name','=','javad hajiyan');
-    })->select('replay.id','replay.vote_up'
-                ,'replay.vote_down','replay.counter','replay.name','replay.comment_id','replay.descr'
-                ,'replay.created_at','replay.updated_at')->get();
-
+        $join->on('replay.comment_id', '=', 'comment.id');
+    })->get();
         return view('news.shownews')->with(array('data' => $news, 'comment' => $comment, 'replay' => $replay));
 	}
 
@@ -157,21 +154,6 @@ class NewsController extends Controller {
             ->where('id', $id)->delete();
         redirect('/');
 	}
-
-    public function getPublish($id)
-    {
-        DB::table('news')
-            ->where('id', $id)
-            ->update(array(
-                'name' => Auth::user()->name
-            ));
-        return  redirect()->back();
-    }
-
-    public function getNotPublish()
-    {
-        return 'not publish';
-    }
     /**
      * Store a newly created resource in storage.
      *
@@ -183,7 +165,7 @@ class NewsController extends Controller {
         $datetime = new \DateTime;
         $data = Input::only('descrip');
         if ($data) {
-            if (1) {
+            if (Auth::check()) {
                 DB::table('comment')->insert(array(
                     'vote_up' => '0',
                     'vote_down' => '0',
@@ -213,12 +195,12 @@ class NewsController extends Controller {
         $datetime = new \DateTime;
         $data = Input::only('descript');
         if ($data) {
-            if (1) {
+            if (Auth::check()) {
                 DB::table('replay')->insert(array(
                     'vote_up' => '0',
                     'vote_down' => '0',
                     'counter' => '0',
-                    'name' => '',
+                    'name' => Auth::user()->name,
                     'comment_id' => $id,
                     'descr' => $data['descript'],
                     'created_at' => $datetime

@@ -7109,7 +7109,7 @@ button.close {
 
 
 .comm_title_box {
-    width: 630px;
+    width: 610px;
     height: 33px;
     background: url('../images/bg_sar.gif') repeat-x;
     overflow: hidden;
@@ -7501,8 +7501,7 @@ input.butt {
     position: absolute;
     top: 140px;
     left: 30px;
-    color: #000000;
-    background-color: #c0c0c0;
+    color: blue;
     font-size: 20px;
     width: 250px;
 }
@@ -7537,20 +7536,3 @@ input.butt {
     position: absolute;
 }
 
-#menu {
-
-    -moz-transition:all 0.5s; /* Firefox 4 */
-    -webkit-transition:all 0.5s; /* Safari and Chrome */
-    -o-transition:all 0.5s; /* Opera */
-    transition:all 0.5s;
-
-}
-
-.sticky #menu {
-
-    position:fixed;
-    top : 100px;
-    width :100%;
-    z-index:9999;
-
-}

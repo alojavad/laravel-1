@@ -25,8 +25,8 @@
                     <a href="news/{!!$titr1->id!!}" target="_blank">
                     <img src="{!!$titr1->image!!}" alt="{!!$titr1->title!!}" width="600">
                     </a>
-                    <div class="carousel-caption" style="background-color: #c0c0c0">
-                        <a href="news/{!!$titr1->id!!}" target="_blank" style="color: #000000;font-size: 20px">
+                    <div class="carousel-caption">
+                        <a href="news/{!!$titr1->id!!}" target="_blank" style="color: blue;font-size: 20px">
                         {!!$titr1->title!!}
                             </a>
                     </div>
@@ -37,8 +37,8 @@
                     <a href="news/{!!$db->id!!}" target="_blank">
                     <img src="{!!$db->image!!}" alt="{!!$db->title!!}" width="600">
                     </a>
-                    <div class="carousel-caption" style="background-color: #c0c0c0">
-                        <a href="news/{!!$db->id!!}" target="_blank" style="color: #000000;font-size: 20px">
+                    <div class="carousel-caption">
+                        <a href="news/{!!$db->id!!}" target="_blank" style="color: blue;font-size: 20px">
                         {!!$db->title!!}
                             </a>
                     </div>
@@ -64,13 +64,7 @@
         @if ($spec1 !="")
         <div class="image">
             <a href="news/{!!$spec1->id!!}" target="_blank">
-                <script>
-                    function opacUp(){
-                        document.getElementById("spec1").style.opacity=".5";
-                    }
-                </script>
-            <img src="{!!$spec1->image!!}" id="spec1" style="width: 300px;height: 230px"
-                 alt="{!!$spec1->title!!}" class="img-thumbnail" onmouseover="opacUp()">
+            <img src="{!!$spec1->image!!}" style="width: 300px;height: 230px" alt="{!!$spec1->title!!}" class="img-thumbnail">
             <p  class="hh2">{!!$spec1->title!!}</p>
             </a>    
         </div>
@@ -120,13 +114,7 @@
         @if ($spec3 !="")
         <div class="image">
             <a href="news/{!!$spec3->id!!}" target="_blank">
-                <script>
-                    function opacUp2(){
-                        document.getElementById("spec3").style.opacity=".5";
-                    }
-                </script>
-                <img src="{!!$spec3->image!!}" style="width: 300px;height: 230px"
-                     alt="{!!$spec3->title!!}" class="img-thumbnail" onmouseover="opacUp2()">
+                <img src="{!!$spec3->image!!}" style="width: 300px;height: 230px" alt="{!!$spec3->title!!}" class="img-thumbnail">
                 <p  class="hh2">{!!$spec3->title!!}</p>
             </a>
         </div>

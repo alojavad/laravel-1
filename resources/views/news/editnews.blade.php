@@ -1,11 +1,13 @@
-@extends ('layouts.dashboard')
-@section('page_heading','Update News')
-@section('section')
+@extends('layout.lnews')
 
-<div class="col-sm-12">
+@section('content')
+<div class="col-md-1">
+</div>
+<div class="col-md-5">
+    <br>
 
-    <div class="row">
-        <div class="col-sm-12">
+
+
     <form class="form-horizontal" role="form" method="post" action="{{ URL::to('/') }}/news/{!!$news->id!!}">
         <input type="hidden" name="_method" value="put" />
 
@@ -51,23 +53,12 @@
     <div class="form-group">
         <label for="InputDesc">Abstract</label>
         <textarea class="form-control" id="InputAbst" name="abst" rows="10">{!!$news->abst!!}</textarea>
-        <script type="text/javascript">
-        CKEDITOR.replace( 'InputAbst' );
-        </script>
     </div>
 
     <div class="form-group">
         <label for="InputDesc">Description</label>
-        <textarea class="form-control " id="InputDesc" name="desc" rows="10">{!!$news->descr!!}</textarea>
-        <script type="text/javascript">
-            CKEDITOR.replace( 'InputDesc' );
-        </script>
+        <textarea class="form-control" id="InputDesc" name="desc" rows="10">{!!$news->descr!!}</textarea>
     </div>
-
-        <input type="text" class="form-control" style="border-radius: 25px;box-shadow: 5px 5px 5px #888888;"
-               name="search" draggable="true" dir="rtl" onkeyup="showResultTag(this.value)" onmouseover="goBackTag()">
-        <div id="livesearch"></div>
-
     <button type="submit" class="btn btn-default">Update</button>
 </form>
     <hr>
@@ -78,8 +69,12 @@
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
         <button type="submit" class="btn btn-default">Delete</button>
         </form>
-        </div>
-    </div>
+
+    <br>
+    <br>
+    <br>
+</div>
+<div class="col-md-6">
 
 
 </div>
