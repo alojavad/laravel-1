@@ -1,18 +1,15 @@
-@extends('layout.lnews')
+@extends ('layouts.dashboard')
+@section('page_heading','Update Tag')
+@section('section')
 
-@section('content')
-<div class="col-md-1">
-</div>
-<div class="col-md-5">
-    <br>
+<div class="col-sm-12">
 
+    <div class="row">
+        <div class="col-sm-12">
 
-
-
-    {!! Form::model($tag, array('method' => 'put',
-    'action' => array('TagController@update', 'tag_id' => $tag -> id),
-    'role' => 'form'
-    )) !!}
+    <form class="form-horizontal" role="form" method="post" action="{{ URL::to('/') }}/admin/tag/{!!$tag->id!!}">
+        <input type="hidden" name="_method" value="put" />
+        <input type="hidden" name="_token" value="{!! csrf_token() !!}">
         <div class="form-group">
             <label for="InputTitle">Title</label>
             <input type="text" class="form-control" id="InputTitle" name="title" placeholder="Title" value="{!! $tag->title!!}">
@@ -28,41 +25,25 @@
         <div class="form-group">
             <label for="InputDesc">Description</label>
             <textarea class="form-control" id="InputDesc" name="descr" rows="6">{!! $tag->descr!!}</textarea>
+            <script type="text/javascript">
+                CKEDITOR.replace( 'descr' );
+            </script>
         </div>
         <button type="submit" class="btn btn-default">Update</button>
-    {!! Form::close() !!}
+    </form>
     <hr>
     Delete this record
     <br>
-    {!! Form::open(array('action' => array('TagController@destroy', $tag -> id), 'method' => 'delete')) !!}
-    {!! Form::submit('Delete', array('class' => 'btn btn-default')) !!}
-    {!! Form::close() !!}
+    <form class="form-horizontal" role="form" method="post" action="{{ URL::to('/') }}/admin/tag/{!!$tag->id!!}">
+        <input type="hidden" name="_method" value="delete" />
 
-    <!--
-    {!!Form::open(['action'=>'TagController@store','class'=>'form form-horizontal','style'=>'margin-top:50px'])!!}
-    <div class="form-group">
-        {!! Form::label('title','Title:',['class'=>'col-sm-3 control-label']) !!}
-        <div class="col-sm-8">
-            {!! Form::text('title',Input::old('title'),['class'=>'form-control']) !!}
+        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+        <button type="submit" class="btn btn-default">Delete</button>
+    </form>
+
+
         </div>
     </div>
-    <div class="form-group">
-        {!! Form::label('text','Deasription:',['class'=>'col-sm-3 control-label']) !!}
-        <div class="col-sm-8">
-            {!! Form::textarea('body',Input::old('title'),['class'=>'form-control']) !!}
-        </div>
-    </div>
-
-    <div class="text-center">
-        {!!Form::submit('Post Your Tags',['class'=>'btn btn-default'])!!}
-    </div>
-    {!!Form::close()!!}
-    -->
-    <br>
-    <br>
-    <br>
-</div>
-<div class="col-md-6">
 
 
 </div>

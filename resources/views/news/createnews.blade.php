@@ -1,14 +1,11 @@
-@extends('app')
+@extends ('layouts.dashboard')
+@section('page_heading','Create News')
+@section('section')
+<div class="col-sm-12">
 
-@section('content')
-<div class="col-md-3">
+    <div class="row">
+        <div class="col-sm-12">
 
-</div>
-<div class="col-md-6">
-    @if (Auth::guest())
-    <p><h1 style="color: red">ابتدا در سایت ثبت نام کنید</h1></p>
-    <p><a href="{!! route('home')!!}">home</a></p>
-    @else
 <form class="form-horizontal" role="form" method="post" action="{{ URL::to('/') }}/news">
     <input type="hidden" name="_token" value="{{ csrf_token() }}">
     <div class="form-group">
@@ -53,11 +50,17 @@
     <div class="form-group">
         <label for="InputDesc">Abstract</label>
         <textarea class="form-control" id="InputAbst" name="abst"></textarea>
+        <script type="text/javascript">
+            CKEDITOR.replace( 'InputAbst' );
+        </script>
     </div>
 
     <div class="form-group">
         <label for="InputDesc">Description</label>
         <textarea class="form-control" id="InputDesc" name="desc"></textarea>
+        <script type="text/javascript">
+            CKEDITOR.replace( 'InputAbst' );
+        </script>
     </div>
 
     <button type="submit" class="btn btn-default">Submit</button>
@@ -66,6 +69,9 @@
 <script>
     CKEDITOR.replace('desc');
 </script>
-    @endif
+        </div>
     </div>
-@endsection
+
+
+</div>
+@stop

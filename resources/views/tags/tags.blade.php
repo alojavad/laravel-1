@@ -1,23 +1,18 @@
-@extends('layout.lnews')
+@extends ('layouts.dashboard')
+@section('page_heading','Tags')
+@section('section')
+<div class="col-sm-12">
 
-@section('content')
+    <div class="row">
+        <div class="col-sm-12">
 
-    <?php
-    include ('js/date_time.php');
-    $day_number = jdate('j');
-    $month_number = jdate('n');
-    $year_number = jdate('y');
-    $day_name = jdate('l');
-    ?>
-    <div style="margin:0px auto; width:400px;padding:5px;border:1px solid #ccc;background:#FFF9F9;">
-        <div style="text-align:center; direction:rtl; font:bold 15px/22px tahoma; direction:rtl; color:#093;"><?php echo " امروز $day_name ۱۳$year_number/$month_number/$day_number"; ?></div><br />
-        </div>
+
 <div class="col-md-1">
 
 </div>
 <div class="col-md-5">
 <br>
-    <form class="form-horizontal" role="form" method="post" action="{{ URL::to('/') }}/tag">
+    <form class="form-horizontal" role="form" method="post" action="{{ URL::to('/admin') }}/tag">
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
         <div class="form-group">
             <label for="InputTitle">Title</label>
@@ -66,4 +61,10 @@
     @endforeach
     @endif
 </div>
-@endsection
+        </div>
+    </div>
+@if($tag !='')
+    <?php echo $tag->render(); ?>
+    @endif
+</div>
+@stop
