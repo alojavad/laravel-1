@@ -11,7 +11,7 @@
 	<title>Hightr| هایتر</title>
     <link rel="shortcut icon" href="{!! asset('/facicon.ico') !!}" type="image/x-icon">
 	<link href="{!! asset('/css/bootstrap.css') !!}" rel="stylesheet">
-
+    <script src="{{ asset('ckeditor/ckeditor.js') }}"></script>
 	<!-- Fonts -->
 	<link href='//fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
 
@@ -26,7 +26,21 @@
             headers: { 'X-CSRF-Token' : $('meta[name=_token]').attr('content') }
         });
     </script>
+    <script>
+        $(window).scroll(function () {
+            var $heightScrolled = $(window).scrollTop();
+            var $defaultHeight = 300;
 
+            if ( $heightScrolled < $defaultHeight )
+            {
+                $('#header').removeClass("sticky")
+            }
+            else {
+                $('#header').addClass("sticky")
+            }
+
+        });
+    </script>
     <script>
 
         function showResult(str) {
@@ -47,20 +61,30 @@
                 if (xmlhttp.readyState==4 && xmlhttp.status==200) {
                     document.getElementById("livesearch").innerHTML=xmlhttp.responseText;
                     document.getElementById("livesearch").style.border="1px solid #A5ACB2";
+                    document.getElementById("livesearch").style.height="200px";
+                    document.getElementById("livesearch").style.overflow="auto";
                 }
             }
 
             xmlhttp.open("GET","news/search?q="+str,true);
             xmlhttp.send();
         }
-    </script>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+        function goBack() {
+            document.getElementById("livesearch").style.height="0px";
+        }
 
+
+    </script>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<
 
 
 </head>
 <body>
-<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+<div class="collapse navbar-collapse" id="header">
+    <div id="menu">
     <div class="col-md-1 navbar-header" >
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
             <span class="sr-only">Toggle navigation</span>
@@ -68,7 +92,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#"><img alt="Brand" src="{!! asset('/facicon.ico')!!}"></a>
+        <a class="navbar-brand" href="#"><img style="opacity: .5" alt="Brand" src="{!! asset('/facicon.ico')!!}"></a>
     </div>
     <ul class="col-md-5 nav nav-tabs navbar-brand navbar">
         <li class="">
@@ -102,7 +126,7 @@
 
             <div class="col-md-12">
 
-                <input type="text" class="form-control" style="border-radius: 25px;box-shadow: 5px 5px 5px #888888;" name="search" draggable="true" dir="rtl" onkeyup="showResult(this.value)">
+                <input type="text" class="form-control" style="border-radius: 25px;box-shadow: 5px 5px 5px #888888;" name="search" draggable="true" dir="rtl" onkeyup="showResult(this.value)" onmouseover="goBack()">
                 <div id="livesearch"></div>
 
             </div>
@@ -120,6 +144,7 @@
                 <li><a href="{!! url('/') !!}">Home</a></li>
                 <li><a href="{!! url('/news/create') !!}">Add news</a></li>
                 <li><a href="{!! url('/tag') !!}">Tag</a></li>
+                <li><a href="{!! url('/admin') !!}">Admin</a></li>
                 <li><a href="{!! url('/laravel/laravel') !!}">Laravel</a></li>
                 <li><a href="{!! url('/auth/logout') !!}">Logout</a></li>
             </ul>
@@ -128,7 +153,9 @@
 
     </ul>
 
-</div><!-- /.navbar-collapse -->
+</div>
+    </div>
+    <!-- /.navbar-collapse -->
 <nav class="navbar navbar-default">
     <div class="container-fluid">
 
@@ -147,14 +174,13 @@
 
 
 @yield('content')
-
 </nav>
 
     <footer class="col-md-12">
 
         <div class="content  text-center">
             <p>Hightr is a trademark of Javad Hajiyan Maleki. Copyright © Javad Hajiyan Maleki.</p>
-            <p ><a href="http://jackmcdade.com/">Design by Javad Hajiyan Maleki</a></p>
+            <p ><a href="http://twitter.com/javadhajian1/">Design by Javad Hajiyan Maleki</a></p>
         </div>
     </footer>
 </div>
