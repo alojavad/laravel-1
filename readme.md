@@ -1,4 +1,5 @@
-new line    # Laravel 5.0 on OpenShift #
+# Laravel 5.0 on OpenShift #
+>>>>>>> d1e719a0b955bfc5c2b6e1bb1c6ade46946bc95b
 [Laravel](http://laravel.com/) is a free, open source PHP web application framework, 
 designed for the development of model–view–controller (MVC) web applications.
 
